@@ -87,6 +87,72 @@
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/main.cpp">
 			<Option target="GP"/>
 		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.cpp">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.h">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.cc">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h">
+			<Option target="GP"/>
+		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

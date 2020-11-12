@@ -15,9 +15,7 @@ int main() {
                 window.close();
             }
         }
+        window.display();
     }
-
-    window.display();
-
     return 0;
 }

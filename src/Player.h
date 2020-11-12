@@ -1,20 +1,20 @@
 //
 // Created by Phili on 11/11/2020.
 //
-#include <iostream>
-
-#include "Entity.h"
-
-
 #ifndef GP_PLAYER_H
 #define GP_PLAYER_H
 
+#include <iostream>
+
+#include "Entity.h"
 
 class Player : public Entity{
 public:
     void Jump();
 
     void Roll();
+
+    Player(sf::Vector3f);
 
 private:
     std::uint8_t stamina;

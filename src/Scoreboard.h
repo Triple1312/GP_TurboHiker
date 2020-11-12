@@ -6,8 +6,10 @@
 #define GP_SCOREBOARD_H
 #include <iostream>
 
+#include "Widget.h"
 
-class Scoreboard {
+
+class Scoreboard : public Widget{
 private:
     std::uint32_t score;
 

@@ -169,6 +169,303 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Entity.obj: src/Entity.cc.obj
+
+.PHONY : src/Entity.obj
+
+# target to build an object file
+src/Entity.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Entity.cc.obj
+.PHONY : src/Entity.cc.obj
+
+src/Entity.i: src/Entity.cc.i
+
+.PHONY : src/Entity.i
+
+# target to preprocess a source file
+src/Entity.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Entity.cc.i
+.PHONY : src/Entity.cc.i
+
+src/Entity.s: src/Entity.cc.s
+
+.PHONY : src/Entity.s
+
+# target to generate assembly for a file
+src/Entity.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Entity.cc.s
+.PHONY : src/Entity.cc.s
+
+src/Field.obj: src/Field.cc.obj
+
+.PHONY : src/Field.obj
+
+# target to build an object file
+src/Field.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Field.cc.obj
+.PHONY : src/Field.cc.obj
+
+src/Field.i: src/Field.cc.i
+
+.PHONY : src/Field.i
+
+# target to preprocess a source file
+src/Field.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Field.cc.i
+.PHONY : src/Field.cc.i
+
+src/Field.s: src/Field.cc.s
+
+.PHONY : src/Field.s
+
+# target to generate assembly for a file
+src/Field.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Field.cc.s
+.PHONY : src/Field.cc.s
+
+src/Item.obj: src/Item.cc.obj
+
+.PHONY : src/Item.obj
+
+# target to build an object file
+src/Item.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Item.cc.obj
+.PHONY : src/Item.cc.obj
+
+src/Item.i: src/Item.cc.i
+
+.PHONY : src/Item.i
+
+# target to preprocess a source file
+src/Item.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Item.cc.i
+.PHONY : src/Item.cc.i
+
+src/Item.s: src/Item.cc.s
+
+.PHONY : src/Item.s
+
+# target to generate assembly for a file
+src/Item.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Item.cc.s
+.PHONY : src/Item.cc.s
+
+src/Lane.obj: src/Lane.cc.obj
+
+.PHONY : src/Lane.obj
+
+# target to build an object file
+src/Lane.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Lane.cc.obj
+.PHONY : src/Lane.cc.obj
+
+src/Lane.i: src/Lane.cc.i
+
+.PHONY : src/Lane.i
+
+# target to preprocess a source file
+src/Lane.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Lane.cc.i
+.PHONY : src/Lane.cc.i
+
+src/Lane.s: src/Lane.cc.s
+
+.PHONY : src/Lane.s
+
+# target to generate assembly for a file
+src/Lane.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Lane.cc.s
+.PHONY : src/Lane.cc.s
+
+src/MainGame.obj: src/MainGame.cc.obj
+
+.PHONY : src/MainGame.obj
+
+# target to build an object file
+src/MainGame.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/MainGame.cc.obj
+.PHONY : src/MainGame.cc.obj
+
+src/MainGame.i: src/MainGame.cc.i
+
+.PHONY : src/MainGame.i
+
+# target to preprocess a source file
+src/MainGame.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/MainGame.cc.i
+.PHONY : src/MainGame.cc.i
+
+src/MainGame.s: src/MainGame.cc.s
+
+.PHONY : src/MainGame.s
+
+# target to generate assembly for a file
+src/MainGame.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/MainGame.cc.s
+.PHONY : src/MainGame.cc.s
+
+src/Menu.obj: src/Menu.cc.obj
+
+.PHONY : src/Menu.obj
+
+# target to build an object file
+src/Menu.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Menu.cc.obj
+.PHONY : src/Menu.cc.obj
+
+src/Menu.i: src/Menu.cc.i
+
+.PHONY : src/Menu.i
+
+# target to preprocess a source file
+src/Menu.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Menu.cc.i
+.PHONY : src/Menu.cc.i
+
+src/Menu.s: src/Menu.cc.s
+
+.PHONY : src/Menu.s
+
+# target to generate assembly for a file
+src/Menu.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Menu.cc.s
+.PHONY : src/Menu.cc.s
+
+src/Obstacle.obj: src/Obstacle.cc.obj
+
+.PHONY : src/Obstacle.obj
+
+# target to build an object file
+src/Obstacle.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Obstacle.cc.obj
+.PHONY : src/Obstacle.cc.obj
+
+src/Obstacle.i: src/Obstacle.cc.i
+
+.PHONY : src/Obstacle.i
+
+# target to preprocess a source file
+src/Obstacle.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Obstacle.cc.i
+.PHONY : src/Obstacle.cc.i
+
+src/Obstacle.s: src/Obstacle.cc.s
+
+.PHONY : src/Obstacle.s
+
+# target to generate assembly for a file
+src/Obstacle.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Obstacle.cc.s
+.PHONY : src/Obstacle.cc.s
+
+src/Player.obj: src/Player.cpp.obj
+
+.PHONY : src/Player.obj
+
+# target to build an object file
+src/Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Player.cpp.obj
+.PHONY : src/Player.cpp.obj
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/Scoreboard.obj: src/Scoreboard.cc.obj
+
+.PHONY : src/Scoreboard.obj
+
+# target to build an object file
+src/Scoreboard.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Scoreboard.cc.obj
+.PHONY : src/Scoreboard.cc.obj
+
+src/Scoreboard.i: src/Scoreboard.cc.i
+
+.PHONY : src/Scoreboard.i
+
+# target to preprocess a source file
+src/Scoreboard.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Scoreboard.cc.i
+.PHONY : src/Scoreboard.cc.i
+
+src/Scoreboard.s: src/Scoreboard.cc.s
+
+.PHONY : src/Scoreboard.s
+
+# target to generate assembly for a file
+src/Scoreboard.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Scoreboard.cc.s
+.PHONY : src/Scoreboard.cc.s
+
+src/View/Draw.obj: src/View/Draw.cc.obj
+
+.PHONY : src/View/Draw.obj
+
+# target to build an object file
+src/View/Draw.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/View/Draw.cc.obj
+.PHONY : src/View/Draw.cc.obj
+
+src/View/Draw.i: src/View/Draw.cc.i
+
+.PHONY : src/View/Draw.i
+
+# target to preprocess a source file
+src/View/Draw.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/View/Draw.cc.i
+.PHONY : src/View/Draw.cc.i
+
+src/View/Draw.s: src/View/Draw.cc.s
+
+.PHONY : src/View/Draw.s
+
+# target to generate assembly for a file
+src/View/Draw.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/View/Draw.cc.s
+.PHONY : src/View/Draw.cc.s
+
+src/Widget.obj: src/Widget.cc.obj
+
+.PHONY : src/Widget.obj
+
+# target to build an object file
+src/Widget.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Widget.cc.obj
+.PHONY : src/Widget.cc.obj
+
+src/Widget.i: src/Widget.cc.i
+
+.PHONY : src/Widget.i
+
+# target to preprocess a source file
+src/Widget.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Widget.cc.i
+.PHONY : src/Widget.cc.i
+
+src/Widget.s: src/Widget.cc.s
+
+.PHONY : src/Widget.s
+
+# target to generate assembly for a file
+src/Widget.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/src/Widget.cc.s
+.PHONY : src/Widget.cc.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -181,6 +478,39 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Entity.obj
+	@echo ... src/Entity.i
+	@echo ... src/Entity.s
+	@echo ... src/Field.obj
+	@echo ... src/Field.i
+	@echo ... src/Field.s
+	@echo ... src/Item.obj
+	@echo ... src/Item.i
+	@echo ... src/Item.s
+	@echo ... src/Lane.obj
+	@echo ... src/Lane.i
+	@echo ... src/Lane.s
+	@echo ... src/MainGame.obj
+	@echo ... src/MainGame.i
+	@echo ... src/MainGame.s
+	@echo ... src/Menu.obj
+	@echo ... src/Menu.i
+	@echo ... src/Menu.s
+	@echo ... src/Obstacle.obj
+	@echo ... src/Obstacle.i
+	@echo ... src/Obstacle.s
+	@echo ... src/Player.obj
+	@echo ... src/Player.i
+	@echo ... src/Player.s
+	@echo ... src/Scoreboard.obj
+	@echo ... src/Scoreboard.i
+	@echo ... src/Scoreboard.s
+	@echo ... src/View/Draw.obj
+	@echo ... src/View/Draw.i
+	@echo ... src/View/Draw.s
+	@echo ... src/Widget.obj
+	@echo ... src/Widget.i
+	@echo ... src/Widget.s
 .PHONY : help
 
 

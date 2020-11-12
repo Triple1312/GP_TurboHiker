@@ -90,14 +90,190 @@ CMakeFiles/GP.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/main.cpp.s"
 	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\main.cpp" -o CMakeFiles\GP.dir\main.cpp.s
 
+CMakeFiles/GP.dir/src/Entity.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Entity.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Entity.cc.obj: ../src/Entity.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GP.dir/src/Entity.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Entity.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Entity.cc"
+
+CMakeFiles/GP.dir/src/Entity.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Entity.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Entity.cc" > CMakeFiles\GP.dir\src\Entity.cc.i
+
+CMakeFiles/GP.dir/src/Entity.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Entity.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Entity.cc" -o CMakeFiles\GP.dir\src\Entity.cc.s
+
+CMakeFiles/GP.dir/src/Player.cpp.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Player.cpp.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Player.cpp.obj: ../src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GP.dir/src/Player.cpp.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Player.cpp.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Player.cpp"
+
+CMakeFiles/GP.dir/src/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Player.cpp.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Player.cpp" > CMakeFiles\GP.dir\src\Player.cpp.i
+
+CMakeFiles/GP.dir/src/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Player.cpp.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Player.cpp" -o CMakeFiles\GP.dir\src\Player.cpp.s
+
+CMakeFiles/GP.dir/src/Item.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Item.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Item.cc.obj: ../src/Item.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GP.dir/src/Item.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Item.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Item.cc"
+
+CMakeFiles/GP.dir/src/Item.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Item.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Item.cc" > CMakeFiles\GP.dir\src\Item.cc.i
+
+CMakeFiles/GP.dir/src/Item.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Item.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Item.cc" -o CMakeFiles\GP.dir\src\Item.cc.s
+
+CMakeFiles/GP.dir/src/Scoreboard.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Scoreboard.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Scoreboard.cc.obj: ../src/Scoreboard.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GP.dir/src/Scoreboard.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Scoreboard.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Scoreboard.cc"
+
+CMakeFiles/GP.dir/src/Scoreboard.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Scoreboard.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Scoreboard.cc" > CMakeFiles\GP.dir\src\Scoreboard.cc.i
+
+CMakeFiles/GP.dir/src/Scoreboard.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Scoreboard.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Scoreboard.cc" -o CMakeFiles\GP.dir\src\Scoreboard.cc.s
+
+CMakeFiles/GP.dir/src/Field.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Field.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Field.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GP.dir/src/Field.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Field.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Field.cc"
+
+CMakeFiles/GP.dir/src/Field.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Field.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Field.cc" > CMakeFiles\GP.dir\src\Field.cc.i
+
+CMakeFiles/GP.dir/src/Field.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Field.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Field.cc" -o CMakeFiles\GP.dir\src\Field.cc.s
+
+CMakeFiles/GP.dir/src/Obstacle.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Obstacle.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Obstacle.cc.obj: ../src/Obstacle.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GP.dir/src/Obstacle.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Obstacle.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Obstacle.cc"
+
+CMakeFiles/GP.dir/src/Obstacle.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Obstacle.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Obstacle.cc" > CMakeFiles\GP.dir\src\Obstacle.cc.i
+
+CMakeFiles/GP.dir/src/Obstacle.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Obstacle.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Obstacle.cc" -o CMakeFiles\GP.dir\src\Obstacle.cc.s
+
+CMakeFiles/GP.dir/src/MainGame.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/MainGame.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/MainGame.cc.obj: ../src/MainGame.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GP.dir/src/MainGame.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\MainGame.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\MainGame.cc"
+
+CMakeFiles/GP.dir/src/MainGame.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/MainGame.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\MainGame.cc" > CMakeFiles\GP.dir\src\MainGame.cc.i
+
+CMakeFiles/GP.dir/src/MainGame.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/MainGame.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\MainGame.cc" -o CMakeFiles\GP.dir\src\MainGame.cc.s
+
+CMakeFiles/GP.dir/src/Menu.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Menu.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Menu.cc.obj: ../src/Menu.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GP.dir/src/Menu.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Menu.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Menu.cc"
+
+CMakeFiles/GP.dir/src/Menu.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Menu.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Menu.cc" > CMakeFiles\GP.dir\src\Menu.cc.i
+
+CMakeFiles/GP.dir/src/Menu.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Menu.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Menu.cc" -o CMakeFiles\GP.dir\src\Menu.cc.s
+
+CMakeFiles/GP.dir/src/Lane.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Lane.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Lane.cc.obj: ../src/Lane.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GP.dir/src/Lane.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Lane.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Lane.cc"
+
+CMakeFiles/GP.dir/src/Lane.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Lane.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Lane.cc" > CMakeFiles\GP.dir\src\Lane.cc.i
+
+CMakeFiles/GP.dir/src/Lane.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Lane.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Lane.cc" -o CMakeFiles\GP.dir\src\Lane.cc.s
+
+CMakeFiles/GP.dir/src/Widget.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/Widget.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/Widget.cc.obj: ../src/Widget.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GP.dir/src/Widget.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\Widget.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Widget.cc"
+
+CMakeFiles/GP.dir/src/Widget.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/Widget.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Widget.cc" > CMakeFiles\GP.dir\src\Widget.cc.i
+
+CMakeFiles/GP.dir/src/Widget.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/Widget.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\Widget.cc" -o CMakeFiles\GP.dir\src\Widget.cc.s
+
+CMakeFiles/GP.dir/src/View/Draw.cc.obj: CMakeFiles/GP.dir/flags.make
+CMakeFiles/GP.dir/src/View/Draw.cc.obj: CMakeFiles/GP.dir/includes_CXX.rsp
+CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../src/View/Draw.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GP.dir/src/View/Draw.cc.obj"
+	C:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GP.dir\src\View\Draw.cc.obj -c "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\View\Draw.cc"
+
+CMakeFiles/GP.dir/src/View/Draw.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GP.dir/src/View/Draw.cc.i"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\View\Draw.cc" > CMakeFiles\GP.dir\src\View\Draw.cc.i
+
+CMakeFiles/GP.dir/src/View/Draw.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GP.dir/src/View/Draw.cc.s"
+	C:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\src\View\Draw.cc" -o CMakeFiles\GP.dir\src\View\Draw.cc.s
+
 # Object files for target GP
 GP_OBJECTS = \
-"CMakeFiles/GP.dir/main.cpp.obj"
+"CMakeFiles/GP.dir/main.cpp.obj" \
+"CMakeFiles/GP.dir/src/Entity.cc.obj" \
+"CMakeFiles/GP.dir/src/Player.cpp.obj" \
+"CMakeFiles/GP.dir/src/Item.cc.obj" \
+"CMakeFiles/GP.dir/src/Scoreboard.cc.obj" \
+"CMakeFiles/GP.dir/src/Field.cc.obj" \
+"CMakeFiles/GP.dir/src/Obstacle.cc.obj" \
+"CMakeFiles/GP.dir/src/MainGame.cc.obj" \
+"CMakeFiles/GP.dir/src/Menu.cc.obj" \
+"CMakeFiles/GP.dir/src/Lane.cc.obj" \
+"CMakeFiles/GP.dir/src/Widget.cc.obj" \
+"CMakeFiles/GP.dir/src/View/Draw.cc.obj"
 
 # External object files for target GP
 GP_EXTERNAL_OBJECTS =
 
 GP.exe: CMakeFiles/GP.dir/main.cpp.obj
+GP.exe: CMakeFiles/GP.dir/src/Entity.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Player.cpp.obj
+GP.exe: CMakeFiles/GP.dir/src/Item.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Scoreboard.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Field.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Obstacle.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/MainGame.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Menu.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Lane.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/Widget.cc.obj
+GP.exe: CMakeFiles/GP.dir/src/View/Draw.cc.obj
 GP.exe: CMakeFiles/GP.dir/build.make
 GP.exe: ../libs/SFML-2.5.1_WIN/lib/libsfml-audio-d.a
 GP.exe: ../libs/SFML-2.5.1_WIN/lib/libsfml-graphics-d.a
@@ -106,7 +282,7 @@ GP.exe: ../libs/SFML-2.5.1_WIN/lib/libsfml-system-d.a
 GP.exe: CMakeFiles/GP.dir/linklibs.rsp
 GP.exe: CMakeFiles/GP.dir/objects1.rsp
 GP.exe: CMakeFiles/GP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable GP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

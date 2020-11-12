@@ -5,6 +5,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/main.cpp" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/main.cpp.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Entity.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Field.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Item.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Lane.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/MainGame.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Menu.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Obstacle.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.cpp" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Player.cpp.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Scoreboard.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/View/Draw.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir/src/Widget.cc.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

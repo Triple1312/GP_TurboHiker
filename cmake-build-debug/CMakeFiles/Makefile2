@@ -93,12 +93,12 @@ clean: CMakeFiles/GP.dir/clean
 CMakeFiles/GP.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GP.dir\build.make CMakeFiles/GP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target GP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target GP"
 .PHONY : CMakeFiles/GP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Phili\Universiteit\20-21\Gevorderd Programmeren\GP_TurboHiker\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/GP.dir/rule
