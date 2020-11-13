@@ -28,6 +28,12 @@ public:
 
     std::shared_ptr<sf::RectangleShape> GetShape();
 
+    void SetCenterTo(sf::Vector2f);
+
+    sf::Vector2f GetCenter();
+
+
+
 protected:
     Entity() = default; //making it impossible to create which means e_t is never None
 

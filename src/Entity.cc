@@ -44,3 +44,16 @@ void Entity::SetEntityType(entity_type type) {
 std::shared_ptr<sf::RectangleShape> Entity::GetShape() {
     return this->shape;
 }
+
+void Entity::SetCenterTo(sf::Vector2f to) {
+     sf::Vector2f c = GetCenter();
+//     float x = to.x + this->shape->getSize().x/2.f;
+//     this->shape->setPosition()
+
+     auto f = sf::Vector2f (to.x - this->shape->getSize().x, to.y - this->shape->getSize().y);
+     this->shape->setPosition(sf::Vector2f (to.x - this->shape->getSize().x/2.f, to.y - this->shape->getSize().y/2.f));
+}
+
+sf::Vector2f Entity::GetCenter() {
+    return sf::Vector2f(this->shape->getPosition() + this->shape->getSize()/2.f);
+}

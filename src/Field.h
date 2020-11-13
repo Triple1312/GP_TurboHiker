@@ -28,7 +28,7 @@ public:
 
     void SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes);
 
-    Field(std::uint8_t);
+    Field(std::uint8_t, double ratio = 0.2);
 
     void MovePlayer(int);
 

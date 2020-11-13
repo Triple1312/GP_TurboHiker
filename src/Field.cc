@@ -24,9 +24,12 @@ void Field::SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes) {
     Field::lanes = lanes;
 }
 
-Field::Field(std::uint8_t lanes) {
+Field::Field(std::uint8_t lanes , double ratio ) {
+    float y = 600 /(lanes  / ratio + lanes-1);
+    float x = y / ratio;
     for (int i = 0; i < lanes ; i++ ) {
-        this->lanes.emplace_back(std::make_shared<Lane>( 100 + i * 150 ));
+        auto meh = 100 + i* (x+y);
+        this->lanes.emplace_back(std::make_shared<Lane>(100 + i* (x+y)));
     }
     std::deque<std::shared_ptr<Player>> temp;
     auto test = std::make_shared<Player>(sf::Vector3f(600, 400, 50));
@@ -49,14 +52,21 @@ void Field::MovePlayer(int i) {
 }
 
 void Field::SetOnLane(std::shared_ptr<Player> p, std::uint8_t nr) {
-    p->SetPosition(sf::Vector3f(this->lanes[nr]->GetLaneChunks()[0]->shape->getPosition().x,
-                                this->lanes[nr]->GetLaneChunks()[0]->shape->getPosition().y,
-                                0));
+//    p->SetPosition(sf::Vector3f(this->lanes[nr]->GetLaneChunks()[0]->shape->getPosition().x,
+//                                this->lanes[nr]->GetLaneChunks()[0]->shape->getPosition().y,
+//                                0));
+    auto i = this->GetLanes()[nr]->GetLaneChunks()[nr]->shape->getSize();
+    auto j = this->GetLanes()[nr]->GetLaneChunks()[nr]->shape->getPosition();
+    auto test = this->GetLanes()[nr]->GetLaneChunks()[this->GetLanes().size()-1]->GetCenter();
+    p->SetCenterTo(test);
+
 }
 
 std::uint8_t Field::GetOnLane(std::shared_ptr<Player> p) {
     for (int i = 0; i < this->lanes.size(); i++) {
-        if (this->lanes[i]->GetLaneChunks()[0]->shape->getPosition().x == p->GetShape()->getPosition().x) {
+        if (this->lanes[i]->GetLaneChunks()[0]->shape->getPosition().x < p->GetCenter().x &&
+            p->GetCenter().x < this->lanes[i]->GetLaneChunks()[0]->shape->getPosition().x + this->lanes[i]->GetLaneChunks()[0]->shape->getSize().x) {
+
             return i;
         }
     }

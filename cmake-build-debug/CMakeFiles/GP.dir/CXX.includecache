@@ -684,6 +684,10 @@ SFML/Window.hpp
 SFML/Graphics.hpp
 -
 
+C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc
+Field.h
+C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h
+
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h
 memory
 -
@@ -702,10 +706,6 @@ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entit
 Player.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
 
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h
-Entity.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
-
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
 deque
 -
@@ -718,32 +718,6 @@ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obsta
 Player.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
 
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.cc
-MainGame.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.h
-
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.h
-memory
--
-deque
--
-SFML/Window.hpp
--
-SFML/Graphics.hpp
--
-Field.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h
-Scoreboard.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h
-Menu.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h
-View/Draw.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.h
-
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h
-Widget.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
-
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
 Entity.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
@@ -753,36 +727,6 @@ iostream
 -
 Entity.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
-
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h
-iostream
--
-Widget.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
-
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.h
-memory
--
-deque
--
-utility
--
-vector
--
-SFML/Window.hpp
--
-SFML/Graphics.hpp
--
-../Entity.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
-../Obstacle.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
-../Item.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h
-../Player.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
-../Lane.h
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
 
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
 

@@ -24,9 +24,16 @@ public:
         Obstacle obstacle;
 
         LaneChunk();
+
+        std::uint8_t GetCenterX();
+
+        std::uint8_t GetCenterY();
+
+        sf::Vector2f GetCenter();
+
     };
 
-    Lane(double);
+    Lane(double, double = 100);
 
 private:
     int height;
@@ -42,6 +49,9 @@ public:
 
     ///void SetLaneChunks(const std::deque<LaneChunk> &laneChunks);
 
+    std::uint8_t GetCenterX();
+
+    std::uint8_t GetCenterY();
 };
 
 
