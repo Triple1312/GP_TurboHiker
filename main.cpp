@@ -1,21 +1,15 @@
 
+#include <memory>
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
+#include "src/MainGame.h"
 
 int main() {
-
+    //std::shared_ptr<sf::RenderWindow> window = std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "GP");
     sf::RenderWindow window(sf::VideoMode(800, 600), "GP");
-    window.setFramerateLimit(27);
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-        }
-        window.display();
-    }
-    return 0;
+    MainGame game(window);
+    game.Play();
+
 }

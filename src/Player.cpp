@@ -18,4 +18,9 @@ Player::Player(sf::Vector3f pos) {
     this->pos = pos;
     this->shape = std::make_shared<sf::RectangleShape>(sf::Vector2f(50.f, 70.f));
     this->shape->setFillColor(sf::Color::Blue);
+    this->shape->setPosition(pos.x, pos.y);
+}
+
+void Player::SetPosition(sf::Vector3f pos) {
+    this->shape->setPosition(pos.x, pos.y);
 }

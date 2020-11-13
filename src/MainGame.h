@@ -21,8 +21,15 @@ class MainGame {
     std::unique_ptr<Field> field;
     std::unique_ptr<Scoreboard> board;
     std::unique_ptr<Draw> draw;
+    //std::shared_ptr<sf::RenderWindow> window;
+    sf::RenderWindow& window;
 
     void DrawField();
+
+public:
+    MainGame(sf::RenderWindow& i_window);
+
+    void Play();
 
 
 };

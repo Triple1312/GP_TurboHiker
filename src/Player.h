@@ -16,6 +16,8 @@ public:
 
     Player(sf::Vector3f);
 
+    void SetPosition(sf::Vector3f);
+
 private:
     std::uint8_t stamina;
     std::uint8_t speed; // todo: pixel per second ?

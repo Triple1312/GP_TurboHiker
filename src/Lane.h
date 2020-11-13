@@ -8,16 +8,39 @@
 #include <deque>
 #include <memory>
 
+#include <SFML/Window.hpp>
+
 #include "Obstacle.h"
 #include "Player.h" // in theory could have used Entity todo check if Entity better
 
 class Lane {
 public:
+    /*
+     * gaan ervanuit dat length 100 is
+     *
+     */
+    struct LaneChunk {
+        std::shared_ptr<sf::RectangleShape> shape;
+        Obstacle obstacle;
 
+        LaneChunk();
+    };
+
+    Lane(double);
 
 private:
     int height;
-    std::deque<Obstacle> obstacles;
+    /*
+     * stel const length 5
+     * positie wordt elke tick herberekend
+     * elke tick waarop een lanechunk uit beeld komt wordt er een nieuwe gemaakt
+     * moet random obstacle soort hebben
+     */
+    std::deque<std::shared_ptr<LaneChunk>> lane_chunks;
+public:
+    const std::deque<std::shared_ptr<LaneChunk>> &GetLaneChunks() const;
+
+    ///void SetLaneChunks(const std::deque<LaneChunk> &laneChunks);
 
 };
 

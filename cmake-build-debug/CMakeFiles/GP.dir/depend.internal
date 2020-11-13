@@ -77,6 +77,17 @@ CMakeFiles/GP.dir/main.cpp.obj
  ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
  ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/main.cpp
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
 CMakeFiles/GP.dir/src/Entity.cc.obj
  ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
  ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
@@ -154,6 +165,88 @@ CMakeFiles/GP.dir/src/Entity.cc.obj
  ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.cc
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+CMakeFiles/GP.dir/src/Field.cc.obj
+ ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/BlendMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/CircleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Color.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/ConvexShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Drawable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Font.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glyph.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Image.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/PrimitiveType.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RectangleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderStates.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTarget.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTexture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderWindow.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shader.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Sprite.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Text.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Texture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transform.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transformable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Vertex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexArray.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexBuffer.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/View.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Clock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Err.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/FileInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/InputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Lock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/MemoryInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Mutex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/NonCopyable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Sleep.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocal.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Time.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Clipboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Context.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/ContextSettings.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Cursor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Event.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/GlResource.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Joystick.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Keyboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Mouse.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Sensor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Touch.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/VideoMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
 CMakeFiles/GP.dir/src/Item.cc.obj
  ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
  ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
@@ -232,6 +325,255 @@ CMakeFiles/GP.dir/src/Item.cc.obj
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.cc
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h
+CMakeFiles/GP.dir/src/Lane.cc.obj
+ ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/BlendMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/CircleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Color.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/ConvexShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Drawable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Font.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glyph.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Image.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/PrimitiveType.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RectangleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderStates.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTarget.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTexture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderWindow.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shader.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Sprite.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Text.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Texture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transform.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transformable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Vertex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexArray.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexBuffer.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/View.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Clock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Err.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/FileInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/InputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Lock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/MemoryInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Mutex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/NonCopyable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Sleep.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocal.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Time.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Clipboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Context.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/ContextSettings.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Cursor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Event.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/GlResource.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Joystick.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Keyboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Mouse.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Sensor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Touch.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/VideoMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
+CMakeFiles/GP.dir/src/MainGame.cc.obj
+ ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/BlendMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/CircleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Color.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/ConvexShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Drawable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Font.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glyph.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Image.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/PrimitiveType.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RectangleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderStates.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTarget.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTexture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderWindow.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shader.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Sprite.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Text.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Texture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transform.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transformable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Vertex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexArray.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexBuffer.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/View.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Clock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Err.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/FileInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/InputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Lock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/MemoryInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Mutex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/NonCopyable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Sleep.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocal.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Time.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Clipboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Context.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/ContextSettings.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Cursor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Event.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/GlResource.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Joystick.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Keyboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Mouse.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Sensor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Touch.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/VideoMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
+CMakeFiles/GP.dir/src/Menu.cc.obj
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
+CMakeFiles/GP.dir/src/Obstacle.cc.obj
+ ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/BlendMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/CircleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Color.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/ConvexShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Drawable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Font.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glyph.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Image.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/PrimitiveType.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RectangleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderStates.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTarget.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTexture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderWindow.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shader.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Sprite.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Text.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Texture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transform.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transformable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Vertex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexArray.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexBuffer.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/View.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Clock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Err.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/FileInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/InputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Lock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/MemoryInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Mutex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/NonCopyable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Sleep.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocal.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Time.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Clipboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Context.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/ContextSettings.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Cursor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Event.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/GlResource.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Joystick.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Keyboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Mouse.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Sensor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Touch.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/VideoMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
 CMakeFiles/GP.dir/src/Player.cpp.obj
  ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
  ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
@@ -313,3 +655,89 @@ CMakeFiles/GP.dir/src/Player.cpp.obj
 CMakeFiles/GP.dir/src/Scoreboard.cc.obj
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.cc
  C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
+CMakeFiles/GP.dir/src/View/Draw.cc.obj
+ ../libs/SFML-2.5.1_WIN/include/SFML/Config.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/BlendMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/CircleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Color.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/ConvexShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Drawable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Font.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glsl.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Glyph.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Image.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/PrimitiveType.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Rect.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RectangleShape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderStates.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTarget.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderTexture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/RenderWindow.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shader.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Shape.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Sprite.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Text.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Texture.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transform.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Transformable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/Vertex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexArray.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/VertexBuffer.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Graphics/View.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Clock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Err.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/FileInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/InputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Lock.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/MemoryInputStream.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Mutex.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/NonCopyable.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Sleep.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/String.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Thread.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocal.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/ThreadLocalPtr.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Time.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Utf.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector2.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/System/Vector3.inl
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Clipboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Context.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/ContextSettings.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Cursor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Event.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Export.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/GlResource.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Joystick.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Keyboard.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Mouse.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Sensor.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Touch.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/VideoMode.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
+ ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.h
+CMakeFiles/GP.dir/src/Widget.cc.obj
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.cc
+ C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h

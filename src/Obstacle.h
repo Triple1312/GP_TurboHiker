@@ -12,6 +12,8 @@ class Obstacle : public Entity {
 public:
     Obstacle(sf::Vector3i, sf::Vector3f );
 
+    Obstacle() = default;
+
 
 };
 

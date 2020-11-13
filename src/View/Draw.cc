@@ -4,9 +4,17 @@
 
 #include "Draw.h"
 
-void Draw::DrawEntities(std::deque<Entity> entities) {
-    for ( Entity& e : entities) {
-        window.draw(e.GetShape());
+void Draw::DrawEntities(std::deque<std::shared_ptr<Entity>>& entities) {
+    for ( auto e : entities) {
+        window.draw(  *e->GetShape());
+    }
+}
+
+void Draw::DrawLanes(std::deque<std::shared_ptr<Lane>>& lanes) {
+    for ( auto l : lanes ) {
+        for ( auto c : l->GetLaneChunks() ) {
+            window.draw(*c->shape);
+        }
     }
 }
 

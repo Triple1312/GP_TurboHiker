@@ -8,6 +8,7 @@
 #include <memory>
 #include <vector>
 #include <deque>
+#include <iostream>
 
 #include "Widget.h"
 #include "Lane.h"
@@ -17,18 +18,27 @@
 
 class Field : public Widget{
     //std::map<int, std::shared_ptr<Entity>> lanes;
-    std::vector<std::shared_ptr<Player>> players;
+
 public:
-    const std::vector<std::shared_ptr<Player>> &GetPlayers() const;
+    const std::deque<std::shared_ptr<Player>> &GetPlayers() const;
 
-    void SetPlayers(const std::vector<std::shared_ptr<Player>> &players);
+    void SetPlayers(std::deque<std::shared_ptr<Player>> &players);
 
-    const std::deque<Lane> &GetLanes() const;
+    const std::deque<std::shared_ptr<Lane>> &GetLanes() const;
 
-    void SetLanes(const std::deque<Lane> &lanes);
+    void SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes);
+
+    Field(std::uint8_t);
+
+    void MovePlayer(int);
+
+    void SetOnLane(std::shared_ptr<Player>, std::uint8_t);
+
+    std::uint8_t GetOnLane(std::shared_ptr<Player>);
 
 private:
-    std::deque<Lane> lanes; // deque because of regularly deletion and creation
+    std::deque<std::shared_ptr<Lane>> lanes; // deque because of regularly deletion and creation
+    std::deque<std::shared_ptr<Player>> players;
     void idk();
 };
 

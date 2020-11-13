@@ -234,7 +234,7 @@ public:
     /// \param states   Render states to use for drawing
     ///
     ////////////////////////////////////////////////////////////
-    void draw(std::shared_ptr<RectangleShape> drawable, const RenderStates& states = RenderStates::Default);
+    void draw(const Drawable& drawable, const RenderStates& states = RenderStates::Default);
 
     ////////////////////////////////////////////////////////////
     /// \brief Draw primitives defined by an array of vertices
