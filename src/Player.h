@@ -16,9 +16,9 @@ public:
 
     void Roll();
 
-    Player(sf::Vector3f);
+    Player(ppp::Vec3F);
 
-    void SetPosition(sf::Vector3f);
+    void SetPosition(ppp::Vec3F);
 
     void EmpCharge(std::deque<std::shared_ptr<Player>>&);
 

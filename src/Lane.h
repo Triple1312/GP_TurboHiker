@@ -8,7 +8,7 @@
 #include <deque>
 #include <memory>
 
-#include <SFML/Window.hpp>
+//#include <SFML/Window.hpp>
 
 #include "Obstacle.h"
 #include "Player.h" // in theory could have used Entity todo check if Entity better
@@ -19,17 +19,14 @@ public:
      * gaan ervanuit dat length 100 is
      *
      */
-    struct LaneChunk {
-        std::shared_ptr<sf::RectangleShape> shape;
+    struct LaneChunk : public Entity{
         Obstacle obstacle;
 
         LaneChunk();
 
-        std::uint8_t GetCenterX();
 
-        std::uint8_t GetCenterY();
 
-        sf::Vector2f GetCenter();
+        LaneChunk(ppp::Vec3F, ppp::Vec3F = ppp::Vec3F(50, 1, 100));
 
     };
 
@@ -48,10 +45,6 @@ public:
     const std::deque<std::shared_ptr<LaneChunk>> &GetLaneChunks() const;
 
     ///void SetLaneChunks(const std::deque<LaneChunk> &laneChunks);
-
-    std::uint8_t GetCenterX();
-
-    std::uint8_t GetCenterY();
 };
 
 

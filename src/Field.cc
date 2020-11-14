@@ -32,11 +32,11 @@ Field::Field(std::uint8_t lanes , double ratio ) {
         this->lanes.emplace_back(std::make_shared<Lane>(100 + i* (x+y)));
     }
     std::deque<std::shared_ptr<Player>> temp;
-    auto test = std::make_shared<Player>(sf::Vector3f(600, 400, 50));
+    auto test = std::make_shared<Player>(ppp::Vec3F(600, 400, 50));
     this->user = test;
     SetOnLane(test, 3);
     auto ent = *test.get();
-    Player a(sf::Vector3f(3,5,4));
+    Player a(ppp::Vec3F(3,5,4));
     Entity& b = a;
     if (typeid(b) == typeid(Player)) { //todo
 
@@ -58,25 +58,19 @@ void Field::MovePlayer(int i) {
     SetOnLane(p, l + i);
 }
 
-void Field::SetOnLane(std::shared_ptr<Player> p, std::uint8_t nr) {
-//    p->SetPosition(sf::Vector3f(this->lanes[nr]->GetLaneChunks()[0]->shape->getPosition().x,
-//                                this->lanes[nr]->GetLaneChunks()[0]->shape->getPosition().y,
-//                                0));
-    auto i = this->GetLanes()[nr]->GetLaneChunks()[nr]->shape->getSize();
-    auto j = this->GetLanes()[nr]->GetLaneChunks()[nr]->shape->getPosition();
-    auto test = this->GetLanes()[nr]->GetLaneChunks()[this->GetLanes().size()-1]->GetCenter();
+void Field::SetOnLane(std::shared_ptr<Player> p, std::uint8_t nr) { //todo zet niet op grond
+    auto test = this->GetLanes()[nr]->GetLaneChunks()[this->GetLanes().size()-1]->GetCenterPos();
     p->SetCenterTo(test);
 
 }
 
 std::uint8_t Field::GetOnLane(std::shared_ptr<Player> p) {
     for (int i = 0; i < this->lanes.size(); i++) {
-        if (this->lanes[i]->GetLaneChunks()[0]->shape->getPosition().x < p->GetCenter().x &&
-            p->GetCenter().x < this->lanes[i]->GetLaneChunks()[0]->shape->getPosition().x + this->lanes[i]->GetLaneChunks()[0]->shape->getSize().x) {
-
-            return i;
+        for ( auto j : this->lanes[i]->GetLaneChunks() ) {
+            if (j->Collision(p)) {
+                return i;
+            }
         }
     }
-
     return -1;
 }

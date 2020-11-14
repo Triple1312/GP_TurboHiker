@@ -16,5 +16,6 @@ void Draw::DrawLanes(std::deque<std::shared_ptr<Lane>>& lanes) {
             window.draw(*c->shape);
         }
     }
+    sf::Vector3f blub;
 }
 

@@ -23,13 +23,20 @@ elseif(WIN32)
     file(GLOB SFML_DLL "libs/SFML-2.5.1_WIN/bin/*.dll")
     file(COPY ${SFML_DLL} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+#    set(Boost_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/libs/boost_1_74_0_W/tools/cmake/include")
+#    set(Boost_LIBRARY_DIR "${CMAKE_CURRENT_LIST_DIR}/libs/boost_1_74_0_W/libs")
+#    set(Boost_USE_STATIC_LIBS OFF)
+#    set(Boost_USE_MULTITHREADED ON)
+#    set(Boost_USE_STATIC_RUNTIME OFF)
+
 endif()
 
 link_directories(SFML_LIBRARY_DIR )
 include_directories(SFML_INCLUDE_DIR )
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio)
-
+#find_package(Boost 1.50 REQUIRED COMPONENTS filesystem)
+#message(STATUS "Boost version: ${Boost_VERSION}")
 
 if(SFML_FOUND)
     message(STATUS "SFML_INCLUDE_DIR: ${SFML_INCLUDE_DIR}")
@@ -39,7 +46,7 @@ endif()
 
 #file(GLOB_RECURSE SCRF "src/*.cpp" "src/*.hpp")
 
-add_executable( GP main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/View/Draw.cc src/View/Draw.h)
+add_executable( GP main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/View/Draw.cc src/View/Draw.h src/Vector3.h)
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 

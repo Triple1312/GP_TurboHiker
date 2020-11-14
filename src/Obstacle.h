@@ -10,7 +10,7 @@
 
 class Obstacle : public Entity {
 public:
-    Obstacle(sf::Vector3i, sf::Vector3f );
+    Obstacle(ppp::Vec3F , ppp::Vec3F );
 
     Obstacle() = default;
 

@@ -141,6 +141,9 @@
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h">
 			<Option target="GP"/>
 		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Vector3.h">
+			<Option target="GP"/>
+		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.cc">
 			<Option target="GP"/>
 		</Unit>

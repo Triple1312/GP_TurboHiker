@@ -4,15 +4,17 @@
 
 #include <memory>
 
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
+#include "Vector3.h"
+
+//#include <SFML/Window.hpp>
+//#include <SFML/Graphics.hpp>
 
 enum entity_type{obstacle, player, e_item};
 
 class Entity {
 public:
-    sf::Vector3i size;
-    sf::Vector3f pos;
+    ppp::Vec3F size;
+    ppp::Vec3F pos;
 
     void MoveUp(double);
 
@@ -26,11 +28,13 @@ public:
 
     entity_type& GetEntityType();
 
-    std::shared_ptr<sf::RectangleShape> GetShape();
+//    std::shared_ptr<sf::RectangleShape> GetShape();
 
-    void SetCenterTo(sf::Vector2f);
+    void SetCenterTo(ppp::Vec3F);
 
-    sf::Vector2f GetCenter();
+    ppp::Vec3F GetCenter();
+
+    ppp::Vec3F GetCenterPos();
 
 
 
@@ -39,7 +43,7 @@ protected:
 
     void SetEntityType(entity_type);
 
-    std::shared_ptr<sf::RectangleShape> shape;
+//    std::shared_ptr<sf::RectangleShape> shape;
 
 private:
     entity_type e_t ;
