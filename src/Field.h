@@ -9,6 +9,7 @@
 #include <vector>
 #include <deque>
 #include <iostream>
+#include <typeinfo>
 
 #include "Widget.h"
 #include "Lane.h"
@@ -39,6 +40,7 @@ public:
 private:
     std::deque<std::shared_ptr<Lane>> lanes; // deque because of regularly deletion and creation
     std::deque<std::shared_ptr<Player>> players;
+    std::shared_ptr<Player> user;
     void idk();
 };
 

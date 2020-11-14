@@ -33,7 +33,14 @@ Field::Field(std::uint8_t lanes , double ratio ) {
     }
     std::deque<std::shared_ptr<Player>> temp;
     auto test = std::make_shared<Player>(sf::Vector3f(600, 400, 50));
+    this->user = test;
     SetOnLane(test, 3);
+    auto ent = *test.get();
+    Player a(sf::Vector3f(3,5,4));
+    Entity& b = a;
+    if (typeid(b) == typeid(Player)) { //todo
+
+    }
     temp.push_back(test);
     this->SetPlayers({temp});
     std::cout << "bla" << std::endl;

@@ -24,6 +24,7 @@ class MainGame {
     //std::shared_ptr<sf::RenderWindow> window;
     sf::RenderWindow& window;
 
+
     void DrawField();
 
 public:

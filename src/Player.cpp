@@ -24,3 +24,11 @@ Player::Player(sf::Vector3f pos) {
 void Player::SetPosition(sf::Vector3f pos) {
     this->shape->setPosition(pos.x, pos.y);
 }
+
+void Player::EmpCharge(std::deque<std::shared_ptr<Player>>& players) {
+    for ( std::shared_ptr<Player> i : players) {
+        if ( i.get() != this) {
+            i->speed = i->speed/2;
+        }
+    }
+}

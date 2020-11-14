@@ -30,6 +30,9 @@ void MainGame::Play() {
             else if ( sf::Event::KeyReleased == event.type && event.key.code == sf::Keyboard::D ) {
                 field->MovePlayer(1);
             }
+            else if ( sf::Event::KeyReleased == event.type && event.key.code == sf::Keyboard::E ) {
+                field->MovePlayer(1);
+            }
         }
         //window.draw(blub);
         DrawField();
