@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/DisignByContract.h
+assert.h
+-
+
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
 memory
 -
+iostream
+-
 Vector3.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Vector3.h
+DisignByContract.h
+C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/DisignByContract.h
 
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc
 Field.h
@@ -25,8 +33,6 @@ deque
 -
 iostream
 -
-typeinfo
--
 Widget.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h
 Lane.h
@@ -35,6 +41,8 @@ Entity.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h
 Player.h
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h
+DisignByContract.h
+C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/DisignByContract.h
 
 C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h
 deque

@@ -16,12 +16,20 @@ public:
 
     Vector3(T x, T y, T z);
 
+    Vector3<T> operator*(const T right);
 
-    Vector3<T> operator -(const Vector3<T>& right);
+    Vector3<T> operator/(const T right);
 
-    Vector3<T> operator +(const Vector3<T>& right);
 
-    Vector3<T> operator /(const T right);
+//    Vector3<T> operator -(const Vector3<T> right);
+//
+//    Vector3<T> operator +(const Vector3<T> right);
+//
+//    Vector3<T> operator /(const T right);
+//
+//    Vector3<T> operator *(const T right);
+//
+//    Vector3<T> operator -(const Vector3<T>& left, const Vector3<T>& right);
 
     T x, y, z;
 };
@@ -42,18 +50,33 @@ Vector3<T>::Vector3(T x, T y, T z) {
 }
 
 template<typename T>
-Vector3<T> operator-(const Vector3<T> &right) {
-    return Vector3<T>(-right.x, -right.y, -right.z);
+Vector3<T> operator-(const Vector3<T>& left, const Vector3<T>& right) {
+    return Vector3<T>(left.x - right.x, left.x - right.y, left.z - right.z);
 }
 
 template<typename T>
-Vector3<T> operator+(const Vector3<T> &right) {
-    return Vector3<T>(+right.x, +right.y, +right.z);
+Vector3<T> operator+(const Vector3<T>& left,const Vector3<T>& right) {
+    return Vector3<T>(left.x + right.x, left.y + right.y, left.z + right.z);
+}
+
+template<typename T>
+Vector3<T> operator/(const Vector3<T>& left, const T right) {
+    return Vector3<T>(left.x/right, left.y/right, left.z/right);
+}
+
+template<typename T>
+Vector3<T> operator*(const Vector3<T>& left ,const T right) {
+    return Vector3<T>(left.x *right, left.y *right, left.z *right);
 }
 
     template<typename T>
+    Vector3<T> Vector3<T>::operator*(const T right) {
+        return Vector3<T>(this->x *right, this->y *right, this->z *right);
+    }
+
+    template<typename T>
     Vector3<T> Vector3<T>::operator/(const T right) {
-        return Vector3<T>(this->x/right, this->y/right, this->z/right);
+        return Vector3<T>(this->x /right, this->y /right, this->z /right);
     }
 
 //    template<typename T>
@@ -70,6 +93,19 @@ inline Vector3<T> & operator/=(Vector3<T> &left, T right) {
 
     return left;
 }
+//    template <typename T>
+//    inline Vector3<T> operator +(const Vector3<T>& left, const Vector3<T>& right)
+//    {
+//        return Vector3<T>(left.x + right.x, left.y + right.y, left.z + right.z);
+//    }
+//
+//
+//////////////////////////////////////////////////////////////
+//    template <typename T>
+//    inline Vector3<T> operator -(const Vector3<T>& left, const Vector3<T>& right)
+//    {
+//        return Vector3<T>(left.x - right.x, left.y - right.y, left.z - right.z);
+//    }
 
 
 

@@ -76,6 +76,7 @@ CMakeFiles/GP.dir/main.cpp.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/Windo
 CMakeFiles/GP.dir/main.cpp.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/GP.dir/main.cpp.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/GP.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/GP.dir/main.cpp.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/main.cpp.obj: ../src/Entity.h
 CMakeFiles/GP.dir/main.cpp.obj: ../src/Field.h
 CMakeFiles/GP.dir/main.cpp.obj: ../src/Item.h
@@ -89,10 +90,12 @@ CMakeFiles/GP.dir/main.cpp.obj: ../src/Vector3.h
 CMakeFiles/GP.dir/main.cpp.obj: ../src/View/Draw.h
 CMakeFiles/GP.dir/main.cpp.obj: ../src/Widget.h
 
+CMakeFiles/GP.dir/src/Entity.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/Entity.cc.obj: ../src/Entity.cc
 CMakeFiles/GP.dir/src/Entity.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/Entity.cc.obj: ../src/Vector3.h
 
+CMakeFiles/GP.dir/src/Field.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Field.cc
 CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Field.h
@@ -102,11 +105,13 @@ CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Player.h
 CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Vector3.h
 CMakeFiles/GP.dir/src/Field.cc.obj: ../src/Widget.h
 
+CMakeFiles/GP.dir/src/Item.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/Item.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/Item.cc.obj: ../src/Item.cc
 CMakeFiles/GP.dir/src/Item.cc.obj: ../src/Item.h
 CMakeFiles/GP.dir/src/Item.cc.obj: ../src/Vector3.h
 
+CMakeFiles/GP.dir/src/Lane.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/Lane.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/Lane.cc.obj: ../src/Lane.cc
 CMakeFiles/GP.dir/src/Lane.cc.obj: ../src/Lane.h
@@ -188,6 +193,7 @@ CMakeFiles/GP.dir/src/MainGame.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Windo
 CMakeFiles/GP.dir/src/MainGame.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
 CMakeFiles/GP.dir/src/MainGame.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/GP.dir/src/MainGame.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/GP.dir/src/MainGame.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/MainGame.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/MainGame.cc.obj: ../src/Field.h
 CMakeFiles/GP.dir/src/MainGame.cc.obj: ../src/Item.h
@@ -206,11 +212,13 @@ CMakeFiles/GP.dir/src/Menu.cc.obj: ../src/Menu.cc
 CMakeFiles/GP.dir/src/Menu.cc.obj: ../src/Menu.h
 CMakeFiles/GP.dir/src/Menu.cc.obj: ../src/Widget.h
 
+CMakeFiles/GP.dir/src/Obstacle.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/Obstacle.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/Obstacle.cc.obj: ../src/Obstacle.cc
 CMakeFiles/GP.dir/src/Obstacle.cc.obj: ../src/Obstacle.h
 CMakeFiles/GP.dir/src/Obstacle.cc.obj: ../src/Vector3.h
 
+CMakeFiles/GP.dir/src/Player.cpp.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/Player.cpp.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/Player.cpp.obj: ../src/Player.cpp
 CMakeFiles/GP.dir/src/Player.cpp.obj: ../src/Player.h
@@ -294,6 +302,7 @@ CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Wind
 CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/Window.hpp
 CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../libs/SFML-2.5.1_WIN/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../src/DisignByContract.h
 CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../src/Entity.h
 CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../src/Item.h
 CMakeFiles/GP.dir/src/View/Draw.cc.obj: ../src/Lane.h

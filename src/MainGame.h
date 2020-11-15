@@ -21,14 +21,17 @@ class MainGame {
     std::unique_ptr<Field> field;
     std::unique_ptr<Scoreboard> board;
     std::unique_ptr<Draw> draw;
-    //std::shared_ptr<sf::RenderWindow> window;
+
     sf::RenderWindow& window;
 
+    ppp::Vec3F space = ppp::Vec3F(7, 7, 7);
 
     void DrawField();
 
 public:
     MainGame(sf::RenderWindow& i_window);
+
+    MainGame();
 
     void Play();
 

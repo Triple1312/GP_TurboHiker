@@ -3,8 +3,10 @@
 #define GP_ENTITY_H
 
 #include <memory>
+#include <iostream>
 
 #include "Vector3.h"
+#include "DisignByContract.h"
 
 //#include <SFML/Window.hpp>
 //#include <SFML/Graphics.hpp>
@@ -28,15 +30,15 @@ public:
 
     entity_type& GetEntityType();
 
-//    std::shared_ptr<sf::RectangleShape> GetShape();
-
-    void SetCenterTo(ppp::Vec3F);
+    void SetPosTo(ppp::Vec3F);
 
     ppp::Vec3F GetCenter();
 
     ppp::Vec3F GetCenterPos();
 
+    void SetCenterPos(ppp::Vec3F p);
 
+    ppp::Vec3F GetPos();
 
 protected:
     Entity() = default; //making it impossible to create which means e_t is never None
@@ -47,10 +49,6 @@ protected:
 
 private:
     entity_type e_t ;
-
-
-
-
 
 
 };

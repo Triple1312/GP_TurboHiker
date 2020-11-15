@@ -1,0 +1,31 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/main.cpp" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/main.cpp.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Entity.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Field.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Item.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Lane.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/MainGame.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Menu.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Obstacle.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.cpp" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Player.cpp.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Scoreboard.cc.obj"
+  "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.cc" "C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug-coverage/CMakeFiles/NoUI.dir/src/Widget.cc.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../SFML_INCLUDE_DIR"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

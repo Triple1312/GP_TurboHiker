@@ -4,10 +4,6 @@
 
 #include "Field.h"
 
-void Field::idk() {
-
-}
-
 const std::deque<std::shared_ptr<Player>> &Field::GetPlayers() const {
     return players;
 }
@@ -24,23 +20,21 @@ void Field::SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes) {
     Field::lanes = lanes;
 }
 
-Field::Field(std::uint8_t lanes , double ratio ) {
-    float y = 600 /(lanes  / ratio + lanes-1);
-    float x = y / ratio;
+Field::Field(ppp::Vec3F space, std::uint8_t lanes , double ratio ) {
+    float z = space.z /(lanes  / ratio + lanes-1);
+    float x = z / ratio;
+
     for (int i = 0; i < lanes ; i++ ) {
-        auto meh = 100 + i* (x+y);
-        this->lanes.emplace_back(std::make_shared<Lane>(100 + i* (x+y)));
+        auto meh = i* (x+z);
+        this->lanes.emplace_back(std::make_shared<Lane>( i* (x+z), space));
     }
     std::deque<std::shared_ptr<Player>> temp;
-    auto test = std::make_shared<Player>(ppp::Vec3F(600, 400, 50));
+    auto test = std::make_shared<Player>(this->lanes[4]->GetLaneChunks()[0]->GetPos());//, this->lanes[3]->GetLaneChunks()[0]->size * 0.75);
+    //test->SetCenterPos(this->lanes[4]->GetLaneChunks()[0]->GetCenterPos());
     this->user = test;
     SetOnLane(test, 3);
     auto ent = *test.get();
-    Player a(ppp::Vec3F(3,5,4));
-    Entity& b = a;
-    if (typeid(b) == typeid(Player)) { //todo
 
-    }
     temp.push_back(test);
     this->SetPlayers({temp});
     std::cout << "bla" << std::endl;
@@ -59,8 +53,11 @@ void Field::MovePlayer(int i) {
 }
 
 void Field::SetOnLane(std::shared_ptr<Player> p, std::uint8_t nr) { //todo zet niet op grond
+    REQUIRE(p.get() != nullptr, "Tried to set an Player that doesnt exist on a lane ");
+    REQUIRE(this->lanes.size() > nr, "Tried to set on a lane that doesnt exist");
+    REQUIRE(0 <= nr, "Tried to set player on a lane with negative nr");
     auto test = this->GetLanes()[nr]->GetLaneChunks()[this->GetLanes().size()-1]->GetCenterPos();
-    p->SetCenterTo(test);
+    p->SetPosition(this->GetLanes()[nr]->GetLaneChunks()[0]->GetPos());
 
 }
 
@@ -72,5 +69,6 @@ std::uint8_t Field::GetOnLane(std::shared_ptr<Player> p) {
             }
         }
     }
+    ENSURE(false, "player is not found on any lane");
     return -1;
 }

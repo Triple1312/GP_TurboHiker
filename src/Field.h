@@ -9,17 +9,15 @@
 #include <vector>
 #include <deque>
 #include <iostream>
-#include <typeinfo>
 
 #include "Widget.h"
 #include "Lane.h"
 #include "Entity.h"
 #include "Player.h"
+#include "DisignByContract.h"
 
 
 class Field : public Widget{
-    //std::map<int, std::shared_ptr<Entity>> lanes;
-
 public:
     const std::deque<std::shared_ptr<Player>> &GetPlayers() const;
 
@@ -29,7 +27,7 @@ public:
 
     void SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes);
 
-    Field(std::uint8_t, double ratio = 0.2);
+    Field(ppp::Vec3F ,std::uint8_t, double ratio = 0.2);
 
     void MovePlayer(int);
 

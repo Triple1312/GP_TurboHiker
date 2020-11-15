@@ -46,7 +46,9 @@ endif()
 
 #file(GLOB_RECURSE SCRF "src/*.cpp" "src/*.hpp")
 
-add_executable( GP main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/View/Draw.cc src/View/Draw.h src/Vector3.h)
+add_executable( GP main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/View/Draw.cc src/View/Draw.h src/Vector3.h src/DisignByContract.h)
+add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
+
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 

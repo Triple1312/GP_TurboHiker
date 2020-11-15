@@ -16,7 +16,7 @@ public:
 
     void Roll();
 
-    Player(ppp::Vec3F);
+    Player(ppp::Vec3F ,ppp::Vec3F = ppp::Vec3F(40.f/60.f, 80.f/60.f, 25.f/60.f));
 
     void SetPosition(ppp::Vec3F);
 

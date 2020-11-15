@@ -19,6 +19,7 @@
 #include "../Item.h"
 #include "../Player.h"
 #include "../Lane.h"
+#include "../Vector3.h"
 
 class Draw {
 public:
@@ -33,6 +34,10 @@ public:
 
 private:
     sf::RenderWindow& window;
+
+    float scale = 60;
+
+    sf::Vector3f blub;
 
 };
 

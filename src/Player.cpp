@@ -12,17 +12,14 @@ void Player::Roll() {
     this->height = 40;
 }
 
-Player::Player( ppp::Vec3F pos) {
-    this->size = ppp::Vec3F (50, 70, 30);
+Player::Player( ppp::Vec3F pos, ppp::Vec3F size) {
+    this->size = size;
     this->SetEntityType(player);
     this->pos = pos;
-//    this->shape = std::make_shared<sf::RectangleShape>(sf::Vector2f(50.f, 70.f));
-//    this->shape->setFillColor(sf::Color::Blue);
-//    this->shape->setPosition(pos.x, pos.y);
 }
 
 void Player::SetPosition(ppp::Vec3F pos) {
-    ///this->shape->setPosition(pos.x, pos.y);
+    this->pos = pos;
 }
 
 void Player::EmpCharge(std::deque<std::shared_ptr<Player>>& players) {

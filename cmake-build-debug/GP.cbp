@@ -63,6 +63,50 @@
 					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="NoUI">
+				<Option output="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/NoUI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 NoUI"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NoUI/fast">
+				<Option output="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/NoUI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 NoUI/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug"/>
 				<Option type="4"/>
@@ -86,63 +130,87 @@
 		</Build>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/main.cpp">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
+		</Unit>
+		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/DisignByContract.h">
+			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Entity.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Field.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Item.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Lane.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/MainGame.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Menu.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Obstacle.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.cpp">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Player.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Scoreboard.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Vector3.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/View/Draw.cc">
 			<Option target="GP"/>
@@ -152,9 +220,11 @@
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.cc">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/src/Widget.h">
 			<Option target="GP"/>
+			<Option target="NoUI"/>
 		</Unit>
 		<Unit filename="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
