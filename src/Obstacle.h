@@ -10,7 +10,7 @@
 
 class Obstacle : public Entity {
 public:
-    Obstacle(ppp::Vec3F , ppp::Vec3F );
+    Obstacle(glm::vec4 , glm::vec4 );
 
     Obstacle() = default;
 

@@ -12,13 +12,13 @@ void Player::Roll() {
     this->height = 40;
 }
 
-Player::Player( ppp::Vec3F pos, ppp::Vec3F size) {
+Player::Player( glm::vec4 pos, glm::vec4 size) {
     this->size = size;
     this->SetEntityType(player);
     this->pos = pos;
 }
 
-void Player::SetPosition(ppp::Vec3F pos) {
+void Player::SetPosition(glm::vec4 pos) {
     this->pos = pos;
 }
 

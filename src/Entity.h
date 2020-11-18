@@ -4,9 +4,13 @@
 
 #include <memory>
 #include <iostream>
+#include <deque>
 
-#include "Vector3.h"
+//#include "Vector3.h"
 #include "DisignByContract.h"
+#include "../libs/glm-0.9.9.8/glm/glm/vec4.hpp"
+#include "../libs/glm-0.9.9.8/glm/glm/matrix.hpp"
+#include "../libs/glm-0.9.9.8/glm/glm/gtx/transform.hpp"
 
 //#include <SFML/Window.hpp>
 //#include <SFML/Graphics.hpp>
@@ -15,8 +19,8 @@ enum entity_type{obstacle, player, e_item};
 
 class Entity {
 public:
-    ppp::Vec3F size;
-    ppp::Vec3F pos;
+    glm::vec4 size;
+    glm::vec4 pos;
 
     void MoveUp(double);
 
@@ -30,15 +34,19 @@ public:
 
     entity_type& GetEntityType();
 
-    void SetPosTo(ppp::Vec3F);
+    void SetPosTo(glm::vec4);
 
-    ppp::Vec3F GetCenter();
+    glm::vec4 GetCenter();
 
-    ppp::Vec3F GetCenterPos();
+    glm::vec4 GetCenterPos();
 
-    void SetCenterPos(ppp::Vec3F p);
+    void SetCenterPos(glm::vec4 p);
 
-    ppp::Vec3F GetPos();
+    glm::vec4 GetPos();
+
+    std::deque<glm::vec4> GetAllPoints();
+
+    std::deque<glm::vec4> GetFace(std::uint8_t);
 
 protected:
     Entity() = default; //making it impossible to create which means e_t is never None

@@ -24,11 +24,11 @@ public:
 
         LaneChunk();
 
-        LaneChunk(ppp::Vec3F, ppp::Vec3F = ppp::Vec3F(50.f/60.f, 200.f/60.f, 100.f/60.f));
+        LaneChunk(glm::vec4, glm::vec4 = glm::vec4(100.f/60.f, 200.f/60.f, 100.f/60.f, 1));
 
     };
 
-    Lane(double, ppp::Vec3F);
+    Lane(double, glm::vec4, double);
 
 private:
     int height;

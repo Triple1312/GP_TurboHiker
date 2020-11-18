@@ -16,9 +16,9 @@ public:
 
     void Roll();
 
-    Player(ppp::Vec3F ,ppp::Vec3F = ppp::Vec3F(40.f/60.f, 80.f/60.f, 25.f/60.f));
+    Player(glm::vec4 ,glm::vec4 = glm::vec4(40.f/60.f, 80.f/60.f, 25.f/60.f, 0));
 
-    void SetPosition(ppp::Vec3F);
+    void SetPosition(glm::vec4);
 
     void EmpCharge(std::deque<std::shared_ptr<Player>>&);
 

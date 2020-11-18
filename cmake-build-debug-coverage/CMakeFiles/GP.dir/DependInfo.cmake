@@ -22,6 +22,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../SFML_INCLUDE_DIR"
+  "../libs/glm-0.9.9.8/glm"
   "../libs/SFML-2.5.1_WIN/include"
   )
 

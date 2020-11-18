@@ -4,7 +4,7 @@
 
 #include "Obstacle.h"
 
-Obstacle::Obstacle(ppp::Vec3F s, ppp::Vec3F p) {
+Obstacle::Obstacle(glm::vec4 s, glm::vec4 p) {
     this->SetEntityType(obstacle);
     this->size = s;
     this->pos = p;

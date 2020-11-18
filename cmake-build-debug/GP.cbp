@@ -25,6 +25,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/libs/glm-0.9.9.8/glm"/>
 					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/libs/SFML-2.5.1_WIN/include"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
@@ -48,6 +49,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/libs/glm-0.9.9.8/glm"/>
 					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/libs/SFML-2.5.1_WIN/include"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
@@ -71,6 +73,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/libs/glm-0.9.9.8/glm"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
@@ -93,6 +96,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/libs/glm-0.9.9.8/glm"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>

@@ -27,7 +27,7 @@ public:
 
     void SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes);
 
-    Field(ppp::Vec3F ,std::uint8_t, double ratio = 0.2);
+    Field(glm::vec4 ,std::uint8_t, double ratio = 0.2);
 
     void MovePlayer(int);
 

@@ -10,6 +10,7 @@
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/OpenGL.hpp>
 
 #include "Field.h"
 #include "Scoreboard.h"
@@ -24,7 +25,7 @@ class MainGame {
 
     sf::RenderWindow& window;
 
-    ppp::Vec3F space = ppp::Vec3F(7, 7, 7);
+    glm::vec4 space = glm::vec4(10, 10, 10, 0);
 
     void DrawField();
 
