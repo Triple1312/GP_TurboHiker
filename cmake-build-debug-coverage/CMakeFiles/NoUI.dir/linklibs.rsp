@@ -1,1 +1,0 @@
-  -L"C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/SFML_LIBRARY_DIR"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

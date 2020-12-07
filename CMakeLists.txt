@@ -1,47 +1,53 @@
 
 project(GP)
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.12)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
 
-if(APPLE)
-    set(SFML_INCLUDE_DIR "libs/SFML-2.5.1-MAC/include")
-    set( SFML_LIBRARY_DIR "libs/SFML-2.5.1-MAC/build/lib")
+add_subdirectory(dependencies )
+include_directories(src)
 
-elseif (UNIX)
-    set(SFML_INCLUDE_DIR "libs/SFML-2.5.1/include/")
-    set(SFML_LIBRARY_DIR "libs/SFML-2.5.1/lib/")
-    set(SFML_DIR "libs/SFML-2.5.1/lib/cmake/SFML/")
-    set(SFML_SHARE "libs/SFML-2.5.1/share/")
+include( dependencies/CmakeLists.txt)
 
-elseif(WIN32)
-    set(SFML_INCLUDE_DIR "libs/SFML-2.5.1_WIN/include/")
-    set(SFML_DIR "${CMAKE_CURRENT_LIST_DIR}/libs/SFML-2.5.1_WIN/lib/cmake/SFML")
-    set(SFML_LIBRARY_DIR "libs/SFML-2.5.1_WIN/lib/")
-    file(GLOB SFML_DLL "libs/SFML-2.5.1_WIN/bin/*.dll")
-    file(COPY ${SFML_DLL} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+set(view src/view/Entity.cpp src/view/Entity.h
+        src/view/Draw.cc src/view/Draw.h
+        src/view/EntityFactory.h
+        src/view/Obstacle.cpp src/view/Obstacle.h
+        src/view/Player.cpp src/view/Player.h
+        src/view/Lane.cpp src/view/Lane.h
+        src/view/Drawable.hpp
+        src/view/World.cpp src/view/World.h
+        src/view/Camera.hpp src/view/Drawable.cpp)
 
-endif()
 
-link_directories(SFML_LIBRARY_DIR )
-include_directories(SFML_INCLUDE_DIR "libs/glm-0.9.9.8/glm")
+#set(controller src/model/MainGame.cc src/model/MainGame.h src/Controller.cpp src/Controller.h)
 
-find_package(SFML 2.5.1 COMPONENTS system window graphics network audio)
+set(model src/model/Entity.cc src/model/Entity.h
+        src/model/Player.cpp src/model/Player.h
+        src/model/Item.h src/model/Item.cc
+        src/model/Scoreboard.cc src/model/Scoreboard.h
+        src/model/World.cc src/model/World.h
+        src/model/Obstacle.cc src/model/Obstacle.h
+        src/model/Menu.cc src/model/Menu.h
+        src/model/Lane.cc src/model/Lane.h
+        src/model/Widget.cc src/model/Widget.h
+        src/model/EntityFactory.hh src/model/PlayerFactory.hh)
 
-if(SFML_FOUND)
-    message(STATUS "SFML_INCLUDE_DIR: ${SFML_INCLUDE_DIR}")
-    message(STATUS "SFML_LIBRARIES: ${SFML_LIBRARIES}")
-    message(STATUS "SFML_VERSION: ${SFML_VERSION}")
-endif()
+set(engine
+        dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp
+        dependencies/engine/engine/Renderer.h dependencies/engine/engine/Renderer.cpp
+        dependencies/engine/engine/VertexBuffer.h dependencies/engine/engine/VertexBuffer.cpp
+        dependencies/engine/engine/IndexBuffer.h dependencies/engine/engine/IndexBuffer.cpp
+        dependencies/engine/engine/VertexArray.h dependencies/engine/engine/VertexArray.cpp
+        dependencies/engine/engine/VertexBufferLayout.h
+        )
 
-#file(GLOB_RECURSE SCRF "src/*.cpp" "src/*.hpp")
 
-add_executable( GP main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/View/Draw.cc src/View/Draw.h src/Vector3.h src/DisignByContract.h)
-add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/Field.cc src/Field.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
+add_executable( GP main.cpp  ${view} ${controller} ${engine} ${model} src/DisignByContract.h Utils/Random.hpp )
+#add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 
-target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system )
+target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system -lOpengl32 -lglew32)

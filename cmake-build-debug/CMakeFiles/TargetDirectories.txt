@@ -1,4 +1,0 @@
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/GP.dir
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/NoUI.dir
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Phili/Universiteit/20-21/Gevorderd Programmeren/GP_TurboHiker/cmake-build-debug/CMakeFiles/rebuild_cache.dir

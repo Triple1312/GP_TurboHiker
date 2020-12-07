@@ -3,10 +3,10 @@ graph TD
   Maingame --> View
   Maingame --> C
   subgraph Model
-  C{Widget} --> Field
+  C{Widget} --> World
   C --> Menu
   C --> Scoreboard
-  Field --> E
+  World --> E
   E{Entity} --> Player
   E --> Obstacle
   E --> Item
