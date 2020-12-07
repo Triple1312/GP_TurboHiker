@@ -23,7 +23,7 @@ struct LaneChunk : public Entity {
      */
     LaneChunk(glm::vec3 pos, glm::vec3 size);
 
-    virtual void Display(){}
+    virtual void Display(){ std::cout << "ni wa ik wil" << std::endl;}
 
     LaneChunk() = default;
 
@@ -42,13 +42,13 @@ public:
      * @param the amount of lanechunks
      * @param the
      */
-    Lane(glm::vec3, double, glm::vec3);
+//    Lane(glm::vec3, double, glm::vec3);
 
     Lane(glm::vec3, glm::vec3);
 
     Lane() = default;
 
-    virtual void Display();
+    void Display() override;
 
 private:
     /*
@@ -57,7 +57,7 @@ private:
      * elke tick waarop een lanechunk uit beeld komt wordt er een nieuwe gemaakt
      * moet random obstacle soort hebben
      */
-    std::deque<LaneChunk> lane_chunks;
+    std::deque<std::shared_ptr<LaneChunk>> lane_chunks;
 public:
     //const std::deque<std::shared_ptr<LaneChunk>> &GetLaneChunks() const;
 

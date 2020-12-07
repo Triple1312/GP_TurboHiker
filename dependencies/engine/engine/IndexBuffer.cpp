@@ -5,11 +5,11 @@
 IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count) // todo make unsigned char if needed
         : m_Count(count)
 {
-    ASSERT(sizeof(unsigned int) == sizeof(GLuint));
+    //ASSERT(sizeof(unsigned int) == sizeof(GLuint));
 
-    GLCall(glGenBuffers(1, &m_RendererID)); // Generate a single buffer
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID)); // Select the buffer to be drawn
-    GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW)); // Add the data to the buffer
+    glGenBuffers(1, &m_RendererID); // Generate a single buffer
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID); // Select the buffer to be drawn
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW); // Add the data to the buffer
 }
 
 IndexBuffer::IndexBuffer() {
@@ -40,23 +40,23 @@ IndexBuffer::IndexBuffer() {
             4, 7, 0
     };
 
-    GLCall(glGenBuffers(1, &m_RendererID)); // Generate a single buffer
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID)); // Select the buffer to be drawn
-    GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_Count * sizeof(unsigned int), data, GL_STATIC_DRAW)); // Add the data to the buffer
+    glGenBuffers(1, &m_RendererID); // Generate a single buffer
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID); // Select the buffer to be drawn
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_Count * sizeof(unsigned int), data, GL_STATIC_DRAW); // Add the data to the buffer
 }
 
 IndexBuffer::~IndexBuffer()
 {
-    GLCall(glDeleteBuffers(1, &m_RendererID));
+    glDeleteBuffers(1, &m_RendererID);
 }
 
 void IndexBuffer::Bind() const
 {
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID);
 }
 
 void IndexBuffer::Unbind() const
 {
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 

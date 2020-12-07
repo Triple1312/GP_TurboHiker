@@ -5,10 +5,11 @@ cmake_minimum_required(VERSION 3.12)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_subdirectory(dependencies )
-include_directories(src)
+add_subdirectory(dependencies/glew-2.1.0/build/cmake )
+include_directories(src dependencies/glew-2.1.0/include)
 
-include( dependencies/CmakeLists.txt)
+
+include( ${CMAKE_CURRENT_LIST_DIR}/dependencies/CmakeLists.txt)
 
 set(view src/view/Entity.cpp src/view/Entity.h
         src/view/Draw.cc src/view/Draw.h
@@ -44,10 +45,10 @@ set(engine
         )
 
 
-add_executable( GP main.cpp  ${view} ${controller} ${engine} ${model} src/DisignByContract.h Utils/Random.hpp )
+add_executable( GP main.cpp  ${view} ${controller} ${engine} ${model} src/DisignByContract.h Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c )
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 
-target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system -lOpengl32 -lglew32)
+target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system  -lGL)

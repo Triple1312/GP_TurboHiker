@@ -30,8 +30,12 @@ public:
     MakeLaneChunk(glm::vec3 pos, glm::vec3 size) override {
         return std::make_shared<view::LaneChunk>(pos, size); }
 
+
+    static void MakeInstance() { instance = new EntityFactory;}
+
 private:
-    EntityFactory(){instance = new EntityFactory;}
+
+    EntityFactory() = default;
 
 };
 
@@ -59,7 +63,6 @@ private:
 //} // namespace view
 
 }
-logic::EntityFactory* logic::EntityFactory::instance = nullptr;
 
 
 #endif //GP_ENTITYFACTORY_H

@@ -5,7 +5,7 @@
 #ifndef IDK_VERTEXBUFFERLAYOUT_H
 #define IDK_VERTEXBUFFERLAYOUT_H
 #include <vector>
-#include <GL\glew.h>
+#include <GL/glew.h>
 
 #include "Renderer.h"
 
@@ -24,7 +24,7 @@ struct VertexBufferElement
             case GL_UNSIGNED_BYTE:  return 1;
         }
 
-        ASSERT(false);
+        //ASSERT(false);
         return 0;
     }
 };

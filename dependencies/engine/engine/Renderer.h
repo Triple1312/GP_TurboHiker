@@ -11,8 +11,8 @@
 #include "IndexBuffer.h"
 #include "Shader.h"
 
-#define ASSERT(x) if (!(x)) __debugbreak(); // Break debugging if x returns false
-#define GLCall(x) GLClearError(); x; ASSERT(GLLogCall(#x, __FILE__, __LINE__)); // Wrap a function with an error boundary
+//#define ASSERT(x) if (!(x)) __debugbreak(); // Break debugging if x returns false
+//#define GLCall(x) GLClearError(); x; ASSERT(GLLogCall(#x, __FILE__, __LINE__)); // Wrap a function with an error boundary
 
 /**
 Clear all (unrelated) previous errors.

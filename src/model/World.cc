@@ -71,7 +71,8 @@ std::uint8_t logic::World::GetOnLane(std::shared_ptr<Player> p) {
 
 void logic::World::Display() {
     int l;
-    for ( auto i : this->lanes) {
+    for ( auto& i : this->lanes) {
+        std::cout << " glss " << std::flush;
         i->Display();
     }
 

@@ -17,9 +17,9 @@ namespace logic {
         ~EntityFactory(){ delete instance;}
 
         static logic::EntityFactory* Get() {
-            if (!instance) {
-                instance  = new EntityFactory;
-            }
+//            if (!instance) {
+//                instance  = new EntityFactory;
+//            }
             return instance;
         }
 
@@ -29,17 +29,16 @@ namespace logic {
 
         virtual std::shared_ptr<logic::Obstacle> MakeObstacle() {  }
 
-        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) {  }
+        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) {  return nullptr;}
 
         virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos, glm::vec3 size) {  }
 
-
-
     protected:
+
+        static logic::EntityFactory* instance ;
 
         EntityFactory() = default;
 
-        static logic::EntityFactory* instance;
     };
 
 //model::Entity EntityFactory::MakeEntity(const EntityType &type) {

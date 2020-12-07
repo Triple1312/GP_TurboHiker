@@ -3,8 +3,8 @@
 #include "Lane.h"
 
 view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size){
-    //this->ibo = std::make_unique<IndexBuffer>();
-    //this->vbo_v = std::make_unique<VertexBuffer>(this->points, 3 * 8 * sizeof(float));
+    this->ibo = std::make_unique<IndexBuffer>();
+    this->vbo_v = std::make_unique<VertexBuffer>(this->points, 3 * 8 * sizeof(float));
 
     float colors[] = {
             // bottom
@@ -19,17 +19,17 @@ view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size){
             1.0f, 1.0f, 1.0f  // 7
     };
 
-    //this->vbo_c = std::make_unique<VertexBuffer>(colors, 3 * 8 * sizeof(float));
+    this->vbo_c = std::make_unique<VertexBuffer>(colors, 3 * 8 * sizeof(float));
 
     VertexBufferLayout vbl_v;
     VertexBufferLayout vbl_c;
     vbl_v.Push(3);
     vbl_c.Push(3);
 
-    //this->vao = std::make_unique<VertexArray>();
+    this->vao = std::make_unique<VertexArray>();
 
-    //this->vao->AddBuffer(*vbo_v, vbl_v);
-    //this->vao->AddBuffer(*vbo_c, vbl_c);
+    this->vao->AddBuffer(*vbo_v, vbl_v);
+    this->vao->AddBuffer(*vbo_c, vbl_c);
     std::string vertex_s = "#version 330 core"
                            "layout(location = 0) in vec3 position;"
                            "layout(location = 1) in vec3 color;"
@@ -46,5 +46,5 @@ view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size){
                              "void main() {"
                              "    Fragcolor = aColor;"
                              "}";
-    //this->shader = std::make_shared<Shader>("src/view/entity.shader");
+    this->shader = std::make_shared<Shader>("src/view/entity.shader");
 }

@@ -26,7 +26,7 @@ bool GLLogCall(const char* function, const char* file, int line)
 
 void Renderer::Clear() const
 {
-    GLCall(glClear(GL_COLOR_BUFFER_BIT));
+    glClear(GL_COLOR_BUFFER_BIT);
 }
 
 void Renderer::Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const
@@ -37,5 +37,5 @@ void Renderer::Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& 
     ib.Bind();
 
     // Draw the current selected buffer
-    GLCall(glDrawElements(GL_TRIANGLES, ib.GetCount(), GL_UNSIGNED_INT, nullptr)); // nullptr, because the indices are bound to the current buffer: GL_ELEMENT_ARRAY_BUFFER
+    glDrawElements(GL_TRIANGLES, ib.GetCount(), GL_UNSIGNED_INT, nullptr); // nullptr, because the indices are bound to the current buffer: GL_ELEMENT_ARRAY_BUFFER
 }
