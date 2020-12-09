@@ -29,7 +29,7 @@ namespace logic {
 
         virtual std::shared_ptr<logic::Obstacle> MakeObstacle() {  }
 
-        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) {  return nullptr;}
+        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) {  LaneChunk(pos, size);}
 
         virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos, glm::vec3 size) {  }
 

@@ -27,14 +27,11 @@ logic::World::World(std::uint8_t lanes) {
     for (int i = 0; i < lanes; i++) {
         this->lanes.emplace_back(
                 EntityFactory::Get()->MakeLane(glm::vec3(2+2*i, 0, 0 ),
-                                               glm::vec3(2, 1, 2 ) ) );
+                                               glm::vec3(2, 1, 100 ) ) );
     }
 
     this->user = EntityFactory::Get()->MakeUser();
     this->lanes;
-
-
-
 }
 
 void logic::World::MovePlayer(int i) {

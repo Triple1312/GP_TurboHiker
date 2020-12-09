@@ -172,7 +172,7 @@ logic::Entity::Entity(glm::vec3 pos, glm::vec3 size) {
     points[7] = pos.y - size.y/2;
     points[8] = pos.z + size.z/2;
 
-    points[9] = pos.x + size.x/2;
+    points[9] = pos.x - size.x/2;
     points[10] = pos.y - size.y/2;
     points[11] = pos.z + size.z/2;
 
@@ -188,7 +188,7 @@ logic::Entity::Entity(glm::vec3 pos, glm::vec3 size) {
     points[19] = pos.y + size.y/2;
     points[20] = pos.z + size.z/2;
 
-    points[21] = pos.x + size.x/2;
+    points[21] = pos.x - size.x/2;
     points[22] = pos.y + size.y/2;
     points[23] = pos.z + size.z/2;
 }
@@ -206,7 +206,7 @@ void logic::Entity::SetPosition(glm::vec3 pos, glm::vec3 size) {
     points[7] = pos.y - size.y/2;
     points[8] = pos.z + size.z/2;
 
-    points[9] = pos.x + size.x/2;
+    points[9] = pos.x - size.x/2;
     points[10] = pos.y - size.y/2;
     points[11] = pos.z + size.z/2;
 
@@ -222,7 +222,7 @@ void logic::Entity::SetPosition(glm::vec3 pos, glm::vec3 size) {
     points[19] = pos.y + size.y/2;
     points[20] = pos.z + size.z/2;
 
-    points[21] = pos.x + size.x/2;
+    points[21] = pos.x - size.x/2;
     points[22] = pos.y + size.y/2;
     points[23] = pos.z + size.z/2;
 }

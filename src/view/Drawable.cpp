@@ -20,7 +20,7 @@ view::Drawable::Drawable(void* verices, unsigned int v_count, void* colors, unsi
 void view::Drawable::Draw() {
     this->shader->SetUniformMat4f("view", Cam::Get()->view);
     this->shader->SetUniformMat4f("projection", Cam::Get()->projection);
-    Renderer::Get().Draw(*vao, *ibo, *shader);
+    Renderer::Get()->Draw(*vao, *ibo, *shader);
 }
 
 

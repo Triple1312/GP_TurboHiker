@@ -34,12 +34,16 @@ public:
     void Clear() const;
     void Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const;
 
-    static Renderer &Get() {
-        static Renderer instance;
+    static Renderer *Get() {
+        if(!instance) {
+            instance = new Renderer;
+        }
         return instance;
     }
 
 private:
     Renderer() = default;
+
+    static Renderer* instance;
 };
 #endif //IDK_RENDERER_H

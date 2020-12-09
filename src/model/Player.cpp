@@ -21,6 +21,6 @@ void logic::Player::EmpCharge(std::deque<std::shared_ptr<Player>>& players) {
 }
 
 logic::User::User() : logic::Player(glm::vec3(0, 1, 0),
-                                    glm::vec3(0.5, 1.7, 0.3)){
+                                    glm::vec3(1, 1, 1)){
 
 }

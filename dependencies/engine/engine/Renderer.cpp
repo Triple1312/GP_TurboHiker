@@ -6,6 +6,8 @@
 
 #include <iostream>
 
+Renderer* Renderer::instance = 0;
+
 void GLClearError()
 {
     while (glGetError() != GL_NO_ERROR);

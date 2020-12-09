@@ -21,7 +21,7 @@ logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) {
 }
 
 void logic::Lane::Display() {
-    std::cout << "bjdf";
+    //std::cout << "bjdf";
     for ( auto &i : this->lane_chunks ) {
         std::cout << "bjdf";
         i->Display();

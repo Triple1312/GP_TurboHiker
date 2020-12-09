@@ -13,7 +13,7 @@ IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count) // todo m
 }
 
 IndexBuffer::IndexBuffer() {
-    m_Count = 24;
+    m_Count = 36;
     unsigned int data[] = {
             // Bottom
             3, 2, 0,
