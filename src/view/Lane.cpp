@@ -2,7 +2,7 @@
 
 #include "Lane.h"
 
-view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size){
+view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size) : logic::LaneChunk(pos, size){
     this->ibo = std::make_unique<IndexBuffer>();
     this->vbo_v = std::make_unique<VertexBuffer>(this->points, 3 * 8 * sizeof(float));
 

@@ -24,7 +24,8 @@ set(view src/view/Entity.cpp src/view/Entity.h
 
 #set(controller src/model/MainGame.cc src/model/MainGame.h src/Controller.cpp src/Controller.h)
 
-set(model src/model/Entity.cc src/model/Entity.h
+add_library(model STATIC
+        src/model/Entity.cc src/model/Entity.h
         src/model/Player.cpp src/model/Player.h
         src/model/Item.h src/model/Item.cc
         src/model/Scoreboard.cc src/model/Scoreboard.h
@@ -35,7 +36,7 @@ set(model src/model/Entity.cc src/model/Entity.h
         src/model/Widget.cc src/model/Widget.h
         src/model/EntityFactory.hh src/model/PlayerFactory.hh)
 
-set(engine
+add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp
         dependencies/engine/engine/Renderer.h dependencies/engine/engine/Renderer.cpp
         dependencies/engine/engine/VertexBuffer.h dependencies/engine/engine/VertexBuffer.cpp
@@ -45,10 +46,12 @@ set(engine
         )
 
 
-add_executable( GP main.cpp  ${view} ${controller} ${engine} ${model} src/DisignByContract.h Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c )
+add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c )
+add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c)
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 
-target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system  -lGL)
+target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system  -lGL engine model)
+target_link_libraries(GP_debug sfml-audio sfml-graphics sfml-window sfml-system  -lGL engine model)

@@ -1,7 +1,3 @@
-//
-// Created by Phili on 06/12/2020.
-//
-
 #ifndef GP_CAMERA_HPP
 #define GP_CAMERA_HPP
 #include <glm/glm.hpp>

@@ -66,10 +66,10 @@ int main() {
     float ypos = 600.f/2;
 
 
-    window->setFramerateLimit(27);
+    window->setFramerateLimit(60);
     //blub.setFillColor(sf::Color::Magenta);
     while (window->isOpen()) {
-        glClearColor(0.9,0.6,0.0,1.0);
+        glClearColor(0.9,0.7,0.0,1.0);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 

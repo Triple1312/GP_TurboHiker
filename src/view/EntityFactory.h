@@ -14,6 +14,8 @@ namespace view {
 class EntityFactory : public logic::EntityFactory {
 public:
 
+    unsigned int lanechunknr= 0;
+
     std::shared_ptr<logic::Obstacle> MakeObstacle() override {
         return std::make_shared<view::Obstacle>(); }
 
@@ -28,6 +30,8 @@ public:
 
     std::shared_ptr<logic::LaneChunk>
     MakeLaneChunk(glm::vec3 pos, glm::vec3 size) override {
+        std::cout << "made lanechunk " << lanechunknr << std::endl;
+        lanechunknr++;
         return std::make_shared<view::LaneChunk>(pos, size); }
 
 

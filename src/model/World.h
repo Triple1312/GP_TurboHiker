@@ -35,12 +35,14 @@ public:
 
     void Display() override;
 
+    std::shared_ptr<logic::User> GetUser();
+
 
 
 private:
     std::deque<std::shared_ptr<Lane>> lanes; // deque because of regularly deletion and creation
     std::deque<std::shared_ptr<Player>> players;
-    std::shared_ptr<Player> user;
+    std::shared_ptr<logic::User> user;
 
 };
 

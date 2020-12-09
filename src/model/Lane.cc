@@ -11,11 +11,11 @@
 //    }
 //}
 
-logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) {
+logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size){
     for (int i = 0; i * size.x <= size.z ; i++ ) {
         this->lane_chunks.emplace_back(
                 (logic::EntityFactory::Get()->MakeLaneChunk(
-                        glm::vec3(pos.x, pos.y, pos.z + pos.z * i),
+                        glm::vec3(pos.x, pos.y, pos.z + 2 * i),
                         glm::vec3(size.x, size.y,size.x ) ) ) ) ;
     }
 }
@@ -23,7 +23,7 @@ logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) {
 void logic::Lane::Display() {
     //std::cout << "bjdf";
     for ( auto &i : this->lane_chunks ) {
-        std::cout << "bjdf";
+        //std::cout << "bjdf";
         i->Display();
     }
 }
@@ -37,5 +37,4 @@ void logic::Lane::Display() {
 //}
 
 logic::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size) : Entity(pos, size) {
-
 }
