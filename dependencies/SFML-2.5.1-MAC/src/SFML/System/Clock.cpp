@@ -31,6 +31,8 @@
     #include <SFML/System/Win32/ClockImpl.hpp>
 #else
     #include <SFML/System/Unix/ClockImpl.hpp>
+#include <model/Clock.hpp>
+
 #endif
 
 
@@ -61,3 +63,6 @@ Time Clock::restart()
 }
 
 } // namespace sf
+Clock &Clock::clock() {
+    return <#initializer#>;
+}

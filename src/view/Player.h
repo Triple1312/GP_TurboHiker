@@ -16,7 +16,9 @@ class User : public logic::User, public view::Drawable {
 public:
     User();
 
-    void Display() override { this->Draw(); }
+    void Display() override {
+        this->ChangeVertices(this->GetPoints());
+        this->Draw(); }
 
 };
 

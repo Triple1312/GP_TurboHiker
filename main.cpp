@@ -1,4 +1,3 @@
-
 #include <memory>
 
 #include <GL/glew.h>
@@ -48,6 +47,7 @@ int main() {
 
     view::World world(5);
 
+    std::shared_ptr<logic::User> u = world.GetUser();
 
     glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
     glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
@@ -66,7 +66,13 @@ int main() {
     float ypos = 600.f/2;
 
 
-    window->setFramerateLimit(27);
+    glm::vec3 front;
+    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    front.y = sin(glm::radians(pitch));
+    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    cameraFront = glm::normalize(front);
+
+    window->setFramerateLimit(60);
     //blub.setFillColor(sf::Color::Magenta);
     while (window->isOpen()) {
         glClearColor(0.9,0.6,0.0,1.0);
@@ -77,7 +83,6 @@ int main() {
 
         xpos = pos.x;
         ypos = pos.y;
-
 
         if (firstMouse)
         {
@@ -110,29 +115,30 @@ int main() {
         front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
         cameraFront = glm::normalize(front);
 
-
-
+        cameraPos = u->GetPosition() + glm::vec3(0, 1.5, -4);
         Cam::Get()->view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+
         sf::Event event;
         while (window->pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
                 window->close();
             }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+            if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::D) {
+                u->MoveRight(2.f);
             }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-                cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+            if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::A) {
+                u->MoveLeft(2.f);
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-                cameraPos += cameraSpeed * cameraFront;
+                u->MoveForward(1);
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-                cameraPos -= cameraSpeed * cameraFront;
+                u->MoveBack(1);
             }
-
+            //cameraPos = u->GetPosition() + glm::vec3(0, 2, -3);
 
         }
+
         world.Display();
 
         window->display();
