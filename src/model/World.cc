@@ -31,7 +31,6 @@ logic::World::World(std::uint8_t lanes) {
     }
 
     this->user = EntityFactory::Get()->MakeUser();
-    this->lanes;
 }
 
 void logic::World::MovePlayer(int i) {
@@ -67,7 +66,6 @@ std::uint8_t logic::World::GetOnLane(std::shared_ptr<Player> p) {
 }
 
 void logic::World::Display() {
-    int l;
     for ( auto& i : this->lanes) {
         //std::cout << " glss " << std::flush;
         i->Display();

@@ -141,7 +141,9 @@ int main() {
 
         }
 
+        Clock::Get()->Update();
         world.Display();
+
 
         window->display();
     }

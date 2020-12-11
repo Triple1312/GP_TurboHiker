@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GP"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\dependencies\;CMake Files\dependencies\SFML-2.5.1\;CMake Files\dependencies\SFML-2.5.1\lib\;CMake Files\dependencies\SFML-2.5.1\lib\cmake\;CMake Files\dependencies\SFML-2.5.1\lib\cmake\SFML\;CMake Files\dependencies\glew-2.1.0\;CMake Files\dependencies\glew-2.1.0\build\;CMake Files\dependencies\glew-2.1.0\build\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="model">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/libmodel.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 model"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="model/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/libmodel.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 model/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/libengine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/libengine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GP">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/GP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 GP"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GP/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/GP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 GP/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GP_debug">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/GP_debug" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 GP_debug"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GP_debug/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/GP_debug" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glm-0.9.9.8/glm"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 GP_debug/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glewinfo">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin/glewinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 glewinfo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glewinfo/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin/glewinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 glewinfo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="visualinfo">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin/visualinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 visualinfo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="visualinfo/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin/visualinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 visualinfo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glew_s">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/lib/libGLEW.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 glew_s"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glew_s/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/lib/libGLEW.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 glew_s/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glew">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/lib/libGLEW.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_BUILD"/>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 glew"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glew/fast">
+				<Option output="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/lib/libGLEW.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_BUILD"/>
+					<Add option="-DGLEW_NO_GLU"/>
+					<Add directory="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/../../include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 glew/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ppp/CLionProjects/untitled/GP_TurboHiker/cmake-build-release/dependencies/glew-2.1.0/build/cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/Utils/Random.hpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/debug.cpp">
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/IndexBuffer.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/IndexBuffer.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/Renderer.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/Renderer.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/Shader.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/Shader.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/VertexArray.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/VertexArray.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/VertexBuffer.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/VertexBuffer.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/engine/engine/VertexBufferLayout.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include/GL/glew.h">
+			<Option target="glew_s"/>
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include/GL/glxew.h">
+			<Option target="glew_s"/>
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/include/GL/wglew.h">
+			<Option target="glew_s"/>
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/src/glew.c">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+			<Option target="glew_s"/>
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/src/glewinfo.c">
+			<Option target="glewinfo"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/src/visualinfo.c">
+			<Option target="visualinfo"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/main.cpp">
+			<Option target="GP"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/DisignByContract.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Clock.hpp">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Entity.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Entity.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/EntityFactory.hh">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Item.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Item.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Lane.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Lane.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Menu.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Menu.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Obstacle.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Obstacle.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Player.cpp">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Player.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/PlayerFactory.hh">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Scoreboard.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Scoreboard.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Widget.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/Widget.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/World.cc">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/model/World.h">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Camera.hpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Draw.cc">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Draw.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Drawable.cpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Drawable.hpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Entity.cpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Entity.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/EntityFactory.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Lane.cpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Lane.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Obstacle.cpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Obstacle.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Player.cpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/Player.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/World.cpp">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/src/view/World.h">
+			<Option target="GP"/>
+			<Option target="GP_debug"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/CmakeLists.txt">
+			<Option virtualFolder="CMake Files\dependencies\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\dependencies\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\dependencies\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\dependencies\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\dependencies\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\dependencies\SFML-2.5.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/glew.pc.in">
+			<Option virtualFolder="CMake Files\dependencies\glew-2.1.0\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\dependencies\glew-2.1.0\build\cmake\"/>
+		</Unit>
+		<Unit filename="/home/ppp/CLionProjects/untitled/GP_TurboHiker/dependencies/glew-2.1.0/build/cmake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\dependencies\glew-2.1.0\build\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

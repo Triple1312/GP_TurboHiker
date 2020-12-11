@@ -13,7 +13,7 @@ Cam* Cam::camera = 0;
 
 logic::EntityFactory* logic::EntityFactory::instance;
 
-Clock* Clock::instance;
+Clock* Clock::instance = 0;
 
 int main() {
 
@@ -135,6 +135,7 @@ int main() {
             }
 
         }
+        Clock::Get()->Update();
         world.Display();
 
         window->display();

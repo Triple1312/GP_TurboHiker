@@ -1,7 +1,7 @@
 
 project(GP)
 
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.14)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -34,7 +34,8 @@ add_library(model STATIC
         src/model/Menu.cc src/model/Menu.h
         src/model/Lane.cc src/model/Lane.h
         src/model/Widget.cc src/model/Widget.h
-        src/model/EntityFactory.hh src/model/PlayerFactory.hh src/model/Clock.hpp)
+        src/model/EntityFactory.hh src/model/PlayerFactory.hh
+        src/model/Clock.hpp)
 
 add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp
@@ -53,5 +54,5 @@ add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h 
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
 
-target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system  -lGL engine model)
+target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system  -lGL engine model )
 target_link_libraries(GP_debug sfml-audio sfml-graphics sfml-window sfml-system  -lGL engine model)

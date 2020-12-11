@@ -14,7 +14,7 @@ namespace logic {
 
         EntityFactory(EntityFactory&) = delete;
 
-        ~EntityFactory(){ delete instance;}
+        virtual ~EntityFactory(){ delete instance;}
 
         static logic::EntityFactory* Get() {
 //            if (!instance) {
@@ -23,15 +23,15 @@ namespace logic {
             return instance;
         }
 
-        virtual std::shared_ptr<logic::NPC> MakeNPC() {  }
+        virtual std::shared_ptr<logic::NPC> MakeNPC() { return std::make_shared<logic::NPC>(); }
 
-        virtual std::shared_ptr<logic::User> MakeUser() {  }
+        virtual std::shared_ptr<logic::User> MakeUser() {  return std::make_shared<logic::User>();}
 
-        virtual std::shared_ptr<logic::Obstacle> MakeObstacle() {  }
+        virtual std::shared_ptr<logic::Obstacle> MakeObstacle() {  return std::make_shared<logic::Obstacle>();}
 
-        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) {  LaneChunk(pos, size);}
+        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) { LaneChunk(pos, size);}
 
-        virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos, glm::vec3 size) {  }
+        virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos, glm::vec3 size) {  return std::make_shared<logic::LaneChunk>();}
 
     protected:
 
