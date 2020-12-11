@@ -5,6 +5,7 @@
 #include "Player.h"
 
 view::User::User() :  view::Drawable(){
+    this->velocity = {0, 0, 1.f};
     this->ibo = std::make_shared<IndexBuffer>();
     this->vbo_v = std::make_shared<VertexBuffer>(this->points, 3 * 8 * sizeof(float));
 

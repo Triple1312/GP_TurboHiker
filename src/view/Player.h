@@ -17,6 +17,7 @@ public:
     User();
 
     void Display() override {
+        this->Update();
         this->ChangeVertices(this->GetPoints());
         this->Draw(); }
 

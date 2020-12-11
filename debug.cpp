@@ -7,10 +7,13 @@
 #include "view/Player.h"
 #include "view/EntityFactory.h"
 #include "view/World.h"
+#include "model/Clock.hpp"
 
 Cam* Cam::camera = 0;
 
 logic::EntityFactory* logic::EntityFactory::instance;
+
+Clock* Clock::instance;
 
 int main() {
 
@@ -130,7 +133,6 @@ int main() {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
                 cameraPos -= cameraSpeed * cameraFront;
             }
-
 
         }
         world.Display();

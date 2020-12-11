@@ -10,6 +10,7 @@
 #include <glm/vec4.hpp>
 #include <glm/matrix.hpp>
 #include <glm/gtx/transform.hpp>
+#include "model/Clock.hpp"
 
 enum collission_type {no_col = false, x_col = true, y_col = true, z_col = true };
 

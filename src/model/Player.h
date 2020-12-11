@@ -19,6 +19,8 @@ public:
 
     void EmpCharge(std::deque<std::shared_ptr<Player>> &);
 
+    virtual void Update();
+
     //void Display();
 
 protected:

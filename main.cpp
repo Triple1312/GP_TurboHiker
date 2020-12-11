@@ -6,10 +6,13 @@
 #include "view/Player.h"
 #include "view/EntityFactory.h"
 #include "view/World.h"
+#include "model/Clock.hpp"
 
 Cam* Cam::camera = 0;
 
 logic::EntityFactory* logic::EntityFactory::instance;
+
+Clock* Clock::instance;
 
 int main() {
 
@@ -77,7 +80,6 @@ int main() {
     while (window->isOpen()) {
         glClearColor(0.9,0.6,0.0,1.0);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 
         sf::Vector2i pos = sf::Mouse::getPosition();
 
