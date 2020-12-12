@@ -5,7 +5,7 @@
 #include "Entity.h"
 
 
-collission_type logic::Entity::Collision(std::shared_ptr<Entity> enti) {
+glm::vec3 logic::Entity::Collision(std::shared_ptr<Entity> enti) {
     if (( this->points[0] <= enti->points[6*3 + 0] && enti->points[0] <= this->points[6*3 + 0]) &&
           ( this->points[1] <= enti->points[6*3 + 1] && enti->points[1] <= this->points[6*3 + 1]) &&
            ( this->points[2] <= enti->points[6*3 + 2] && enti->points[2] <= this->points[6*3 + 2] )) {
@@ -13,17 +13,9 @@ collission_type logic::Entity::Collision(std::shared_ptr<Entity> enti) {
         float x =  enti->points[6*3 + 0] - this->points[0];
         float y = enti->points[6*3 + 1] - this->points[1];
         float z = enti->points[6*3 + 2] - this->points[2];
-        if (x <= y && x <= z) {
-            return x_col;
-        }
-        else if ( y <= z && y <= x) {
-            return y_col;
-        }
-        else {
-            return z_col;
-        }
+        return glm::vec3(x, y, z);
     }
-    return no_col;
+    return glm::vec3(0.0f);
 }
 
 
@@ -225,6 +217,12 @@ void logic::Entity::SetPosition(glm::vec3 pos, glm::vec3 size) {
     points[21] = pos.x - size.x/2;
     points[22] = pos.y + size.y/2;
     points[23] = pos.z + size.z/2;
+}
+
+void logic::Entity::MoveUp(float tmp) {
+    for (auto i = 0; i < 8; i++) {
+        this->points[3 * i + 1] += tmp;
+    }
 }
 
 

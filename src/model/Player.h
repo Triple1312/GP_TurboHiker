@@ -30,6 +30,7 @@ protected:
     std::uint8_t emp_charge;
 
     Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos , size){};
+
     Player() = default;
 
 
@@ -38,6 +39,8 @@ protected:
 class User : public logic::Player {
 public:
     User();
+
+    User(glm::vec3 pos , glm::vec3 size);
 
     //virtual void Display(){}
 };

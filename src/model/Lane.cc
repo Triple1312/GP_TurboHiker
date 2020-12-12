@@ -38,3 +38,7 @@ void logic::Lane::Display() {
 
 logic::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size) : Entity(pos, size) {
 }
+
+const std::deque<std::shared_ptr<logic::LaneChunk>>& logic::Lane::GetChunks() const {
+    return this->lane_chunks;
+};

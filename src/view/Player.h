@@ -16,6 +16,8 @@ class User : public logic::User, public view::Drawable {
 public:
     User();
 
+    User(glm::vec3 pos , glm::vec3 size);
+
     void Display() override {
         this->Update();
         this->ChangeVertices(this->GetPoints());

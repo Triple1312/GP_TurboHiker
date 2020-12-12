@@ -30,7 +30,9 @@ logic::World::World(std::uint8_t lanes) {
                                                glm::vec3(2, 1, 100 ) ) );
     }
 
-    this->user = EntityFactory::Get()->MakeUser();
+    this->user = EntityFactory::Get()->MakeUser({this->lanes[0]->GetPosition().x, this->lanes[0]->GetPosition().y + 2, 1}, glm::vec3(1.f));
+    this->players.emplace_back(this->user);
+    //this->user->SetPosition({this->lanes[0]->GetPosition().x, this->lanes[0]->GetPosition().y + 2, 1});
 }
 
 void logic::World::MovePlayer(int i) {
@@ -76,4 +78,26 @@ void logic::World::Display() {
 
 std::shared_ptr<logic::User> logic::World::GetUser() {
     return this->user;
+}
+
+void logic::World::Update() {
+    for (auto i : this->players) {
+        for ( auto j : lanes ) {
+            for ( auto k : j->GetChunks()) {
+                glm::vec3 tmp = i->Collision(k);
+
+                if (tmp.x <= tmp.y && tmp.x <= tmp.z) { // if there is no collision it will also end here
+                    i->MoveRight(-2.f * tmp.x);
+                }
+                else if (tmp.y <= tmp.x && tmp.y <= tmp.z) {
+                    i->MoveUp( tmp.y);
+                }
+                else {
+                    i->MoveForward(-2.f * tmp.z);
+                }
+            }
+        }
+    }
+
+    this->Display();
 }

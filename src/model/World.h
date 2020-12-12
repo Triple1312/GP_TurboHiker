@@ -37,6 +37,8 @@ public:
 
     std::shared_ptr<logic::User> GetUser();
 
+    void Update();
+
 
 
 private:

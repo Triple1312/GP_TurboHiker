@@ -15,7 +15,7 @@
 /**
 *@brief: an enum that describes at which axis two entities collide;
 */
-enum collission_type {no_col = false, x_col = true, y_col = true, z_col = true };
+enum collission_type {no_col = false, x_col = true, y_col = true, z_col = true }; //todo beter vector
 
 namespace logic {
 
@@ -35,9 +35,9 @@ public:
 
 
     /**
-    * @brief checks wich collision is present between 2 etities if any
+    * @brief function that checks collision for every axis
     */
-    virtual collission_type Collision(std::shared_ptr<Entity>);
+    virtual glm::vec3 Collision(std::shared_ptr<Entity>);
 
     /**
     *@brief returns a pointer to a c-array whinch holds all the points of the entiry
@@ -69,6 +69,8 @@ public:
     virtual void MoveLeft(float);
 
     virtual void MoveRight(float);
+
+    virtual void MoveUp(float);
 
     virtual void MoveX(float);
 

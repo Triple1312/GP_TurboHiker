@@ -27,6 +27,8 @@ namespace logic {
 
         virtual std::shared_ptr<logic::User> MakeUser() {  return std::make_shared<logic::User>();}
 
+        virtual std::shared_ptr<logic::User> MakeUser(glm::vec3 pos , glm::vec3 size){}
+
         virtual std::shared_ptr<logic::Obstacle> MakeObstacle() {  return std::make_shared<logic::Obstacle>();}
 
         virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) { LaneChunk(pos, size);}

@@ -50,6 +50,8 @@ public:
 
     void Display() override;
 
+    const std::deque<std::shared_ptr<LaneChunk>>& GetChunks() const;
+
 private:
     /*
      * stel const length 5
