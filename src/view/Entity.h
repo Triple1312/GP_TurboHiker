@@ -2,8 +2,8 @@
 // Created by Phili on 27/11/2020.
 //
 
-#ifndef GP_ENTITY_V_H
-#define GP_ENTITY_V_H
+#ifndef GP_SRC_VIEW_ENTITY_H_
+#define GP_SRC_VIEW_ENTITY_H_
 
 #include <memory>
 
@@ -20,9 +20,9 @@ public:
     explicit Entity();
 private:
 
-    std::unique_ptr<VertexArray> vao;
-    std::unique_ptr<IndexBuffer> ibo;
-    std::unique_ptr<VertexBuffer> vbo;
+    std::unique_ptr<VertexArray> vao_;
+    std::unique_ptr<IndexBuffer> ibo_;
+    std::unique_ptr<VertexBuffer> vbo_;
 
     //void Update();
 };
@@ -31,4 +31,4 @@ private:
 
 
 
-#endif //GP_ENTITY_H
+#endif //GP_SRC_MODEL_ENTITY_H_

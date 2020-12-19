@@ -2,84 +2,95 @@
 // Created by ppp on 12/10/20.
 //
 
-#ifndef GP_CLOCK_HPP
-#define GP_CLOCK_HPP
+#ifndef GP_SRC_MODEL_CLOCK_HPP_
+#define GP_SRC_MODEL_CLOCK_HPP_
 
 #include <chrono>
 
 class Clock {
-public:
-    unsigned int GetTimeAsSeconds() {
-        return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - begin).count();
+ public:
+  unsigned int GetTimeAsSeconds() {
+    return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - begin_).count();
+  }
+
+  unsigned int GetTimeAsMilliSeconds() {
+    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - begin_).count();
+  }
+
+  unsigned int GetTimeAsMicroSeconds() {
+    return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin_).count();
+  }
+
+  void Update() {
+    since_last_ = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - last_).count();
+    last_ = std::chrono::steady_clock::now();
+  }
+
+  static Clock *Get() {
+    if (!instance_) {
+      instance_ = new Clock;
     }
+    return instance_;
+  }
 
-    unsigned int GetTimeAsMilliSeconds() {
-        return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - begin).count();
-    }
+  double TimeSinceLast() const {
+    return since_last_;
+  }
 
-    unsigned int GetTimeAsMicroSeconds() {
-        return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count();
-    }
+  double GetTimeSinceLastInSeconds() const {
+    return since_last_ / 1000000;
+  }
 
-    void Update() {
-        since_last = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - last).count();
-        last = std::chrono::steady_clock::now();
-    }
+ private:
+  Clock() {
+    begin_ = std::chrono::steady_clock::now();
+    last_ = std::chrono::steady_clock::now();
+    since_last_ = 0;
 
-    static Clock* Get() {
-        if (!instance) {
-            instance = new Clock;
-        }
-        return instance;
-    }
+  }
 
-    double TimeSinceLast() const {
-        return since_last;
-    }
+  std::chrono::_V2::steady_clock::time_point begin_;
 
-    double GetTimeSinceLastInSeconds() const {
-        return since_last/1000000;
-    }
+  float since_last_;
 
+  std::chrono::_V2::steady_clock::time_point last_;
 
-private:
-    Clock() {
-        begin = std::chrono::steady_clock::now();
-        last = std::chrono::steady_clock::now();
-        since_last = 0;
-
-    }
-
-    std::chrono::_V2::steady_clock::time_point begin;
-
-    float since_last;
-
-    std::chrono::_V2::steady_clock::time_point last;
-
-    static Clock* instance ;
+  static Clock *instance_;
 };
-
 
 class Timer {
-public:
+ public:
 
-    static Timer ConstructAsSeconds(unsigned int time) { return Timer(time * 1000000); }
+  static Timer ConstructAsSeconds(unsigned int time) { return Timer(time * 1000000); }
 
-    static Timer ConstructAsMicroSeconds(unsigned int time) { return Timer(time); }
+  static Timer ConstructAsMicroSeconds(unsigned int time) { return Timer(time); }
 
-    static Timer ConstructAsMilliSeconds(unsigned int time) { return Timer(time * 1000); }
+  static Timer ConstructAsMilliSeconds(unsigned int time) { return Timer(time * 1000); }
 
-    bool Complete(){return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin).count() > time;}
+  bool Complete() {
+    return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin_).count()
+        > time_;
+  }
 
-private:
-
-    unsigned int time;
-
-    std::chrono::_V2::steady_clock::time_point begin;
-
-    Timer(unsigned int time) : time(time){
-        begin  = std::chrono::steady_clock::now();
+  float Percentage() {
+    if (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin_).count()
+        > time_) {
+      return 1.f;
+    } else {
+      return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - begin_).count()
+          / 1000000.F / float(time_);
     }
+  }
+
+ private:
+
+  unsigned int time_;
+
+  std::chrono::_V2::steady_clock::time_point begin_;
+
+  explicit  Timer(unsigned int time) : time_(time) {
+    begin_ = std::chrono::steady_clock::now();
+  }
 
 };
-#endif //GP_CLOCK_HPP
+#endif //GP_SRC_MODEL_CLOCK_HPP_

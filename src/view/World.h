@@ -9,7 +9,7 @@ namespace view {
 class World : public logic::World {
 public:
 
-    World(std::uint8_t lanes) : logic::World(lanes) {  }
+    explicit World(std::uint8_t lanes) : logic::World(lanes) {  }
 
 };
 
@@ -17,4 +17,4 @@ public:
 
 
 
-#endif //GP_WORLD_H
+#endif //GP_SRC_MODEL_WORLD_H_

@@ -129,7 +129,7 @@ public:
     /// \brief Destructor
     ///
     /// This destructor calls wait(), so that the internal thread
-    /// cannot survive after its sf::Thread instance is destroyed.
+    /// cannot survive after its sf::Thread instance_ is destroyed.
     ///
     ////////////////////////////////////////////////////////////
     ~Thread();
@@ -217,13 +217,13 @@ private:
 /// \li member functions from any class with no argument
 ///
 /// The function argument, if any, is copied in the sf::Thread
-/// instance, as well as the functor (if the corresponding
+/// instance_, as well as the functor (if the corresponding
 /// constructor is used). Class instances, however, are passed
 /// by pointer so you must make sure that the object won't be
 /// destroyed while the thread is still using it.
 ///
 /// The thread ends when its function is terminated. If the
-/// owner sf::Thread instance is destroyed before the
+/// owner sf::Thread instance_ is destroyed before the
 /// thread is finished, the destructor will wait (see wait())
 ///
 /// Usage examples:
@@ -268,7 +268,7 @@ private:
 /// };
 ///
 /// sf::Thread thread(Task());
-/// thread.launch(); // start the thread (internally calls operator() on the Task instance)
+/// thread.launch(); // start the thread (internally calls operator() on the Task instance_)
 /// \endcode
 ///
 /// Creating parallel threads of execution can be dangerous:

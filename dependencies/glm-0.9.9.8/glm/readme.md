@@ -623,7 +623,7 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 - Fixed lerp when cosTheta is close to 1 in quaternion slerp #210
 - Added GTX_io for io with <iostream> #144
 - Fixed fastDistance ambiguity #215
-- Fixed tweakedInfinitePerspective #208 and added user-defined epsilon to
+- Fixed tweakedInfinitePerspective #208 and added user_-defined epsilon to
   tweakedInfinitePerspective
 - Fixed std::copy and std::vector with GLM types #214
 - Fixed strict aliasing issues #212, #152

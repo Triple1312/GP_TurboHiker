@@ -1,2 +1,0 @@
-/usr/bin/ar qc libengine.a  CMakeFiles/engine.dir/dependencies/engine/engine/Shader.cpp.o CMakeFiles/engine.dir/dependencies/engine/engine/Renderer.cpp.o CMakeFiles/engine.dir/dependencies/engine/engine/VertexBuffer.cpp.o CMakeFiles/engine.dir/dependencies/engine/engine/IndexBuffer.cpp.o CMakeFiles/engine.dir/dependencies/engine/engine/VertexArray.cpp.o
-/usr/bin/ranlib libengine.a

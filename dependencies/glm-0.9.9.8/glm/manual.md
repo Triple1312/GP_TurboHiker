@@ -201,7 +201,7 @@ glm::mat4 transform(glm::vec2 const& Orientation, glm::vec3 const& Translate, gl
 
 ### <a name="section1_2"></a> 1.2. Using separated headers
 
-GLM relies on C++ templates heavily, and may significantly increase compilation times for projects that use it. Hence, user projects could only include the features they actually use. Following is the list of all the core features, based on GLSL specification, headers:
+GLM relies on C++ templates heavily, and may significantly increase compilation times for projects that use it. Hence, user_ projects could only include the features they actually use. Following is the list of all the core features, based on GLSL specification, headers:
 ```cpp
 #include <glm/vec2.hpp>               // vec2, bvec2, dvec2, ivec2 and uvec2
 #include <glm/vec3.hpp>               // vec3, bvec3, dvec3, ivec3 and uvec3
@@ -1457,7 +1457,7 @@ Provide a list of built-in constants.
 
 ### <a name="section4_4"></a> 4.4. GLM\_GTC\_epsilon
 
-Approximate equality comparisons for floating-point numbers, possibly with a user-defined epsilon.
+Approximate equality comparisons for floating-point numbers, possibly with a user_-defined epsilon.
 
 `<glm/gtc/epsilon.hpp>` need to be included to use these features.
 

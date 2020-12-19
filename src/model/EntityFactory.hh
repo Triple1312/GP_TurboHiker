@@ -1,5 +1,5 @@
-#ifndef GP_ENTITYFACTORY_HH
-#define GP_ENTITYFACTORY_HH
+#ifndef GP_SRC_MODEL_ENTITYFACTORY_HH_
+#define GP_SRC_MODEL_ENTITYFACTORY_HH_
 
 #include "model/Obstacle.h"
 #include "model/Lane.h"
@@ -8,40 +8,47 @@
 
 namespace logic {
 
-    class EntityFactory {
+class EntityFactory {
 
-    public:
+ public:
 
-        EntityFactory(EntityFactory&) = delete;
+  EntityFactory(EntityFactory &) = delete;
 
-        virtual ~EntityFactory(){ delete instance;}
+  virtual ~EntityFactory() { delete instance_; }
 
-        static logic::EntityFactory* Get() {
-//            if (!instance) {
-//                instance  = new EntityFactory;
+  static logic::EntityFactory *Get() {
+//            if (!instance_) {
+//                instance_  = new EntityFactory;
 //            }
-            return instance;
-        }
+    return instance_;
+  }
 
-        virtual std::shared_ptr<logic::NPC> MakeNPC() { return std::make_shared<logic::NPC>(); }
+  virtual std::shared_ptr<logic::NPC> MakeNPC() { return std::make_shared<logic::NPC>(); }
 
-        virtual std::shared_ptr<logic::User> MakeUser() {  return std::make_shared<logic::User>();}
+  virtual std::shared_ptr<logic::User> MakeUser() { return std::make_shared<logic::User>(); }
 
-        virtual std::shared_ptr<logic::User> MakeUser(glm::vec3 pos , glm::vec3 size){}
+  virtual std::shared_ptr<logic::User> MakeUser(glm::vec3 pos, glm::vec3 size) {}
 
-        virtual std::shared_ptr<logic::Obstacle> MakeObstacle() {  return std::make_shared<logic::Obstacle>();}
+  virtual std::shared_ptr<logic::Obstacle> MakeObstacle() { return std::make_shared<logic::Obstacle>(); }
 
-        virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) { LaneChunk(pos, size);}
+  virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) { LaneChunk(pos, size); }
 
-        virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos, glm::vec3 size) {  return std::make_shared<logic::LaneChunk>();}
+  virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos,
+                                                          glm::vec3 size) { return std::make_shared<logic::LaneChunk>(); }
 
-    protected:
+  virtual std::shared_ptr<logic::OCube> MakeOCube(std::shared_ptr<logic::Entity> entity) {}
 
-        static logic::EntityFactory* instance ;
+  virtual std::shared_ptr<logic::OCube> MakeOCube() {
+    return std::make_shared<logic::OCube>();
+  }
 
-        EntityFactory() = default;
+ protected:
 
-    };
+  static logic::EntityFactory *instance_;
+
+  EntityFactory() = default;
+
+};
 
 //model::Entity EntityFactory::MakeEntity(const EntityType &type) {
 //
@@ -61,4 +68,4 @@ namespace logic {
 
 } // model
 
-#endif //GP_ENTITYFACTORY_HH
+#endif //GP_SRC_MODEL_ENTITYFACTORY_HH_

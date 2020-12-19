@@ -39,13 +39,13 @@
 //    }
 //}
 //
-//void Draw::DrawLanes(std::deque<std::shared_ptr<logic::Lane>>& lanes) {
+//void Draw::DrawLanes(std::deque<std::shared_ptr<logic::Lane>>& lanes_) {
 //    auto  texture = std::make_shared<sf::Texture>();
 //    texture->loadFromFile("recources/Textures/portal_2_textures/metal/metalwall048e.jpg");
 //    double scaler =  window.getSize().x /10;
 //
 //
-//    for ( auto l : lanes ) {
+//    for ( auto l : lanes_ ) {
 //        auto a = *l;
 //        for ( auto c : l->GetLaneChunks() ) {
 //

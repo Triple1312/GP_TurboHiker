@@ -11,11 +11,28 @@
 
 namespace view {
 
-class Obstacle : public logic::Obstacle, public view::Drawable {
-public:
-    Obstacle();
-};
+class Ramp : public logic::Ramp , public view::Drawable{
 
+    };
+
+    class OCube : public logic::OCube , public view::Drawable { //todo andere naam geven
+    public:
+        OCube();
+
+        void Display() override;
+    };
+
+    class Laser : public logic::Laser , public view::Drawable {
+
+    };
+
+    class ChunkGone : public logic::ChunkGone , public view::Drawable { //todo geen idee hoe ik dit ga implementeren
+
+    };
+
+    class Portal : public logic::Portal , public view::Drawable {
+
+    };
 } // namespace view
 
 

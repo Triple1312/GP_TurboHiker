@@ -152,7 +152,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Close the window and destroy all the attached resources
     ///
-    /// After calling this function, the sf::Window instance remains
+    /// After calling this function, the sf::Window instance_ remains
     /// valid and you can call create() to recreate the window.
     /// All other functions such as pollEvent() or display() will
     /// still work (i.e. you don't have to test isOpen() every time),
@@ -520,13 +520,13 @@ protected:
 private:
 
     ////////////////////////////////////////////////////////////
-    /// \brief Processes an event before it is sent to the user
+    /// \brief Processes an event before it is sent to the user_
     ///
     /// This function is called every time an event is received
     /// from the internal window (through pollEvent or waitEvent).
     /// It filters out unwanted events, and performs whatever internal
     /// stuff the window needs before the event is returned to the
-    /// user.
+    /// user_.
     ///
     /// \param event Event to filter
     ///

@@ -9,12 +9,11 @@
  * this class is useless without graphics
  */
 class Widget {
-public:
-    virtual void display(){}
+ public:
+  virtual void display() {}
 
-    bool active;
+  bool active{};
 
 };
-
 
 #endif //GP_WIDGET_H

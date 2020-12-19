@@ -453,7 +453,7 @@ SFML_SYSTEM_API Time& operator %=(Time& left, Time right);
 ///
 /// By using such a flexible interface, the API doesn't
 /// impose any fixed type or resolution for time values,
-/// and let the user choose its own favorite representation.
+/// and let the user_ choose its own favorite representation.
 ///
 /// Time values support the usual mathematical operations:
 /// you can add or subtract two times, multiply or divide

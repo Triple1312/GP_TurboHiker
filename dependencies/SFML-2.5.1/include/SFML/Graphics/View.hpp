@@ -75,7 +75,7 @@ public:
     /// \param x X coordinate of the new center
     /// \param y Y coordinate of the new center
     ///
-    /// \see setSize, getCenter
+    /// \see setSize, GetCenter
     ///
     ////////////////////////////////////////////////////////////
     void setCenter(float x, float y);
@@ -85,7 +85,7 @@ public:
     ///
     /// \param center New center
     ///
-    /// \see setSize, getCenter
+    /// \see setSize, GetCenter
     ///
     ////////////////////////////////////////////////////////////
     void setCenter(const Vector2f& center);
@@ -96,7 +96,7 @@ public:
     /// \param width  New width of the view
     /// \param height New height of the view
     ///
-    /// \see setCenter, getCenter
+    /// \see setCenter, GetCenter
     ///
     ////////////////////////////////////////////////////////////
     void setSize(float width, float height);
@@ -106,7 +106,7 @@ public:
     ///
     /// \param size New size
     ///
-    /// \see setCenter, getCenter
+    /// \see setCenter, GetCenter
     ///
     ////////////////////////////////////////////////////////////
     void setSize(const Vector2f& size);
@@ -167,7 +167,7 @@ public:
     ///
     /// \return Size of the view
     ///
-    /// \see getCenter, setSize
+    /// \see GetCenter, setSize
     ///
     ////////////////////////////////////////////////////////////
     const Vector2f& getSize() const;

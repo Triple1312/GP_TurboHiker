@@ -224,7 +224,7 @@ public:
     /// you can retrieve the updated texture using this function,
     /// and draw it using a sprite (for example).
     /// The internal sf::Texture of a render-texture is always the
-    /// same instance, so that it is possible to call this function
+    /// same instance_, so that it is possible to call this function
     /// once and keep a reference to the texture even after it is
     /// modified.
     ///

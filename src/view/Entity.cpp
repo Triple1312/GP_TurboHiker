@@ -5,6 +5,6 @@
 #include "Entity.h"
 
 //void view::Entity::Update() {
-//    vbo->Bind();
+//    vbo_->Bind();
 //    glBufferSubData(GL_ARRAY_BUFFER, 0, 3 * 8 * sizeof(float), this->GetPoints());
 //}

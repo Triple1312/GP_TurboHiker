@@ -7,10 +7,8 @@
 
 #include "Entity.h"
 
-
 class Item {
 
 };
-
 
 #endif //GP_ITEM_H

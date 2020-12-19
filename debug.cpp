@@ -1,4 +1,3 @@
-
 #include <memory>
 
 #include <GL/glew.h>
@@ -11,9 +10,11 @@
 
 Cam* Cam::camera = 0;
 
-logic::EntityFactory* logic::EntityFactory::instance;
+logic::EntityFactory* logic::EntityFactory::instance_;
 
-Clock* Clock::instance = 0;
+Clock* Clock::instance_ = 0;
+
+Random Random::random_;
 
 int main() {
 

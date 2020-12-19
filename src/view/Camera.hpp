@@ -7,7 +7,7 @@
 
 struct Cam {
     glm::mat4 view = glm::lookAt(glm::vec3(0, 1.0f, 0 ),
-                                 glm::vec3(0, 1.f, 5.f ),
+                                 glm::vec3(0, 0.f, -1.f ),
                                  glm::vec3(0, 1, 0 ) );
 
     glm::mat4 projection = glm::perspective(glm::radians(120.f),
@@ -28,7 +28,7 @@ private:
 
     Cam() {
         view = glm::lookAt(glm::vec3(0, 3.0f, -3.0 ),
-                           glm::vec3(0, 1.f, 5.f ),
+                           glm::vec3(0, 0.f, 1.f ),
                            glm::vec3(0, 1, 0 ) );
 
         projection = glm::perspective(glm::radians(45.f),

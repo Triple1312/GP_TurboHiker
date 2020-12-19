@@ -367,7 +367,7 @@ public:
     ///
     /// If color conversions are used, the ivec4 uniform in GLSL
     /// will hold the same values as the original sf::Color
-    /// instance. For example, sf::Color(255, 127, 0, 255) is
+    /// instance_. For example, sf::Color(255, 127, 0, 255) is
     /// mapped to ivec4(255, 127, 0, 255).
     ///
     /// \param name   Name of the uniform variable in GLSL

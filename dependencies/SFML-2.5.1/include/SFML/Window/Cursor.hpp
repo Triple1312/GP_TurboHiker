@@ -96,7 +96,7 @@ public:
     /// \brief Default constructor
     ///
     /// This constructor doesn't actually create the cursor;
-    /// initially the new instance is invalid and must not be
+    /// initially the new instance_ is invalid and must not be
     /// used until either loadFromPixels() or loadFromSystem()
     /// is called and successfully created a cursor.
     ///

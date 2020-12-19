@@ -5,33 +5,31 @@
 #ifndef GP_PLAYERFACTORY_HH
 #define GP_PLAYERFACTORY_HH
 
-
-
 namespace logic {
 
-    class NPC;
-    class User;
+class NPC;
+class User;
 
-    class PlayerFactory {
+class PlayerFactory {
 
-    public:
+ public:
 
-        PlayerFactory() = default;
+  PlayerFactory() = default;
 
-        //Player MakePlayer();
+  //Player MakePlayer();
 
-        User MakeUser();
+  User MakeUser();
 
-        NPC MakeNPC();
+  NPC MakeNPC();
 
-    };
+};
 
 logic::User PlayerFactory::MakeUser() {
-    return User();
+  return User();
 }
 
 logic::NPC PlayerFactory::MakeNPC() {
-    //return model::NPC();
+  //return model::NPC();
 }
 
 } // factory

@@ -9,19 +9,19 @@
 
 #include "Widget.h"
 
-namespace logic{
+namespace logic {
 
 class Scoreboard : public Widget {
-private:
-    std::uint32_t score;
+ private:
+  std::uint32_t score_{};
 
-    Scoreboard();
+  Scoreboard() = default;
 
-public:
-    static Scoreboard &getInstance() {
-        static Scoreboard instance;
-        return instance;
-    }
+ public:
+  static Scoreboard &GetInstance() {
+    static Scoreboard instance;
+    return instance;
+  }
 };
 
 }

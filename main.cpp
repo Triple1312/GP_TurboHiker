@@ -7,12 +7,15 @@
 #include "view/EntityFactory.h"
 #include "view/World.h"
 #include "model/Clock.hpp"
+#include "Utils/Random.hpp"
 
-Cam* Cam::camera = 0;
+Cam* Cam::camera = nullptr;
 
-logic::EntityFactory* logic::EntityFactory::instance;
+logic::EntityFactory* logic::EntityFactory::instance_;
 
-Clock* Clock::instance;
+Clock* Clock::instance_;
+
+Random Random::random_;
 
 int main() {
 
@@ -52,17 +55,17 @@ int main() {
 
     std::shared_ptr<logic::User> u = world.GetUser();
 
-    glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
-    glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-    glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
+    glm::vec3 camera_pos   = glm::vec3(0.0f, 0.0f, 3.0f);
+    glm::vec3 camera_front = glm::vec3(0.0f, 0.0f, -1.0f);
+    glm::vec3 camera_up    = glm::vec3(0.0f, 1.0f, 0.0f);
 
-    const float cameraSpeed = 0.1f;
+    const float kCameraSpeed = 0.1f;
 
-    bool firstMouse = true;
+    bool first_mouse = true;
     float yaw   = -90.0f;	// yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
     float pitch =  0.0f;
-    float lastX =  800.0f / 2.0;
-    float lastY =  600.0 / 2.0;
+    float last_x =  800.0f / 2.0;
+    float last_y =  600.0 / 2.0;
     float fov   =  45.0f;
 
     float xpos = 800.f/2;
@@ -73,7 +76,7 @@ int main() {
     front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
     front.y = sin(glm::radians(pitch));
     front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-    cameraFront = glm::normalize(front);
+  camera_front = glm::normalize(front);
 
     window->setFramerateLimit(60);
     //blub.setFillColor(sf::Color::Magenta);
@@ -86,17 +89,17 @@ int main() {
         xpos = pos.x;
         ypos = pos.y;
 
-        if (firstMouse)
+        if (first_mouse)
         {
-            lastX = xpos;
-            lastY = ypos;
-            firstMouse = false;
+          last_x = xpos;
+          last_y = ypos;
+          first_mouse = false;
         }
 
-        float xoffset = xpos - lastX;
-        float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
-        lastX = xpos;
-        lastY = ypos;
+        float xoffset = xpos - last_x;
+        float yoffset = last_y - ypos; // reversed since y-coordinates go from bottom to top
+        last_x = xpos;
+      last_y = ypos;
 
         float sensitivity = 0.3f; // change this value to your liking
         xoffset *= sensitivity;
@@ -115,10 +118,10 @@ int main() {
         front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
         front.y = sin(glm::radians(pitch));
         front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-        cameraFront = glm::normalize(front);
+      camera_front = glm::normalize(front);
 
-        cameraPos = u->GetPosition() + glm::vec3(0, 1.5, -4);
-        Cam::Get()->view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+      camera_pos = u->GetPosition() + glm::vec3(0, 1.5, -4);
+        Cam::Get()->view = glm::lookAt(camera_pos, camera_pos + camera_front, camera_up);
 
         sf::Event event;
         while (window->pollEvent(event)) {
@@ -137,7 +140,7 @@ int main() {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
                 u->MoveBack(1);
             }
-            //cameraPos = u->GetPosition() + glm::vec3(0, 2, -3);
+            //camera_pos = u->GetPosition() + glm::vec3(0, 2, -3);
 
         }
 

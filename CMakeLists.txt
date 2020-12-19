@@ -1,9 +1,10 @@
 
 project(GP)
 
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS "-fsanitize=leak -fsanitize=address")
 
 add_subdirectory(dependencies/glew-2.1.0/build/cmake )
 include_directories(src dependencies/glew-2.1.0/include)
@@ -47,8 +48,8 @@ add_library(engine STATIC
         )
 
 
-add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c )
-add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c)
+add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c )
+add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glew-2.1.0/src/glew.c)
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 
 

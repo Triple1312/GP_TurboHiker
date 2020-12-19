@@ -5,9 +5,9 @@
 #include "Player.h"
 
 view::User::User() :  view::Drawable(){
-    this->velocity = {0, -0.5, 1.f};
+    this->velocity_ = {0, -0.5, 1.f};
     this->ibo = std::make_shared<IndexBuffer>();
-    this->vbo_v = std::make_shared<VertexBuffer>(this->points, 3 * 8 * sizeof(float));
+    this->vbo_v = std::make_shared<VertexBuffer>(this->points_, 3 * 8 * sizeof(float));
 
     float colors[] = {
             1.0f, 0.0f, 1.0f,
@@ -54,9 +54,9 @@ view::User::User() :  view::Drawable(){
 
 
 view::User::User(glm::vec3 pos, glm::vec3 size) : logic::User(pos, size) , Drawable(){
-    this->velocity = {0, -1.f, 2.f};
+    this->velocity_ = {0, -1.f, 2.f};
     this->ibo = std::make_shared<IndexBuffer>();
-    this->vbo_v = std::make_shared<VertexBuffer>(this->points, 3 * 8 * sizeof(float));
+    this->vbo_v = std::make_shared<VertexBuffer>(this->points_, 3 * 8 * sizeof(float));
 
     float colors[] = {
             1.0f, 0.0f, 1.0f,

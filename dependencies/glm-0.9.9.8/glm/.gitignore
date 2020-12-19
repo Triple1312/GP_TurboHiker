@@ -46,7 +46,7 @@ test/gtc/*.dds
 # Project Files
 Makefile
 *.cbp
-*.user
+*.user_
 
 # Misc.
 *.log

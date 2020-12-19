@@ -484,11 +484,11 @@ private:
 /// object which can combine the glyphs data and metrics of a sf::Font
 /// to display any text on a render target.
 ///
-/// It is important to note that the sf::Text instance doesn't
+/// It is important to note that the sf::Text instance_ doesn't
 /// copy the font that it uses, it only keeps a reference to it.
 /// Thus, a sf::Font must not be destructed while it is
 /// used by a sf::Text (i.e. never write a function that
-/// uses a local sf::Font instance for creating a text).
+/// uses a local sf::Font instance_ for creating a text).
 ///
 /// See also the note on coordinates and undistorted rendering in sf::Transformable.
 ///

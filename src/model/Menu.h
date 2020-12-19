@@ -7,10 +7,8 @@
 
 #include "Widget.h"
 
-
-class Menu : public Widget{
+class Menu : public Widget {
 
 };
-
 
 #endif //GP_MENU_H

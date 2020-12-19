@@ -59,7 +59,7 @@ struct Matrix
     ///
     /// \param pointer Points to the beginning of an array that
     ///                has the size of the matrix. The elements
-    ///                are copied to the instance.
+    ///                are copied to the instance_.
     ///
     ////////////////////////////////////////////////////////////
     explicit Matrix(const float* pointer)
@@ -138,7 +138,7 @@ struct Vector4
     ////////////////////////////////////////////////////////////
     /// \brief Construct float vector implicitly from color
     ///
-    /// \param color Color instance. Is normalized to [0, 1]
+    /// \param color Color instance_. Is normalized to [0, 1]
     ///              for floats, and left as-is for ints.
     ///
     ////////////////////////////////////////////////////////////

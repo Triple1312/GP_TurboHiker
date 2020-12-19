@@ -17,7 +17,7 @@ public:
     unsigned int lanechunknr= 0;
 
     std::shared_ptr<logic::Obstacle> MakeObstacle() override {
-        return std::make_shared<view::Obstacle>(); }
+        return std::make_shared<logic::Obstacle>(); }
 
     std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) override {
         return std::make_shared<logic::Lane>(pos, size); }
@@ -34,8 +34,16 @@ public:
         lanechunknr++;
         return std::make_shared<view::LaneChunk>(pos, size); }
 
+    std::shared_ptr<logic::OCube> MakeOCube(std::shared_ptr<logic::Entity> entity) override {
+        return std::make_shared<view::OCube>();
+    }
 
-    static void MakeInstance() { instance = new EntityFactory;}
+    std::shared_ptr<logic::OCube> MakeOCube() override {
+        return std::make_shared<view::OCube>();
+    }
+
+
+    static void MakeInstance() { instance_ = new EntityFactory;}
 
 private:
 

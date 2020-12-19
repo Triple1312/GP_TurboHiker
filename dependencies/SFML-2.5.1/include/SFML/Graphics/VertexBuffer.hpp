@@ -107,7 +107,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Copy constructor
     ///
-    /// \param copy instance to copy
+    /// \param copy instance_ to copy
     ///
     ////////////////////////////////////////////////////////////
     VertexBuffer(const VertexBuffer& copy);
@@ -364,14 +364,14 @@ private:
 /// memory as would be the case with sf::VertexArray. If data transfer
 /// is a bottleneck, this can lead to performance gains.
 ///
-/// Using sf::VertexBuffer, the user also has the ability to only modify
+/// Using sf::VertexBuffer, the user_ also has the ability to only modify
 /// a portion of the buffer in graphics memory. This way, a large buffer
 /// can be allocated at the start of the application and only the
 /// applicable portions of it need to be updated during the course of
-/// the application. This allows the user to take full control of data
+/// the application. This allows the user_ to take full control of data
 /// transfers between system and graphics memory if they need to.
 ///
-/// In special cases, the user can make use of multiple threads to update
+/// In special cases, the user_ can make use of multiple threads to update
 /// vertex data in multiple distinct regions of the buffer simultaneously.
 /// This might make sense when e.g. the position of multiple objects has to
 /// be recalculated very frequently. The computation load can be spread
@@ -384,7 +384,7 @@ private:
 ///
 /// Simultaneous updates of distinct non-overlapping regions of the buffer
 /// are also not guaranteed to complete in a specific order. However, in
-/// this case the user can make sure to synchronize the writer threads at
+/// this case the user_ can make sure to synchronize the writer threads at
 /// well-defined points in their code. The driver will make sure that all
 /// pending data transfers complete before the vertex buffer is sourced
 /// by the rendering pipeline.

@@ -54,7 +54,7 @@ public:
     /// \brief Get the elapsed time
     ///
     /// This function returns the time elapsed since the last call
-    /// to restart() (or the construction of the instance if restart()
+    /// to restart() (or the construction of the instance_ if restart()
     /// has not been called).
     ///
     /// \return Time elapsed

@@ -54,7 +54,7 @@ SFML_SYSTEM_API std::ostream& err();
 /// (-> the stderr descriptor) which is the console if there's
 /// one available.
 ///
-/// It is a standard std::ostream instance, so it supports all the
+/// It is a standard std::ostream instance_, so it supports all the
 /// insertion operations defined by the STL
 /// (operator <<, manipulators, etc.).
 ///

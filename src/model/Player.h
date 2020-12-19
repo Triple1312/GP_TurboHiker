@@ -7,49 +7,48 @@
 
 #include "model/Entity.h"
 
-namespace logic{
+namespace logic {
 
 class Player : public logic::Entity {
-public:
-    void Jump();
+ public:
+  void Jump();
 
-    void Roll();
+  void Roll();
 
-    //Player(glm::vec4 ,glm::vec4 = glm::vec4(40.f/60.f, 80.f/60.f, 25.f/60.f, 0));
+  //Player(glm::vec4 ,glm::vec4 = glm::vec4(40.f/60.f, 80.f/60.f, 25.f/60.f, 0));
 
-    void EmpCharge(std::deque<std::shared_ptr<Player>> &);
+  void EmpCharge(std::deque<std::shared_ptr<Player>> &);
 
-    virtual void Update();
+  virtual void Update();
 
-    //void Display();
+  //void Display();
 
-protected:
-    std::uint8_t stamina;
-    std::uint8_t speed; // todo: pixel per second ?
-    std::uint8_t height; // if the player jumps or rolls this number will change
-    std::uint8_t emp_charge;
+ protected:
+  std::uint8_t stamina{};
+  std::uint8_t speed{}; // todo: pixel per second ?
+  std::uint8_t height{}; // if the player jumps or rolls this number will change
+  std::uint8_t emp_charge_{};
 
-    Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos , size){};
+  Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {};
 
-    Player() = default;
-
+  Player() = default;
 
 };
 
 class User : public logic::Player {
-public:
-    User();
+ public:
+  User();
 
-    User(glm::vec3 pos , glm::vec3 size);
+  User(glm::vec3 pos, glm::vec3 size);
 
-    //virtual void Display(){}
+  //virtual void Display(){}
 };
 
 class NPC : public logic::Player {
-public:
-    NPC() = default;
+ public:
+  NPC() = default;
 
-    virtual void Display(){}
+  void Display() override {}
 
 };
 

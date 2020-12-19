@@ -92,7 +92,7 @@ public:
     /// The supported font formats are: TrueType, Type 1, CFF,
     /// OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42.
     /// Note that this function knows nothing about the standard
-    /// fonts installed on the user's system, thus you can't
+    /// fonts installed on the user_'s system, thus you can't
     /// load them directly.
     ///
     /// \warning SFML cannot preload all the font data in this
@@ -348,7 +348,7 @@ private:
     ////////////////////////////////////////////////////////////
     void*                      m_library;     ///< Pointer to the internal library interface (it is typeless to avoid exposing implementation details)
     void*                      m_face;        ///< Pointer to the internal font face (it is typeless to avoid exposing implementation details)
-    void*                      m_streamRec;   ///< Pointer to the stream rec instance (it is typeless to avoid exposing implementation details)
+    void*                      m_streamRec;   ///< Pointer to the stream rec instance_ (it is typeless to avoid exposing implementation details)
     void*                      m_stroker;     ///< Pointer to the stroker (it is typeless to avoid exposing implementation details)
     int*                       m_refCount;    ///< Reference counter used by implicit sharing
     Info                       m_info;        ///< Information about the font
@@ -373,7 +373,7 @@ private:
 /// stream, and supports the most common types of fonts. See
 /// the loadFromFile function for the complete list of supported formats.
 ///
-/// Once it is loaded, a sf::Font instance provides three
+/// Once it is loaded, a sf::Font instance_ provides three
 /// types of information about the font:
 /// \li Global metrics, such as the line spacing
 /// \li Per-glyph metrics, such as bounding box or kerning
@@ -393,11 +393,11 @@ private:
 /// Note that it is also possible to bind several sf::Text instances
 /// to the same sf::Font.
 ///
-/// It is important to note that the sf::Text instance doesn't
+/// It is important to note that the sf::Text instance_ doesn't
 /// copy the font that it uses, it only keeps a reference to it.
 /// Thus, a sf::Font must not be destructed while it is
 /// used by a sf::Text (i.e. never write a function that
-/// uses a local sf::Font instance for creating a text).
+/// uses a local sf::Font instance_ for creating a text).
 ///
 /// Usage example:
 /// \code

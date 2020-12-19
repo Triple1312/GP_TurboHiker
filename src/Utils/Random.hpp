@@ -8,28 +8,28 @@ class Random {
 public:
 
     static Random& Get(){
-        return random;
+        return random_;
     }
 
-    float Float(float i, float j) { // precision v 9
+    static float Float(float i, float j) { // precision v 9
         time_t timer;
         time(&timer);
         int range = j - i;
-        return i + ((float)((timer * std::rand()) % (range * 1000000000)) / 1000000000.f);
+        return i + ((float)(timer * std::rand() % (range * 1000000000)) / 1000000000.f);
     }
 
-    int Int(int i, int j) {
+    static int Int(int i, int j) {
         time_t timer;
         time(&timer);
         int range = j - i;
-        return i + (timer * std::rand()) % range;
+        return i + timer * std::rand() % range;
     }
 
 private:
 
     Random() = default;
 
-    static Random random;
+    static Random random_;
 
 };
 

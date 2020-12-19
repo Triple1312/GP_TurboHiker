@@ -164,7 +164,7 @@ private:
 ///
 /// If you need to make OpenGL calls without having an
 /// active window (like in a thread), you can use an
-/// instance of this class to get a valid context.
+/// instance_ of this class to get a valid context.
 ///
 /// Having a valid context is necessary for *every* OpenGL call.
 ///
@@ -172,7 +172,7 @@ private:
 /// if you create a new thread it will have no valid context
 /// by default.
 ///
-/// To use a sf::Context instance, just construct it and let it
+/// To use a sf::Context instance_, just construct it and let it
 /// live as long as you need a valid context. No explicit activation
 /// is needed, all it has to do is to exist. Its destructor
 /// will take care of deactivating and freeing all the attached

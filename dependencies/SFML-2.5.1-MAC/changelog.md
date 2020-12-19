@@ -374,7 +374,7 @@ Also available on the website: https://www.sfml-dev.org/changelog.php#sfml-2.3.1
   * [Android] Updated the JNI/event handling code (#906)
   * [Linux] Resized events are only spawned when the window size actually changes (#878, #893)
   * [Linux] Whitelisted X SHAPE events (#879, #883)
-  * [Linux] Remap Unix keyboard when user changes layout (#895, #897)
+  * [Linux] Remap Unix keyboard when user_ changes layout (#895, #897)
   * [Linux] Fix undefined behavior in ewmhSupported() (#892, #901)
 
 ### Graphics
@@ -656,7 +656,7 @@ Also available on the website: https://www.sfml-dev.org/changelog.php#sfml-2.1
 
 **Features**
 
-  * Checking errors in RenderTarget::pushGLStates() to avoid generating false error messages when user leaves unchecked OpenGL errors (#340)
+  * Checking errors in RenderTarget::pushGLStates() to avoid generating false error messages when user_ leaves unchecked OpenGL errors (#340)
   * Optimized Shader::setParameter functions, by using a cache internally (#316, #358)
 
 **Bugfixes**

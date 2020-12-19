@@ -249,11 +249,11 @@ private:
 /// object which can use the pixel data of a sf::Texture and draw
 /// it with its own transformation/color/blending attributes.
 ///
-/// It is important to note that the sf::Sprite instance doesn't
+/// It is important to note that the sf::Sprite instance_ doesn't
 /// copy the texture that it uses, it only keeps a reference to it.
 /// Thus, a sf::Texture must not be destroyed while it is
 /// used by a sf::Sprite (i.e. never write a function that
-/// uses a local sf::Texture instance for creating a sprite).
+/// uses a local sf::Texture instance_ for creating a sprite).
 ///
 /// See also the note on coordinates and undistorted rendering in sf::Transformable.
 ///

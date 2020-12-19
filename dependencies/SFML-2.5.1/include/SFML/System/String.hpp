@@ -644,7 +644,7 @@ SFML_SYSTEM_API String operator +(const String& left, const String& right);
 /// s += L'a';           // automatically converted from wide string
 /// \endcode
 ///
-/// Conversions involving ANSI strings use the default user locale. However
+/// Conversions involving ANSI strings use the default user_ locale. However
 /// it is possible to use a custom locale if necessary:
 /// \code
 /// std::locale locale;
