@@ -32,6 +32,8 @@ class Player : public logic::Entity {
 
   Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {};
 
+  void Jump();
+
   Player() = default;
 
 };

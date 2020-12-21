@@ -32,6 +32,9 @@ void logic::Player::Update() {
   this->MoveForward(Clock::Get()->GetTimeSinceLastInSeconds() * this->velocity_.z);
   //std::cout << Clock::Get()->TimeSinceLast() << std::endl;
 }
+void logic::Player::Jump() {
+  this->velocity_.y = 2;
+}
 
 logic::User::User() : logic::Player(glm::vec3(0, 1, 0),
                                     glm::vec3(1, 1, 1)) {

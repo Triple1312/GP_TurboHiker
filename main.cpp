@@ -138,6 +138,9 @@ int main() {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
                 u->MoveBack(1);
             }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+              u->Jump();
+            }
             //camera_pos = u->GetPosition() + glm::vec3(0, 2, -3);
 
         }

@@ -38,6 +38,7 @@ logic::World::World(std::uint8_t lanes) {
       glm::vec3(1.f));
   this->SetOnLanechunk(this->user_, 2, 1);
   this->players_.emplace_back(this->user_);
+  this->user_->velocity_.y = 3;
 
   // this->lanes_[0]->GetChunks()[6]->SetOnChunk(EntityFactory::Get()->MakeOCube({0,0,0}));
 
@@ -57,14 +58,6 @@ logic::World::World(std::uint8_t lanes) {
 
 void logic::World::MovePlayer(int i) {
   auto p = this->players_[0];
-  //    auto l = GetOnLane(p);
-  //    if (l == 0 and i == -1) {
-  //        return;
-  //    }
-  //    else if(l == this->lanes_.size()-1 and i == 1) {
-  //        return;
-  //    }
-  //    SetOnLane(p, l + i);
 }
 
 void logic::World::SetOnLane(const std::shared_ptr<Player>& p,
@@ -96,6 +89,7 @@ void logic::World::Display() {
 std::shared_ptr<logic::User> logic::World::GetUser() { return this->user_; }
 
 void logic::World::Update() {
+  this->Display();
   for (const auto& i : this->players_) {
     for (const auto& j : lanes_) {
       for (const auto& k : j->GetChunks()) {
@@ -124,7 +118,7 @@ void logic::World::Update() {
       }
     }
   }
-  this->Display();
+
 }
 
 void logic::World::SetOnLanechunk(std::shared_ptr<logic::Entity> entity,
