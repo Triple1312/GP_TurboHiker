@@ -22,8 +22,8 @@ public:
     std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) override {
         return std::make_shared<logic::Lane>(pos, size); }
 
-    std::shared_ptr<logic::NPC> MakeNPC() override {
-        return std::make_shared<view::NPC>(); }
+    std::shared_ptr<logic::NPC> MakeNPC(glm::vec3 pos) override {
+        return std::make_shared<view::NPC>(pos); }
 
     std::shared_ptr<logic::User> MakeUser(glm::vec3 pos , glm::vec3 size) override {
         return std::make_shared<view::User>(pos , size); }

@@ -1,5 +1,5 @@
-#ifndef GP_CAMERA_HPP
-#define GP_CAMERA_HPP
+#ifndef GP_SRC_VIEW_CAMERA_HPP_
+#define GP_SRC_VIEW_CAMERA_HPP_
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 
@@ -39,4 +39,4 @@ private:
 };
 
 
-#endif //GP_CAMERA_HPP
+#endif //GP_SRC_VIEW_CAMERA_HPP_

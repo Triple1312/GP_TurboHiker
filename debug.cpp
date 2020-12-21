@@ -1,6 +1,6 @@
 #include <memory>
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "view/Player.h"
@@ -32,11 +32,9 @@ int main() {
     window->resetGLStates();
     auto s = window->getSettings().depthBits;
 
-    GLenum err = glewInit();
-    if (GLEW_OK != err)
-    {
-        /* Problem: glewInit failed, something is seriously wrong. */
-        fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
+    if (!gladLoadGLLoader((GLADloadproc)sf::Context::getFunction)) {
+      std::cout << "no glad";
+      return -1;
     }
 
     glCullFace(GL_CCW);

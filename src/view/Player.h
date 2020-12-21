@@ -26,11 +26,17 @@ public:
 };
 
 class NPC : public logic::NPC, public view::Drawable {
+ public:
+  NPC(glm::vec3 pos);
 
+  void Display() override {
+    this->Update();
+    this->ChangeVertices(this->GetPoints());
+    this->Draw(); }
 };
 
 }
 
 
 
-#endif //GP_PLAYER_H
+#endif //GP_SRC_MODEL_PLAYER_H_

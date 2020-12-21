@@ -5,7 +5,7 @@
 #ifndef IDK_VERTEXBUFFERLAYOUT_H
 #define IDK_VERTEXBUFFERLAYOUT_H
 #include <vector>
-#include <GL/glew.h>
+#include <glad/glad.h>
 
 #include "Renderer.h"
 

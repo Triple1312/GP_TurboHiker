@@ -23,7 +23,7 @@ class EntityFactory {
     return instance_;
   }
 
-  virtual std::shared_ptr<logic::NPC> MakeNPC() { return std::make_shared<logic::NPC>(); }
+  virtual std::shared_ptr<logic::NPC> MakeNPC(glm::vec3 pos) { return std::make_shared<logic::NPC>(pos); }
 
   virtual std::shared_ptr<logic::User> MakeUser() { return std::make_shared<logic::User>(); }
 

@@ -2,18 +2,18 @@
 #include "EntityFactory.hh"
 
 //const std::deque<std::shared_ptr<model::Lane::LaneChunk>> &model::Lane::GetLaneChunks() const {
-//    return lane_chunks;
+//    return lane_chunks_;
 //}
 
 //logic::Lane::Lane(glm::vec3 pos, double count, glm::vec3 size) {
 //    for (int i = 0; i < count; i++) {
-//        this->lane_chunks.emplace_back(LaneChunk(glm::vec3(pos.x, pos.y, pos.z + i * size.z ), size));
+//        this->lane_chunks_.emplace_back(LaneChunk(glm::vec3(pos.x, pos.y, pos.z + i * size.z ), size));
 //    }
 //}
 
 logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {
   for (int i = 0; i * size.x <= size.z; i++) {
-    this->lane_chunks.emplace_back(
+    this->lane_chunks_.emplace_back(
         (logic::EntityFactory::Get()->MakeLaneChunk(
             glm::vec3(pos.x, pos.y, pos.z + 2 * i),
             glm::vec3(size.x, size.y, size.x))));
@@ -22,7 +22,7 @@ logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {
 
 void logic::Lane::Display() {
   //std::cout << "bjdf";
-  for (auto &i : this->lane_chunks) {
+  for (auto &i : this->lane_chunks_) {
     //std::cout << "bjdf";
     i->Display();
   }
@@ -45,9 +45,9 @@ void logic::LaneChunk::SetOnChunk(const std::shared_ptr<logic::Entity>& entity) 
 }
 
 const std::deque<std::shared_ptr<logic::LaneChunk>> &logic::Lane::GetChunks() const {
-  return this->lane_chunks;
+  return this->lane_chunks_;
 }
 
 void logic::Lane::SetOnChunk(const std::shared_ptr<logic::Entity>& entity, unsigned int chunk) {
-  this->lane_chunks[chunk]->SetOnChunk(entity);
+  this->lane_chunks_[chunk]->SetOnChunk(entity);
 };

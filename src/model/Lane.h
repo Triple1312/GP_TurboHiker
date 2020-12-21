@@ -61,7 +61,7 @@ class Lane : public logic::Entity {
    * elke tick waarop een lanechunk uit beeld komt wordt er een nieuwe gemaakt
    * moet random obstacle soort hebben
    */
-  std::deque<std::shared_ptr<LaneChunk>> lane_chunks;
+  std::deque<std::shared_ptr<LaneChunk>> lane_chunks_;
  public:
   //const std::deque<std::shared_ptr<LaneChunk>> &GetLaneChunks() const;
 

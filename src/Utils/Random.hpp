@@ -1,7 +1,7 @@
-#ifndef GP_RANDOM_HPP
-#define GP_RANDOM_HPP
+#ifndef GP_SRC_UTILS_RANDOM_HPP_
+#define GP_SRC_UTILS_RANDOM_HPP_
 
-#include <ctime>
+#include <random>
 #include <iostream>
 
 class Random {
@@ -11,18 +11,14 @@ public:
         return random_;
     }
 
-    static float Float(float i, float j) { // precision v 9
-        time_t timer;
-        time(&timer);
-        int range = j - i;
-        return i + ((float)(timer * std::rand() % (range * 1000000000)) / 1000000000.f);
+    float Float(float i, float j) { // precision v 9
+      std::uniform_real_distribution<float> distribution(i, std::nextafter(j, FLT_MAX));
+      return distribution(random_device_); // todo efficientere random
     }
 
-    static int Int(int i, int j) {
-        time_t timer;
-        time(&timer);
-        int range = j - i;
-        return i + timer * std::rand() % range;
+    int Int(int i, int j) {
+      std::uniform_int_distribution<int> distribution(i, std::nextafter(j, INT_MAX));
+      return distribution(random_device_); // todo efficientere random
     }
 
 private:
@@ -31,6 +27,8 @@ private:
 
     static Random random_;
 
+    std::random_device random_device_;
+
 };
 
-#endif //GP_RANDOM_HPP
+#endif //GP_SRC_UTILS_RANDOM_HPP_

@@ -5,7 +5,7 @@
 #ifndef IDK_RENDERER_H
 #define IDK_RENDERER_H
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 
 #include "VertexArray.h"
 #include "IndexBuffer.h"

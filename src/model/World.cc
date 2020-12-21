@@ -43,8 +43,13 @@ logic::World::World(std::uint8_t lanes) {
 
   for (int i = 0; i < 12; i++) {
     this->obstacles_.emplace_back(EntityFactory::Get()->MakeOCube());
-    this->SetOnLanechunk(this->obstacles_[i], Random::Get().Int(0, 5),
+    this->SetOnLanechunk(this->obstacles_[i], Random::Get().Int(0, 4),
                          Random::Get().Int(2, 50));
+  }
+  for (int j = 0; j < 2; j++) {
+    std::shared_ptr<NPC> temp = EntityFactory::Get()->MakeNPC({1, 1, 1});
+    SetOnLanechunk(temp , j , 1);
+    players_.emplace_back(temp);
   }
   // this->user_->SetPosition({this->lanes_[0]->GetPosition().x,
   // this->lanes_[0]->GetPosition().y + 2, 1});
@@ -81,6 +86,9 @@ void logic::World::Display() {
   for (auto &j : this->obstacles_) {
     j->Display();
   }
+  for ( auto &k : this->players_) {
+    k->Display();
+  }
 
   this->user_->Display();
 }
@@ -96,6 +104,7 @@ void logic::World::Update() {
           i->MoveRight(tmp.x);
         } else if (tmp.y != 0.F) {
           i->MoveUp(tmp.y);
+          i->velocity_.y = 0.f;
         } else if (tmp.z != 0.F) {
           i->MoveForward(tmp.z);
         }
@@ -109,6 +118,7 @@ void logic::World::Update() {
         i->MoveRight(tmp.x);
       } else if (tmp.y <= tmp.x && tmp.y <= tmp.z) {
         i->MoveUp(tmp.y);
+        i->velocity_.y = 0.f;
       } else {
         i->MoveForward(tmp.z);
       }
