@@ -1,13 +1,11 @@
-//
-// Created by Phili on 11/11/2020.
-//
-
-#ifndef GP_AOBSTACLE_H
-#define GP_AOBSTACLE_H
+#ifndef GP_SRC_MODEL_OBSTACLE_H_
+#define GP_SRC_MODEL_OBSTACLE_H_
 
 #include "Entity.h"
 
 namespace logic {
+
+enum ObstType{ WALL = 1, HORDE = 2, STEP_1 = 3, STEP_2 = 4};
 
 class Obstacle : public Entity {
 
@@ -23,8 +21,14 @@ class Obstacle : public Entity {
 /**
  * @note moet een systeem vinden voor meerdere obstakels achter elkaar
  */
-class Ramp : public Obstacle {
+class Ramp1 : public Obstacle {
+ public:
+  explicit Ramp1(glm::vec3 pos);
+};
 
+class Ramp2 : public Obstacle {
+ public:
+  explicit Ramp2(glm::vec3 pos);
 };
 
 class OCube : public Obstacle { //todo andere naam geven
@@ -33,6 +37,11 @@ class OCube : public Obstacle { //todo andere naam geven
 
   OCube() = default;
 
+};
+
+class Horde : public Obstacle {
+ public:
+  explicit Horde(glm::vec3 pos);
 };
 
 class Laser : public Obstacle {

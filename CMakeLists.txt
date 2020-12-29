@@ -4,7 +4,7 @@ project(GP)
 cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "-fsanitize=leak -fsanitize=address")
+set(CMAKE_CXX_FLAGS "-fsanitize=leak -fsanitize=address -Wall")
 
 #add_subdirectory(dependencies/glew-2.1.0/build/cmake )
 include_directories(src dependencies/glad/include)
@@ -12,14 +12,13 @@ include_directories(src dependencies/glad/include)
 
 include( ${CMAKE_CURRENT_LIST_DIR}/dependencies/CmakeLists.txt)
 
-set(view src/view/Entity.cpp src/view/Entity.h
+set(view
         src/view/Draw.cc src/view/Draw.h
-        src/view/EntityFactory.h
+        src/view/Factory.h
         src/view/Obstacle.cpp src/view/Obstacle.h
         src/view/Player.cpp src/view/Player.h
         src/view/Lane.cpp src/view/Lane.h
         src/view/Drawable.hpp
-        src/view/World.cpp src/view/World.h
         src/view/Camera.hpp src/view/Drawable.cpp)
 
 
@@ -28,15 +27,12 @@ set(view src/view/Entity.cpp src/view/Entity.h
 add_library(model STATIC
         src/model/Entity.cc src/model/Entity.h
         src/model/Player.cpp src/model/Player.h
-        src/model/Item.h src/model/Item.cc
         src/model/Scoreboard.cc src/model/Scoreboard.h
         src/model/World.cc src/model/World.h
         src/model/Obstacle.cc src/model/Obstacle.h
-        src/model/Menu.cc src/model/Menu.h
         src/model/Lane.cc src/model/Lane.h
-        src/model/Widget.cc src/model/Widget.h
-        src/model/EntityFactory.hh src/model/PlayerFactory.hh
-        src/model/Clock.hpp)
+        src/model/Factory.h src/model/PlayerFactory.hh
+        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h)
 
 add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp

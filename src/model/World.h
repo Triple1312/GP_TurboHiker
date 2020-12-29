@@ -6,7 +6,6 @@
 #include <deque>
 #include <iostream>
 
-#include "Widget.h"
 #include "Lane.h"
 #include "Entity.h"
 #include "Player.h"
@@ -28,6 +27,8 @@ class World : public Entity {
 
   explicit World(std::uint8_t);
 
+  void Generate(uint8_t lane_count);
+
   void MovePlayer(int);
 
   void SetOnLane(const std::shared_ptr<Player>&, std::uint8_t);
@@ -47,6 +48,11 @@ class World : public Entity {
   std::deque<std::shared_ptr<Player>> players_;
   std::shared_ptr<logic::User> user_;
   std::deque<std::shared_ptr<logic::Obstacle>> obstacles_;
+
+  std::vector<std::uint8_t> obst_map_;
+
+  void GenerateObstacleMap();
+
 
 };
 

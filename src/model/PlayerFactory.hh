@@ -2,8 +2,8 @@
 // Created by Phili on 28/11/2020.
 //
 
-#ifndef GP_PLAYERFACTORY_HH
-#define GP_PLAYERFACTORY_HH
+#ifndef GP_SRC_MODEL_PLAYERFACTORY_HH_
+#define GP_SRC_MODEL_PLAYERFACTORY_HH_
 
 namespace logic {
 
@@ -36,4 +36,4 @@ logic::NPC PlayerFactory::MakeNPC() {
 
 
 
-#endif //GP_PLAYERFACTORY_HH
+#endif //GP_SRC_MODEL_PLAYERFACTORY_HH_

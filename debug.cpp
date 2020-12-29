@@ -4,13 +4,13 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "view/Player.h"
-#include "view/EntityFactory.h"
-#include "view/World.h"
+#include "view/Factory.h"
+#include "model/World.h"
 #include "model/Clock.hpp"
 
 Cam* Cam::camera = 0;
 
-logic::EntityFactory* logic::EntityFactory::instance_;
+logic::Factory* logic::Factory::instance_;
 
 Clock* Clock::instance_ = 0;
 
@@ -18,7 +18,7 @@ Random Random::random_;
 
 int main() {
 
-    view::EntityFactory::MakeInstance();
+    view::Factory::MakeInstance();
 
     sf::ContextSettings settings;
     settings.depthBits = 24;
@@ -48,7 +48,7 @@ int main() {
     auto v = std::make_shared<view::Drawable>();
 
 
-    view::World world(5);
+    logic::World world(5);
 
 
     glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
@@ -58,7 +58,7 @@ int main() {
     const float cameraSpeed = 0.1f;
 
     bool firstMouse = true;
-    float yaw   = -90.0f;	// yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
+    float yaw   = 90.0f;	// yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
     float pitch =  0.0f;
     float lastX =  800.0f / 2.0;
     float lastY =  600.0 / 2.0;

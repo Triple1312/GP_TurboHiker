@@ -30,11 +30,15 @@ class Player : public logic::Entity {
 //  glm::vec3 curr_acceleration_{};
 
 
-  Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {};
+  Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {this->stamina_ = 1;}
 
   void Jump();
 
   Player() = default;
+
+  void Bump(float stamina, glm::vec3 dir);
+
+  void CalcVel();
 
 };
 
@@ -44,7 +48,7 @@ class User : public logic::Player {
 
   User(glm::vec3 pos, glm::vec3 size);
 
-  void EmpCharge(std::deque<std::shared_ptr<Player>> &);
+  void EmpCharge( const std::deque<std::shared_ptr<Player>> &);
 
   //virtual void Display(){}
 };

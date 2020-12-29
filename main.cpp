@@ -4,14 +4,13 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "view/Player.h"
-#include "view/EntityFactory.h"
-#include "view/World.h"
+#include "view/Factory.h"
 #include "model/Clock.hpp"
 #include "Utils/Random.hpp"
 
 Cam* Cam::camera = nullptr;
 
-logic::EntityFactory* logic::EntityFactory::instance_;
+logic::Factory* logic::Factory::instance_;
 
 Clock* Clock::instance_;
 
@@ -19,7 +18,7 @@ Random Random::random_;
 
 int main() {
 
-    view::EntityFactory::MakeInstance();
+    view::Factory::MakeInstance();
 
     sf::ContextSettings settings;
     settings.depthBits = 24;
@@ -49,7 +48,7 @@ int main() {
     auto v = std::make_shared<view::Drawable>();
 
 
-    view::World world(5);
+    logic::World world(5);
 
     std::shared_ptr<logic::User> u = world.GetUser();
 
@@ -60,7 +59,7 @@ int main() {
     const float kCameraSpeed = 0.1f;
 
     bool first_mouse = true;
-    float yaw   = -90.0f;	// yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
+    float yaw   = 90.0f;	// yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
     float pitch =  0.0f;
     float last_x =  800.0f / 2.0;
     float last_y =  600.0 / 2.0;
@@ -77,6 +76,7 @@ int main() {
   camera_front = glm::normalize(front);
 
     window->setFramerateLimit(60);
+    //Clock::Get()->Reset();
     //blub.setFillColor(sf::Color::Magenta);
     while (window->isOpen()) {
         glClearColor(0.9,0.6,0.0,1.0);
@@ -140,6 +140,9 @@ int main() {
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
               u->Jump();
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+              u->EmpCharge(world.GetPlayers());
             }
             //camera_pos = u->GetPosition() + glm::vec3(0, 2, -3);
 

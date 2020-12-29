@@ -26,6 +26,12 @@ class Clock {
     last_ = std::chrono::steady_clock::now();
   }
 
+  void Reset() {
+    begin_ = std::chrono::steady_clock::now();
+    last_ = std::chrono::steady_clock::now();
+    since_last_ = 0;
+  }
+
   static Clock *Get() {
     if (!instance_) {
       instance_ = new Clock;

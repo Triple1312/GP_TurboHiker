@@ -1,18 +1,7 @@
-//
-// Created by Phili on 11/11/2020.
-//
 
 #include "Player.h"
 
-//void logic::Player::Jump() {
-//  this->height_ = 80;
-//}
-//
-//void logic::Player::Roll() {
-//  this->height_ = 40;
-//}
-
-void logic::User::EmpCharge(std::deque<std::shared_ptr<Player>> &players) {
+void logic::User::EmpCharge(const std::deque<std::shared_ptr<Player>> &players) {
   auto temp = this->GetPosition();
   for (const std::shared_ptr<Player>& i : players) {
     if (i.get() != (Player*)this) {
@@ -31,9 +20,42 @@ void logic::Player::Update() {
   this->MoveUp(Clock::Get()->GetTimeSinceLastInSeconds() * velocity_.y);
   this->MoveForward(Clock::Get()->GetTimeSinceLastInSeconds() * this->velocity_.z);
   //std::cout << Clock::Get()->TimeSinceLast() << std::endl;
+  this->CalcVel();
 }
 void logic::Player::Jump() {
   this->velocity_.y = 2;
+}
+void logic::Player::Bump(float stamina, glm::vec3 dir) {
+  if (stamina > stamina_) {
+    this->velocity_.z = this->velocity_.z * stamina_/stamina;
+    this->stamina_ = 0;
+    //todo verplaatsen
+
+  }
+  else if (stamina == 0) {
+    // todo delete ?
+    std::cout << "ha";
+  }
+  else {
+    this->velocity_.z = this->velocity_.z * stamina_/stamina;
+    this->stamina_ = stamina_ - stamina;
+  }
+}
+
+void logic::Player::CalcVel() {
+  if (velocity_.z > 2 ) {
+    velocity_.z -= Clock::Get()->GetTimeSinceLastInSeconds() * 0.2;
+    stamina_ += Clock::Get()->GetTimeSinceLastInSeconds() * 0.2;
+    if (velocity_.z < 2) {velocity_.z = 2;}
+
+  }
+  else if ( velocity_.z < 2 && stamina_ != 0) {
+    velocity_.z += Clock::Get()->GetTimeSinceLastInSeconds() * 0.5;
+    stamina_-= Clock::Get()->GetTimeSinceLastInSeconds() * 0.1;
+    if (velocity_.z > 2) {velocity_.z = 2;}
+  }
+  if (stamina_ > 1) { stamina_ = 1;}
+  stamina_+= Clock::Get()->GetTimeSinceLastInSeconds() * 0.1;
 }
 
 logic::User::User() : logic::Player(glm::vec3(0, 1, 0),

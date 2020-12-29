@@ -35,7 +35,7 @@ class Entity {
    *@brief: saves every point of the entity
    * an entity will always be a recengular cube
    */
-  float points_[24]{};  // stride is 3
+  std::array<glm::vec3, 8> points_;  // stride is 3
 
   /**
    * @brief function that checks collision for every axis
@@ -83,9 +83,9 @@ class Entity {
 
   virtual void MoveZ(float);
 
-  virtual void SetPositionBottom(glm::vec3);
+  //virtual void SetPositionBottom(glm::vec3);
 
-  virtual glm::vec3 GetPositionTop();
+  //virtual glm::vec3 GetPositionTop();
 
   virtual void Display();
 

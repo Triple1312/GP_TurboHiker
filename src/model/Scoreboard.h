@@ -1,17 +1,14 @@
-//
-// Created by Phili on 11/11/2020.
-//
 
-#ifndef GP_SCOREBOARD_H
-#define GP_SCOREBOARD_H
+#ifndef GP_SRC_MODEL_SCOREBOARD_H_
+#define GP_SRC_MODEL_SCOREBOARD_H_
 
 #include <iostream>
 
-#include "Widget.h"
+
 
 namespace logic {
 
-class Scoreboard : public Widget {
+class Scoreboard {
  private:
   std::uint32_t score_{};
 
@@ -26,4 +23,4 @@ class Scoreboard : public Widget {
 
 }
 
-#endif //GP_SCOREBOARD_H
+#endif //GP_SRC_MODEL_SCOREBOARD_H_

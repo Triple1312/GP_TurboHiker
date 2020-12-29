@@ -1,5 +1,5 @@
 #include "Lane.h"
-#include "EntityFactory.hh"
+#include "Factory.h"
 
 //const std::deque<std::shared_ptr<model::Lane::LaneChunk>> &model::Lane::GetLaneChunks() const {
 //    return lane_chunks_;
@@ -14,7 +14,7 @@
 logic::Lane::Lane(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {
   for (int i = 0; i * size.x <= size.z; i++) {
     this->lane_chunks_.emplace_back(
-        (logic::EntityFactory::Get()->MakeLaneChunk(
+        (logic::Factory::Get()->MakeLaneChunk(
             glm::vec3(pos.x, pos.y, pos.z + 2 * i),
             glm::vec3(size.x, size.y, size.x))));
   }

@@ -1,14 +1,8 @@
-//
-// Created by Phili on 03/12/2020.
-//
-
-#ifndef GP_V_PLAYER_H
-#define GP_V_PLAYER_H
-
+#ifndef GP_SRC_VIEW_PLAYER_H_
+#define GP_SRC_VIEW_PLAYER_H_
 
 #include "model/Player.h"
 #include "view/Drawable.hpp"
-
 
 namespace view {
 
@@ -27,7 +21,7 @@ public:
 
 class NPC : public logic::NPC, public view::Drawable {
  public:
-  NPC(glm::vec3 pos);
+  explicit NPC(glm::vec3 pos);
 
   void Display() override {
     this->Update();

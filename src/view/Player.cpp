@@ -1,13 +1,9 @@
-//
-// Created by Phili on 03/12/2020.
-//
-
 #include "Player.h"
 
 view::User::User() :  view::Drawable(){
     this->velocity_ = {0, -0.5, 1.f};
     this->ibo = std::make_shared<IndexBuffer>();
-    this->vbo_v = std::make_shared<VertexBuffer>(this->points_, 3 * 8 * sizeof(float));
+    this->vbo_v = std::make_shared<VertexBuffer>(&this->points_, 3 * 8 * sizeof(float));
 
     float colors[] = {
             1.0f, 0.0f, 1.0f,
@@ -55,7 +51,7 @@ view::User::User() :  view::Drawable(){
 
 view::User::User(glm::vec3 pos, glm::vec3 size) : logic::User(pos, size) , Drawable(){
     this->ibo = std::make_shared<IndexBuffer>();
-    this->vbo_v = std::make_shared<VertexBuffer>(this->points_, 3 * 8 * sizeof(float));
+    this->vbo_v = std::make_shared<VertexBuffer>(&this->points_[0].x, 3 * 8 * sizeof(float));
 
     float colors[] = {
             1.0f, 0.0f, 1.0f,
@@ -100,7 +96,7 @@ view::User::User(glm::vec3 pos, glm::vec3 size) : logic::User(pos, size) , Drawa
 }
 view::NPC::NPC(glm::vec3 pos) : logic::NPC(pos) , Drawable(){
   this->ibo = std::make_shared<IndexBuffer>();
-  this->vbo_v = std::make_shared<VertexBuffer>(this->points_, 3 * 8 * sizeof(float));
+  this->vbo_v = std::make_shared<VertexBuffer>(&this->points_[0].x, 3 * 8 * sizeof(float));
 
   float colors[] = {
       0.0f, 0.0f, 1.0f,

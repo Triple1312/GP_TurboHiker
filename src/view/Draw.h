@@ -23,7 +23,6 @@
 
 #include "model/Entity.h"
 #include "model/Obstacle.h"
-#include "model/Item.h"
 #include "model/Player.h"
 #include "model/Lane.h"
 

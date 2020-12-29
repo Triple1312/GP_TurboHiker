@@ -1,5 +1,5 @@
-#ifndef GP_DRAWABLE_HPP
-#define GP_DRAWABLE_HPP
+#ifndef GP_SRC_VIEW_DRAWABLE_HPP_
+#define GP_SRC_VIEW_DRAWABLE_HPP_
 
 #include <memory>
 #include <engine/Renderer.h>
@@ -33,4 +33,4 @@ public:
 
 
 
-#endif //GP_DRAWABLE_HPP
+#endif //GP_SRC_VIEW_DRAWABLE_HPP_
