@@ -4,7 +4,7 @@ project(GP)
 cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "-fsanitize=leak -fsanitize=address -Wall")
+set(CMAKE_CXX_FLAGS )
 
 #add_subdirectory(dependencies/glew-2.1.0/build/cmake )
 include_directories(src dependencies/glad/include)
@@ -19,7 +19,7 @@ set(view
         src/view/Player.cpp src/view/Player.h
         src/view/Lane.cpp src/view/Lane.h
         src/view/Drawable.hpp
-        src/view/Camera.hpp src/view/Drawable.cpp)
+        src/view/Camera.hpp src/view/Drawable.cpp src/view/Scoreboard.cpp src/view/Scoreboard.h)
 
 
 #set(controller src/model/MainGame.cc src/model/MainGame.h src/Controller.cpp src/Controller.h)
@@ -32,7 +32,7 @@ add_library(model STATIC
         src/model/Obstacle.cc src/model/Obstacle.h
         src/model/Lane.cc src/model/Lane.h
         src/model/Factory.h src/model/PlayerFactory.hh
-        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h)
+        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h src/model/GameSettings.cpp src/model/GameSettings.h)
 
 add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp

@@ -11,6 +11,7 @@
 
 #include "DisignByContract.h"
 #include "model/Clock.hpp"
+#include "model/GameSettings.h"
 
 /**
  *@brief: an enum that describes at which axis two entities collide;

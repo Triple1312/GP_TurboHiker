@@ -47,6 +47,10 @@ class Clock {
     return since_last_ / 1000000;
   }
 
+  uint32_t GetTimeSinceLastInMilliSeconds() const {
+    return since_last_ / 1000;
+  }
+
  private:
   Clock() {
     begin_ = std::chrono::steady_clock::now();

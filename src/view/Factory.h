@@ -8,6 +8,7 @@
 #include "view/Player.h"
 #include "view/Obstacle.h"
 #include "view/Lane.h"
+#include "view/Scoreboard.h"
 
 namespace view {
 
@@ -33,7 +34,7 @@ public:
     }
 
     std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) override {
-        return std::make_shared<logic::Lane>(pos, size); }
+        return std::make_shared<Lane>(pos, size); }
 
     std::shared_ptr<logic::NPC> MakeNPC(glm::vec3 pos) override {
         return std::make_shared<NPC>(pos); }
@@ -41,11 +42,6 @@ public:
     std::shared_ptr<logic::User> MakeUser(glm::vec3 pos , glm::vec3 size) override {
         return std::make_shared<User>(pos , size); }
 
-    std::shared_ptr<logic::LaneChunk>
-    MakeLaneChunk(glm::vec3 pos, glm::vec3 size) override {
-        std::cout << "made lanechunk " << lanechunknr_ << std::endl;
-        lanechunknr_++;
-        return std::make_shared<view::LaneChunk>(pos, size); }
 
     std::shared_ptr<logic::OCube> MakeOCube(std::shared_ptr<logic::Entity> entity) override {
         return std::make_shared<OCube>(entity->GetPosition());
@@ -53,6 +49,10 @@ public:
 
     std::shared_ptr<logic::OCube> MakeOCube() override {
         return std::make_shared<OCube>(glm::vec3(0.f));
+    }
+
+  std::shared_ptr<logic::Scoreboard> MakeScoreBoard(std::shared_ptr<logic::Player> player) override {
+      return std::make_shared<view::Scoreboard>(player);
     }
 
 

@@ -2,7 +2,7 @@
 
 #include "Lane.h"
 
-view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size) : logic::LaneChunk(pos, size){
+view::Lane::Lane(glm::vec3 pos, glm::vec3 size) : logic::Lane(pos, size){
     this->ibo = std::make_unique<IndexBuffer>();
     this->vbo_v = std::make_unique<VertexBuffer>(&this->points_[0].x, 3 * 8 * sizeof(float));
 
@@ -48,3 +48,4 @@ view::LaneChunk::LaneChunk(glm::vec3 pos, glm::vec3 size) : logic::LaneChunk(pos
                              "}";
     this->shader = std::make_shared<Shader>("src/view/entity.shader");
 }
+

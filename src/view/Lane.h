@@ -7,26 +7,15 @@
 
 namespace view {
 
-class LaneChunk : public logic::LaneChunk , public view::Drawable {
-public:
+class Lane : public logic::Lane, public view::Drawable {
+ public:
 
-    void Display() override { this->Draw(); }
+  void Display() override { this->Draw(); }
 
-    //LaneChunk();
+  Lane(glm::vec3 pos, glm::vec3 size);
 
-    LaneChunk(glm::vec3 pos, glm::vec3 size);
-
-
-    };
-
-
-
-
-
-
+};
 
 }
-
-
 
 #endif //GP_SRC_MODEL_LANE_H_

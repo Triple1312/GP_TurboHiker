@@ -4,6 +4,7 @@
 #include "model/Player.h"
 #include "view/Drawable.hpp"
 
+
 namespace view {
 
 class User : public logic::User, public view::Drawable {

@@ -26,6 +26,7 @@ class Player : public logic::Entity {
   float speed_{}; // todo: pixel per second ?
 //  std::uint8_t height_{}; // if the player jumps or rolls this number will change
   float emp_charge_{};
+  bool airborne_ = false;
 //  glm::vec3 max_speed_{};
 //  glm::vec3 curr_acceleration_{};
 

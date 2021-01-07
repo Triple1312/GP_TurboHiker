@@ -11,6 +11,7 @@
 #include "Player.h"
 #include "DisignByContract.h"
 #include "Utils/Random.hpp"
+#include "Scoreboard.h"
 
 namespace logic {
 
@@ -33,6 +34,8 @@ class World : public Entity {
 
   void SetOnLane(const std::shared_ptr<Player>&, std::uint8_t);
 
+  logic::Scoreboard* GetScoreBoard();
+
   std::uint8_t GetOnLane(std::shared_ptr<Player>);
 
   void Display() override;
@@ -50,6 +53,8 @@ class World : public Entity {
   std::deque<std::shared_ptr<logic::Obstacle>> obstacles_;
 
   std::vector<std::uint8_t> obst_map_;
+
+  std::shared_ptr<logic::Scoreboard> score_board_;
 
   void GenerateObstacleMap();
 

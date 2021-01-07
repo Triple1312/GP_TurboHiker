@@ -13,12 +13,12 @@ public:
 
     float Float(float i, float j) { // precision v 9
       std::uniform_real_distribution<float> distribution(i, std::nextafter(j, FLT_MAX));
-      return distribution(random_device_); // todo efficientere random
+      return distribution(rand_gen_); // todo efficientere random
     }
 
     int Int(int i, int j) {
       std::uniform_int_distribution<int> distribution(i, std::nextafter(j, INT_MAX));
-      return distribution(random_device_); // todo efficientere random
+      return distribution(rand_gen_); // todo efficientere random
     }
 
 private:
@@ -27,7 +27,7 @@ private:
 
     static Random random_;
 
-    std::random_device random_device_;
+    std::mt19937 rand_gen_;
 
 };
 

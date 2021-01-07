@@ -34,9 +34,6 @@ class Factory {
 
   virtual std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos, glm::vec3 size) = 0;
 
-  virtual std::shared_ptr<logic::LaneChunk> MakeLaneChunk(glm::vec3 pos,
-                                                          glm::vec3 size) { return std::make_shared<logic::LaneChunk>(); }
-
   virtual std::shared_ptr<logic::OCube> MakeOCube(std::shared_ptr<logic::Entity> entity) = 0;
 
   virtual std::shared_ptr<logic::OCube> MakeOCube() {
@@ -46,6 +43,8 @@ class Factory {
   virtual std::unique_ptr<Trigger> MakeTrigger(std::function<void()> &action, std::function<bool()> &trigger, bool del = true) {
     return std::make_unique<Trigger>(action, trigger, del);
   }
+
+  virtual std::shared_ptr<logic::Scoreboard> MakeScoreBoard(std::shared_ptr<logic::Player>) = 0;
 
  protected:
 
