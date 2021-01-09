@@ -8,6 +8,11 @@
 #include "model/Clock.hpp"
 #include "Utils/Random.hpp"
 
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
+
+
 Cam* Cam::camera = nullptr;
 
 logic::Factory* logic::Factory::instance_;
@@ -37,7 +42,12 @@ int main() {
     return -1;
   }
 
-
+  FT_Library ft;
+  if (FT_Init_FreeType(&ft))
+  {
+    std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
+    return -1;
+  }
 
     glCullFace(GL_CCW);
 
@@ -85,10 +95,8 @@ int main() {
     //window->resetGLStates();
     //Clock::Get()->Reset();
     //blub.setFillColor(sf::Color::Magenta);
+
     while (window->isOpen()) {
-        window->clear();
-        window->pushGLStates();
-      {
         glCullFace(GL_CCW);
 
         glEnable(GL_DEPTH_TEST);
@@ -168,13 +176,7 @@ int main() {
         Clock::Get()->Update();
         world.Update();
         world.Display();
-      }
-        window->popGLStates();
-
-        window->pushGLStates();
         //sb->Draw(&window); //todo is momenteel gwn logic
-        window->draw(sf::RectangleShape(sf::Vector2f(100, 500)));
-        window->popGLStates();
 
         window->display();
     }
