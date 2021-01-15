@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS )
 
-#add_subdirectory(dependencies/glew-2.1.0/build/cmake )
-include_directories(src dependencies/glad/include dependencies/engine/engine/freetype-2.10.0/build/include)
+add_subdirectory(dependencies/engine/engine/freetype2 )
+include_directories(src dependencies/glad/include dependencies/engine/engine/freetype2/include)
 
 
 
@@ -47,8 +47,8 @@ add_library(engine STATIC
         dependencies/engine/engine/Text.cpp dependencies/engine/engine/Text.h)
 
 
-include_directories(GP dependencies/engine/engine/freetype-2.10.0/include)
-link_directories(GP dependencies/engine/engine/freetype-2.10.0/build)
+#include_directories(GP dependencies/engine/engine/freetype-2.10.0/include)
+#link_directories(GP dependencies/engine/engine/freetype-2.10.0/build)
 add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c )
 add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c)
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
@@ -58,7 +58,5 @@ find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED
 
 #find_package(Freetype REQUIRED)
 
-#target_link_directories(GP PRIVATE dependencies/engine/engine/freetype-2.10.0/objs)
-
 target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system -ldl -lGL engine model freetype )
-target_link_libraries(GP_debug sfml-audio sfml-graphics sfml-window sfml-system  -ldl -lGL engine model)
+target_link_libraries(GP_debug sfml-audio sfml-graphics sfml-window sfml-system  -ldl -lGL engine model freetype)
