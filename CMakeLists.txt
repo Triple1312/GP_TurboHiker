@@ -44,7 +44,7 @@ add_library(engine STATIC
         dependencies/engine/engine/VertexArray.h dependencies/engine/engine/VertexArray.cpp
         dependencies/engine/engine/VertexBufferLayout.h
 
-        dependencies/engine/engine/Text.cpp dependencies/engine/engine/Text.h)
+        dependencies/engine/engine/Text.cpp dependencies/engine/engine/Text.h dependencies/engine/engine/Texture.cc dependencies/engine/engine/Texture.h dependencies/engine/engine/stb_image.h dependencies/engine/engine/stb_image.cpp)
 
 
 #include_directories(GP dependencies/engine/engine/freetype-2.10.0/include)

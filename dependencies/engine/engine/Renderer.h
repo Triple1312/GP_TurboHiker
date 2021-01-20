@@ -7,12 +7,13 @@
 
 #include <glad/glad.h>
 
-#include "VertexArray.h"
 #include "IndexBuffer.h"
 #include "Shader.h"
+#include "VertexArray.h"
 
-//#define ASSERT(x) if (!(x)) __debugbreak(); // Break debugging if x returns false
-//#define GLCall(x) GLClearError(); x; ASSERT(GLLogCall(#x, __FILE__, __LINE__)); // Wrap a function with an error boundary
+//#define ASSERT(x) if (!(x)) __debugbreak(); // Break debugging if x returns
+//false #define GLCall(x) GLClearError(); x; ASSERT(GLLogCall(#x, __FILE__,
+//__LINE__)); // Wrap a function with an error boundary
 
 /**
 Clear all (unrelated) previous errors.
@@ -28,22 +29,22 @@ Check for an error and log the error to the console.
 */
 bool GLLogCall(const char* function, const char* file, int line);
 
-class Renderer
-{
-public:
-    void Clear() const;
-    void Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const;
+class Renderer {
+ public:
+  void Clear() const;
+  void Draw(const VertexArray& va, const IndexBuffer& ib,
+            const Shader& shader) const;
 
-    static Renderer *Get() {
-        if(!instance) {
-            instance = new Renderer;
-        }
-        return instance;
+  static Renderer* Get() {
+    if (!instance) {
+      instance = new Renderer;
     }
+    return instance;
+  }
 
-private:
-    Renderer() = default;
+ private:
+  Renderer() = default;
 
-    static Renderer* instance;
+  static Renderer* instance;
 };
-#endif //IDK_RENDERER_H
+#endif  // IDK_RENDERER_H

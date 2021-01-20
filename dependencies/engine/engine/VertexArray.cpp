@@ -2,44 +2,32 @@
 // Created by Phili on 23/11/2020.
 //
 #include "VertexArray.h"
+
 #include "VertexBufferLayout.h"
 
-VertexArray::VertexArray()
-{
-    glGenVertexArrays(1, &m_RendererID);
+VertexArray::VertexArray() { glGenVertexArrays(1, &m_RendererID); }
+
+VertexArray::~VertexArray() { glDeleteVertexArrays(1, &m_RendererID); }
+
+void VertexArray::AddBuffer(const VertexBuffer& vb,
+                            const VertexBufferLayout& layout) {
+  Bind();
+  vb.Bind();
+
+  const auto& elements = layout.GetElements();
+  unsigned int offset = 0;
+
+  for (unsigned int i = 0; i < elements.size(); i++) {
+    const auto& element = elements[i];
+    glEnableVertexAttribArray(i + current_buffer_index);
+    glVertexAttribPointer(i + current_buffer_index, element.count, element.type,
+                          element.normalized, layout.GetStride(),
+                          (const void*)offset);
+    offset += element.count * VertexBufferElement::GetSizeOfType(element.type);
+    current_buffer_index += 1;
+  }
 }
 
-VertexArray::~VertexArray()
-{
-    glDeleteVertexArrays(1, &m_RendererID);
-}
+void VertexArray::Bind() const { glBindVertexArray(m_RendererID); }
 
-void VertexArray::AddBuffer(const VertexBuffer & vb, const VertexBufferLayout & layout)
-{
-    Bind();
-    vb.Bind();
-
-    const auto& elements = layout.GetElements();
-    unsigned int offset = 0;
-
-    for (unsigned int i = 0; i < elements.size(); i++)
-    {
-        const auto& element = elements[i];
-        glEnableVertexAttribArray(i + current_buffer_index);
-        glVertexAttribPointer(i + current_buffer_index, element.count, element.type, element.normalized, layout.GetStride(), (const void*)offset);
-        offset += element.count * VertexBufferElement::GetSizeOfType(element.type);
-        current_buffer_index += 1;
-    }
-}
-
-void VertexArray::Bind() const
-{
-    glBindVertexArray(m_RendererID);
-}
-
-void VertexArray::Unbind() const
-{
-    glBindVertexArray(0);
-}
-
-
+void VertexArray::Unbind() const { glBindVertexArray(0); }

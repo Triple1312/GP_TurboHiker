@@ -4,23 +4,20 @@
 
 #ifndef IDK_VERTEXBUFFER_H
 #define IDK_VERTEXBUFFER_H
-class VertexBuffer
-{
-private:
-    unsigned int m_RendererID;
-    const unsigned int size;
-public:
-    VertexBuffer(const void* data, unsigned int size);
-    VertexBuffer() = default;
-    ~VertexBuffer();
+class VertexBuffer {
+ private:
+  unsigned int m_RendererID;
+  const unsigned int size;
 
-    void Bind() const;
-    void Unbind() const;
+ public:
+  VertexBuffer(const void* data, unsigned int size);
+  // VertexBuffer() = default;
+  ~VertexBuffer();
 
-    void ChangeBufferData(const void * data);
+  void Bind() const;
+  void Unbind() const;
+
+  void ChangeBufferData(const void* data);
 };
 
-
-
-
-#endif //IDK_VERTEXBUFFER_H
+#endif  // IDK_VERTEXBUFFER_H

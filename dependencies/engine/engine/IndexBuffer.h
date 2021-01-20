@@ -2,24 +2,21 @@
 #ifndef INDEXBUFFER_H
 #define INDEXBUFFER_H
 
-class IndexBuffer
-{
-private:
-    unsigned int m_RendererID;
-    unsigned int m_Count;
-public:
-    IndexBuffer(const unsigned int* data, unsigned int count);
-    ~IndexBuffer();
+class IndexBuffer {
+ private:
+  unsigned int m_RendererID;
+  unsigned int m_Count;
 
-    IndexBuffer();
+ public:
+  IndexBuffer(const unsigned int* data, unsigned int count);
+  ~IndexBuffer();
 
-    void Bind() const;
-    void Unbind() const;
+  IndexBuffer();
 
-    inline unsigned int GetCount() const { return m_Count; }
+  void Bind() const;
+  void Unbind() const;
+
+  inline unsigned int GetCount() const { return m_Count; }
 };
 
-
-
-
-#endif //INDEXBUFFER_H
+#endif  // INDEXBUFFER_H

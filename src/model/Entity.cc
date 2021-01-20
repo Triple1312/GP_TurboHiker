@@ -29,7 +29,7 @@ glm::vec3 logic::Entity::Collision(std::shared_ptr<Entity> enti) {
     axis.y = y0;
   }
 
-  float y1 = this->points_[6 ].y - enti->points_[0].y;
+  float y1 = this->points_[6].y - enti->points_[0].y;
   if (y1 < depth) {
     depth = y1;
     axis.x = 0.f;
@@ -102,9 +102,9 @@ void logic::Entity::MoveX(float tmp) { MoveRight(tmp); }
 void logic::Entity::MoveZ(float tmp) { MoveForward(tmp); }
 
 glm::vec3 logic::Entity::GetPosition() {  // todo kan verkleinen
-  glm::vec3 size(points_[6]- points_[0]);
+  glm::vec3 size(points_[6] - points_[0]);
 
-  return glm::vec3(points_[0] +( size /= 2));
+  return glm::vec3(points_[0] + (size /= 2));
 }
 
 void logic::Entity::SetPosNoX(float y, float z) {}
@@ -112,17 +112,17 @@ void logic::Entity::SetPosNoX(float y, float z) {}
 void logic::Entity::SetPosition(glm::vec3 pos) {
   glm::vec3 size(points_[6] - points_[0]);
 
-  points_[0] = {pos.x - size.x / 2,pos.y - size.y / 2,pos.z - size.z / 2};
-  points_[1] = {pos.x + size.x / 2,pos.y - size.y / 2,pos.z - size.z / 2};
-  points_[2] = {pos.x + size.x / 2,pos.y - size.y / 2,pos.z + size.z / 2};
-  points_[3] = {pos.x - size.x / 2,pos.y - size.y / 2,pos.z + size.z / 2};
-  points_[4] = {pos.x - size.x / 2,pos.y + size.y / 2,pos.z - size.z / 2};
-  points_[5] = {pos.x + size.x / 2,pos.y + size.y / 2,pos.z - size.z / 2};
-  points_[6] = {pos.x + size.x / 2,pos.y + size.y / 2,pos.z + size.z / 2};
-  points_[7] = {pos.x - size.x / 2,pos.y + size.y / 2,pos.z + size.z / 2};
+  points_[0] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};
+  points_[1] = {pos.x + size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};
+  points_[2] = {pos.x + size.x / 2, pos.y - size.y / 2, pos.z + size.z / 2};
+  points_[3] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z + size.z / 2};
+  points_[4] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z - size.z / 2};
+  points_[5] = {pos.x + size.x / 2, pos.y + size.y / 2, pos.z - size.z / 2};
+  points_[6] = {pos.x + size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
+  points_[7] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
 }
 
-//void logic::Entity::SetPositionBottom(glm::vec3 pos) {
+// void logic::Entity::SetPositionBottom(glm::vec3 pos) {
 //  glm::vec3 size(points_[6 * 3] - points_[0], points_[6 * 3 + 1] - points_[1],
 //                 points_[6 * 3 + 2] - points_[2]);
 //
@@ -161,31 +161,31 @@ void logic::Entity::SetPosition(glm::vec3 pos) {
 
 void logic::Entity::Display() {}
 
-//glm::vec3 logic::Entity::GetPositionTop() {
+// glm::vec3 logic::Entity::GetPositionTop() {
 //  auto pos = GetPosition();
 //  return glm::vec3(pos.x, points_[6 * 3 + 2], pos.z);
 //}
 
-logic::Entity::Entity(glm::vec3 pos, glm::vec3 size){
-  points_[0] = {pos.x - size.x / 2,pos.y - size.y / 2,pos.z - size.z / 2};
-  points_[1] = {pos.x + size.x / 2,pos.y - size.y / 2,pos.z - size.z / 2};
-  points_[2] = {pos.x + size.x / 2,pos.y - size.y / 2,pos.z + size.z / 2};
-  points_[3] = {pos.x - size.x / 2,pos.y - size.y / 2,pos.z + size.z / 2};
-  points_[4] = {pos.x - size.x / 2,pos.y + size.y / 2,pos.z - size.z / 2};
-  points_[5] = {pos.x + size.x / 2,pos.y + size.y / 2,pos.z - size.z / 2};
-  points_[6] = {pos.x + size.x / 2,pos.y + size.y / 2,pos.z + size.z / 2};
-  points_[7] = {pos.x - size.x / 2,pos.y + size.y / 2,pos.z + size.z / 2};
+logic::Entity::Entity(glm::vec3 pos, glm::vec3 size) {
+  points_[0] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};
+  points_[1] = {pos.x + size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};
+  points_[2] = {pos.x + size.x / 2, pos.y - size.y / 2, pos.z + size.z / 2};
+  points_[3] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z + size.z / 2};
+  points_[4] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z - size.z / 2};
+  points_[5] = {pos.x + size.x / 2, pos.y + size.y / 2, pos.z - size.z / 2};
+  points_[6] = {pos.x + size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
+  points_[7] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
 }
 
 void logic::Entity::SetPosition(glm::vec3 pos, glm::vec3 size) {
-  points_[0] = {pos.x - size.x / 2,pos.y - size.y / 2,pos.z - size.z / 2};
-  points_[1] = {pos.x + size.x / 2,pos.y - size.y / 2,pos.z - size.z / 2};
-  points_[2] = {pos.x + size.x / 2,pos.y - size.y / 2,pos.z + size.z / 2};
-  points_[3] = {pos.x - size.x / 2,pos.y - size.y / 2,pos.z + size.z / 2};
-  points_[4] = {pos.x - size.x / 2,pos.y + size.y / 2,pos.z - size.z / 2};
-  points_[5] = {pos.x + size.x / 2,pos.y + size.y / 2,pos.z - size.z / 2};
-  points_[6] = {pos.x + size.x / 2,pos.y + size.y / 2,pos.z + size.z / 2};
-  points_[7] = {pos.x - size.x / 2,pos.y + size.y / 2,pos.z + size.z / 2};
+  points_[0] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};
+  points_[1] = {pos.x + size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};
+  points_[2] = {pos.x + size.x / 2, pos.y - size.y / 2, pos.z + size.z / 2};
+  points_[3] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z + size.z / 2};
+  points_[4] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z - size.z / 2};
+  points_[5] = {pos.x + size.x / 2, pos.y + size.y / 2, pos.z - size.z / 2};
+  points_[6] = {pos.x + size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
+  points_[7] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
 }
 
 void logic::Entity::MoveUp(float tmp) {

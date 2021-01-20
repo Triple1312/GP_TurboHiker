@@ -9,22 +9,19 @@
 
 class VertexBufferLayout;
 
-class VertexArray
-{
-private:
-    unsigned int m_RendererID = 0;
-    unsigned int current_buffer_index = 0;
-public:
-    VertexArray();
-    ~VertexArray();
+class VertexArray {
+ private:
+  unsigned int m_RendererID = 0;
+  unsigned int current_buffer_index = 0;
 
-    void AddBuffer(const VertexBuffer& vb, const VertexBufferLayout& layout);
+ public:
+  VertexArray();
+  ~VertexArray();
 
-    void Bind() const;
-    void Unbind() const;
+  void AddBuffer(const VertexBuffer& vb, const VertexBufferLayout& layout);
 
+  void Bind() const;
+  void Unbind() const;
 };
 
-
-
-#endif //IDK_VERTEXARRAY_H
+#endif  // IDK_VERTEXARRAY_H
