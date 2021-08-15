@@ -1,4 +1,5 @@
 #include <memory>
+#include <thread>
 
 #include <glad/glad.h>
 #include <SFML/Window.hpp>
@@ -7,6 +8,8 @@
 #include "view/Factory.h"
 #include "model/Clock.hpp"
 #include "Utils/Random.hpp"
+#include "engine/Text.h"
+
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
@@ -23,8 +26,13 @@ Random Random::random_;
 
 int main() {
 
+//    auto window = std::make_shared<Window>();
+//    std::thread t_window = window->start();
+
     view::Factory::MakeInstance();
 
+
+    //settings voor de window (gewoon negeren)w
     sf::ContextSettings settings;
     settings.depthBits = 24;
     settings.stencilBits = 8;
@@ -32,16 +40,20 @@ int main() {
     settings.majorVersion = 0;
     settings.minorVersion = 0;
 
+
+    // aanmaken nieuw window
     auto window = std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "Bla",sf::Style::Default,  settings );
     //window->setFramerateLimit(27);
     //window->resetGLStates();
     auto s = window->getSettings().depthBits;
 
+    // check of glad werkt
   if (!gladLoadGLLoader((GLADloadproc)sf::Context::getFunction)) {
     std::cout << "no glad";
     return -1;
   }
 
+  // text renderer lib checken
   FT_Library ft;
   if (FT_Init_FreeType(&ft))
   {
@@ -57,7 +69,7 @@ int main() {
 
     glDepthRange(0.0f, 1.0f);
   window->pushGLStates();
-    auto v = std::make_shared<view::Drawable>();
+//    auto v = std::make_shared<view::Drawable>();
 
 
     logic::World world(5);
@@ -89,12 +101,15 @@ int main() {
     front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
   camera_front = glm::normalize(front);
 
-    window->setFramerateLimit(60);
+    window->setFramerateLimit(144);
     window->popGLStates();
 
     //window->resetGLStates();
     //Clock::Get()->Reset();
     //blub.setFillColor(sf::Color::Magenta);
+
+    Text text("recources/Fonts/Diane_de_France/Diane_de_France.ttf", 20, 20, 80);
+    text.SetString("blubldskdlasdasdasdasdasd");
 
     while (window->isOpen()) {
         glCullFace(GL_CCW);
@@ -124,7 +139,7 @@ int main() {
         last_x = xpos;
         last_y = ypos;
 
-        float sensitivity = 0.3f; // change this value to your liking
+        float sensitivity = 0.2f; // change this value to your liking
         xoffset *= sensitivity;
         yoffset *= sensitivity;
 
@@ -146,37 +161,42 @@ int main() {
         camera_pos = u->GetPosition() + glm::vec3(0, 1.5, -4);
         Cam::Get()->view = glm::lookAt(camera_pos, camera_pos + camera_front, camera_up);
 
-        sf::Event event;
-        while (window->pollEvent(event)) {
-          if (event.type == sf::Event::Closed) {
-            window->close();
+      // controls input checken
+          sf::Event event;
+          while (window->pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+              window->close();
+            }
+            if (event.type == sf::Event::KeyReleased &&
+                event.key.code == sf::Keyboard::D) {
+              u->MoveRight(2.f);
+            }
+            if (event.type == sf::Event::KeyReleased &&
+                event.key.code == sf::Keyboard::A) {
+              u->MoveLeft(2.f);
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+              u->MoveForward(1);
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+              u->MoveBack(1);
+            }
+            if (event.type == sf::Event::KeyReleased &&
+                event.key.code == sf::Keyboard::Space) {
+              u->Jump();
+            }
+            if (event.type == sf::Event::KeyReleased &&
+                event.key.code == sf::Keyboard::E) {
+              u->EmpCharge(world.GetPlayers());
+            }
+            // camera_pos = u->GetPosition() + glm::vec3(0, 2, -3);
           }
-          if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::D) {
-            u->MoveRight(2.f);
-          }
-          if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::A) {
-            u->MoveLeft(2.f);
-          }
-          if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-            u->MoveForward(1);
-          }
-          if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-            u->MoveBack(1);
-          }
-          if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-            u->Jump();
-          }
-          if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
-            u->EmpCharge(world.GetPlayers());
-          }
-          //camera_pos = u->GetPosition() + glm::vec3(0, 2, -3);
-
-        }
 
         Clock::Get()->Update();
         world.Update();
         world.Display();
         //sb->Draw(&window); //todo is momenteel gwn logic
+        text.Draw();
 
         window->display();
     }

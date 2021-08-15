@@ -14,8 +14,8 @@ void main() {
     aColor = vec4(color, 1.0f);
 }
 
-#shader fragment
-#version 330 core
+    #shader fragment
+    #version 330 core
 
 out vec4 Fragcolor;
 in vec4 aColor;

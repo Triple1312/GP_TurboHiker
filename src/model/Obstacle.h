@@ -5,17 +5,17 @@
 
 namespace logic {
 
-enum ObstType{ WALL = 1, HORDE = 2, STEP_1 = 3, STEP_2 = 4};
+enum ObstType { WALL = 1, HORDE = 2, STEP_1 = 3, STEP_2 = 4, COLLECTABLE = 5 };
 
 class Obstacle : public Entity {
-
  public:
-  //Obstacle(glm::vec4, glm::vec4);
+  // Obstacle(glm::vec4, glm::vec4);
 
   Obstacle() = default;
 
   Obstacle(glm::vec3 pos, glm::vec3 size);
 
+  virtual void hit();
 };
 
 /**
@@ -31,12 +31,11 @@ class Ramp2 : public Obstacle {
   explicit Ramp2(glm::vec3 pos);
 };
 
-class OCube : public Obstacle { //todo andere naam geven
+class OCube : public Obstacle {  // todo andere naam geven
  public:
   OCube(glm::vec3 pos, glm::vec3 size);
 
   OCube() = default;
-
 };
 
 class Horde : public Obstacle {
@@ -44,18 +43,14 @@ class Horde : public Obstacle {
   explicit Horde(glm::vec3 pos);
 };
 
-class Laser : public Obstacle {
+class Laser : public Obstacle {};
 
+class ChunkGone
+    : public Obstacle {  // todo geen idee hoe ik dit ga implementeren
 };
 
-class ChunkGone : public Obstacle { //todo geen idee hoe ik dit ga implementeren
+class Portal : public Obstacle {};
 
-};
+}  // namespace logic
 
-class Portal : public Obstacle {
-
-};
-
-}
-
-#endif //GP_OBSTACLE_H
+#endif  // GP_OBSTACLE_H

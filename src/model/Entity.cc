@@ -1,6 +1,6 @@
 #include "Entity.h"
 
-glm::vec3 logic::Entity::Collision(std::shared_ptr<Entity> enti) {
+glm::vec3 logic::Entity::Collision(Entity* enti) {
   glm::vec3 axis(0.f);
   float depth = INFINITY;
 
@@ -59,7 +59,7 @@ glm::vec3 logic::Entity::Collision(std::shared_ptr<Entity> enti) {
     return glm::vec3(0.0f);
   }
   if (axis.x != 0) {
-    std::cout << "x";
+//    std::cout << "x";
   }
 
   return axis;

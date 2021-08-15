@@ -25,6 +25,8 @@ enum CollissionType {
 
 namespace logic {
 
+  struct Modifier;
+
 class Entity {
  public:
   /**
@@ -41,7 +43,9 @@ class Entity {
   /**
    * @brief function that checks collision for every axis
    */
-  virtual glm::vec3 Collision(std::shared_ptr<Entity>);
+  virtual glm::vec3 Collision(Entity*);
+
+  virtual Modifier Hit();
 
   /**
    *@brief returns a pointer to a c-array whinch holds all the points of the
@@ -84,15 +88,15 @@ class Entity {
 
   virtual void MoveZ(float);
 
-  //virtual void SetPositionBottom(glm::vec3);
+  // virtual void SetPositionBottom(glm::vec3);
 
-  //virtual glm::vec3 GetPositionTop();
+  // virtual glm::vec3 GetPositionTop();
 
   virtual void Display();
 
  protected:
   Entity() =
-  default;  // making it impossible to create which means e_t is never None
+      default;  // making it impossible to create which means e_t is never None
 
   Entity(glm::vec3 pos, glm::vec3 size);
 };

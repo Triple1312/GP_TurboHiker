@@ -5,33 +5,29 @@
 #ifndef GP_SRC_VIEW_SCOREBOARD_H_
 #define GP_SRC_VIEW_SCOREBOARD_H_
 
+#include <SFML/Graphics.hpp>
 #include <iostream>
 
 #include "model/Scoreboard.h"
-#include <SFML/Graphics.hpp>
-
 
 namespace view {
 
- class Scoreboard : public logic::Scoreboard {
-  public:
+class Scoreboard : public logic::Scoreboard {
+ public:
+  explicit Scoreboard(std::shared_ptr<logic::Player>);
 
-   explicit Scoreboard(std::shared_ptr<logic::Player>);
+  void Update() override;
 
-   void Update() override;
+  void Draw(void*) override;
 
-   void Draw(void*) override;
+ private:
+  sf::Text text_;
 
-  private:
+  sf::Font font_;
 
-   sf::Text text_;
-
-   sf::Font font_;
-
-   sf::String string_;
+  sf::String string_;
 };
 
-} // namespace view
+}  // namespace view
 
-
-#endif //GP_SRC_VIEW_SCOREBOARD_H_
+#endif  // GP_SRC_VIEW_SCOREBOARD_H_

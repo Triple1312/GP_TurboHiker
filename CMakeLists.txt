@@ -1,10 +1,12 @@
 
 project(GP)
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS )
+
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 add_subdirectory(dependencies/engine/engine/freetype2 )
 include_directories(src dependencies/glad/include dependencies/engine/engine/freetype2/include)
@@ -23,9 +25,6 @@ set(view
         src/view/Drawable.hpp
         src/view/Camera.hpp src/view/Drawable.cpp src/view/Scoreboard.cpp src/view/Scoreboard.h)
 
-
-#set(controller src/model/MainGame.cc src/model/MainGame.h src/Controller.cpp src/Controller.h)
-
 add_library(model STATIC
         src/model/Entity.cc src/model/Entity.h
         src/model/Player.cpp src/model/Player.h
@@ -34,7 +33,7 @@ add_library(model STATIC
         src/model/Obstacle.cc src/model/Obstacle.h
         src/model/Lane.cc src/model/Lane.h
         src/model/Factory.h src/model/PlayerFactory.hh
-        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h src/model/GameSettings.cpp src/model/GameSettings.h)
+        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h src/model/GameSettings.cpp src/model/GameSettings.h src/model/Model.cpp src/model/Model.h src/model/collision.cpp src/model/Collectable.cpp src/model/Collectable.h)
 
 add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp
@@ -49,7 +48,7 @@ add_library(engine STATIC
 
 #include_directories(GP dependencies/engine/engine/freetype-2.10.0/include)
 #link_directories(GP dependencies/engine/engine/freetype-2.10.0/build)
-add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c )
+add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c)
 add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c)
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 

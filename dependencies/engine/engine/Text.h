@@ -32,7 +32,7 @@ class Text {
 
   void Draw();
 
-  Text(const std::string &font);
+  Text(const std::string &font, float x, float y, float scale);
 
  private:
   std::map<char, Char> chars_;

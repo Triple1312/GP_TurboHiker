@@ -9,9 +9,8 @@
 logic::Scoreboard::Scoreboard(std::shared_ptr<logic::Player> entity) {
   this->entity_ = std::move(entity);
 }
-const uint32_t &logic::Scoreboard::GetScore() const {
-  return this->score_;
-}
+const uint32_t &logic::Scoreboard::GetScore() const { return this->score_; }
 void logic::Scoreboard::Update() {
-  score_ += (float)this->entity_->velocity_.z / GameSettings::PlayerSpeed() * (float)Clock::Get()->GetTimeSinceLastInMilliSeconds();
+  score_ += (float)this->entity_->velocity_.z / GameSettings::PlayerSpeed() *
+            (float)Clock::Get()->GetTimeSinceLastInMilliSeconds();
 }

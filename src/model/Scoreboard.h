@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include <memory>
-#include "model/Player.h"
 
+#include "model/Player.h"
 
 namespace logic {
 
@@ -18,18 +18,14 @@ class Scoreboard {
   virtual void Update();
 
   // the void* is used to pass the window class of the given engine
-  virtual void Draw(void*){
-
-  }
+  virtual void Draw(void *) {}
 
  private:
-
   std::shared_ptr<logic::Player> entity_;
 
   std::uint32_t score_ = 0;
-
 };
 
-}
+}  // namespace logic
 
-#endif //GP_SRC_MODEL_SCOREBOARD_H_
+#endif  // GP_SRC_MODEL_SCOREBOARD_H_

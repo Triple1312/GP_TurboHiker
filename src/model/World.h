@@ -1,23 +1,23 @@
 #ifndef GP_SRC_MODEL_WORLD_H_
 #define GP_SRC_MODEL_WORLD_H_
 
-#include <memory>
-#include <vector>
 #include <deque>
 #include <iostream>
+#include <memory>
+#include <vector>
+#include <thread>
 
-#include "Lane.h"
-#include "Entity.h"
-#include "Player.h"
 #include "DisignByContract.h"
-#include "Utils/Random.hpp"
+#include "Entity.h"
+#include "Lane.h"
+#include "Player.h"
 #include "Scoreboard.h"
+#include "Utils/Random.hpp"
 
 namespace logic {
 
 class World : public Entity {
  public:
-
   const std::deque<std::shared_ptr<Player>> &GetPlayers() const;
 
   void SetPlayers(std::deque<std::shared_ptr<Player>> &players);
@@ -32,9 +32,9 @@ class World : public Entity {
 
   void MovePlayer(int);
 
-  void SetOnLane(const std::shared_ptr<Player>&, std::uint8_t);
+  void SetOnLane(const std::shared_ptr<Player> &, std::uint8_t);
 
-  logic::Scoreboard* GetScoreBoard();
+  logic::Scoreboard *GetScoreBoard();
 
   std::uint8_t GetOnLane(std::shared_ptr<Player>);
 
@@ -44,10 +44,12 @@ class World : public Entity {
 
   void Update();
 
-  void SetOnLanechunk(std::shared_ptr<logic::Entity>, unsigned int, unsigned int);
+  void SetOnLanechunk(std::shared_ptr<logic::Entity>, unsigned int,
+                      unsigned int);
 
  private:
-  std::deque<std::shared_ptr<Lane>> lanes_; // deque because of regularly deletion and creation
+  std::deque<std::shared_ptr<Lane>>
+      lanes_;  // deque because of regularly deletion and creation
   std::deque<std::shared_ptr<Player>> players_;
   std::shared_ptr<logic::User> user_;
   std::deque<std::shared_ptr<logic::Obstacle>> obstacles_;
@@ -56,11 +58,11 @@ class World : public Entity {
 
   std::shared_ptr<logic::Scoreboard> score_board_;
 
+  void P_L_Collision(Player&);
+
   void GenerateObstacleMap();
-
-
 };
 
-} // namespace logic
+}  // namespace logic
 
-#endif //GP_SRC_MODEL_WORLD_H_
+#endif  // GP_SRC_MODEL_WORLD_H_

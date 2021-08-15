@@ -8,8 +8,9 @@
 
 class Trigger {
  public:
-  //template<class T, class S, class U>
-  Trigger(std::function<void()> &action, std::function<bool()> &trigger, bool del = true);
+  // template<class T, class S, class U>
+  Trigger(std::function<void()> &action, std::function<bool()> &trigger,
+          bool del = true);
 
   bool Done();
 
@@ -17,7 +18,6 @@ class Trigger {
   std::function<void()> action_;
   std::function<bool()> trigger_;
   bool del_;
-
 };
 
-#endif //GP_SRC_MODEL_TRIGGER_H_
+#endif  // GP_SRC_MODEL_TRIGGER_H_

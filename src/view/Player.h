@@ -4,20 +4,19 @@
 #include "model/Player.h"
 #include "view/Drawable.hpp"
 
-
 namespace view {
 
 class User : public logic::User, public view::Drawable {
-public:
-    User();
+ public:
+  User();
 
-    User(glm::vec3 pos , glm::vec3 size);
+  User(glm::vec3 pos, glm::vec3 size);
 
-    void Display() override {
-        this->Update();
-        this->ChangeVertices(this->GetPoints());
-        this->Draw(); }
-
+  void Display() override {
+    this->Update();
+    this->ChangeVertices(this->GetPoints());
+    this->Draw();
+  }
 };
 
 class NPC : public logic::NPC, public view::Drawable {
@@ -27,11 +26,10 @@ class NPC : public logic::NPC, public view::Drawable {
   void Display() override {
     this->Update();
     this->ChangeVertices(this->GetPoints());
-    this->Draw(); }
+    this->Draw();
+  }
 };
 
-}
+}  // namespace view
 
-
-
-#endif //GP_SRC_MODEL_PLAYER_H_
+#endif  // GP_SRC_MODEL_PLAYER_H_
