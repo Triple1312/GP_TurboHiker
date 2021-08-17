@@ -101,7 +101,7 @@ int main() {
     front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
   camera_front = glm::normalize(front);
 
-    window->setFramerateLimit(144);
+    window->setFramerateLimit(30);
     window->popGLStates();
 
     //window->resetGLStates();

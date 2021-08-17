@@ -16,6 +16,8 @@ struct GameSettings {
 
   static uint32_t Chunks() { return instance.chunks; }
 
+  static float EnemySpeed() { return instance.enemyspeed; }
+
  private:
   static GameSettings instance;
 
@@ -27,6 +29,7 @@ struct GameSettings {
   float valversnelling;
   uint8_t enemies;
   uint32_t chunks;
+  float enemyspeed;
 };
 
 #endif  // GP_SRC_MODEL_GAMESETTINGS_H_

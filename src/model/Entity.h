@@ -25,7 +25,11 @@ enum CollissionType {
 
 namespace logic {
 
-  struct Modifier;
+struct Modifier {
+  glm::vec3 velocity = {0,0,0};
+  float score = 0;
+
+};
 
 class Entity {
  public:
@@ -45,7 +49,7 @@ class Entity {
    */
   virtual glm::vec3 Collision(Entity*);
 
-  virtual Modifier Hit();
+  virtual logic::Modifier Hit();
 
   /**
    *@brief returns a pointer to a c-array whinch holds all the points of the
@@ -87,6 +91,8 @@ class Entity {
   virtual void MoveY(float) {}
 
   virtual void MoveZ(float);
+
+  virtual void Modify(logic::Modifier);
 
   // virtual void SetPositionBottom(glm::vec3);
 

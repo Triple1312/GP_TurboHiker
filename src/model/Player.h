@@ -9,11 +9,6 @@
 
 namespace logic {
 
-struct Modifier {
-  glm::vec3 velocity;
-  float score;
-};
-
 class Player : public logic::Entity {
  public:
   //  void Jump();

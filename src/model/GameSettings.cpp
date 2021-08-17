@@ -13,4 +13,5 @@ GameSettings::GameSettings() {
   valversnelling = -1;
   enemies = 2;
   chunks = 1000;
+  enemyspeed = 1.2 * playerspeed;
 }

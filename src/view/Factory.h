@@ -8,6 +8,7 @@
 #include "view/Obstacle.h"
 #include "view/Player.h"
 #include "view/Scoreboard.h"
+#include "view/Collectable.h"
 
 namespace view {
 
@@ -25,6 +26,8 @@ class Factory : public logic::Factory {
       return std::make_shared<view::Ramp1>(pos);
     } else if (obst_type == logic::STEP_2) {
       return std::make_shared<view::Ramp2>(pos);
+    } else if (obst_type == logic::COLLECTABLE) {
+      return std::make_shared<view::Collectable>(pos);
     }
   }
 

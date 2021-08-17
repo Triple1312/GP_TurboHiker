@@ -23,6 +23,7 @@ void logic::Player::Update() {
                     this->velocity_.z);
   // std::cout << Clock::Get()->TimeSinceLast() << std::endl;
   this->CalcVel();
+  this->score_ += Clock::Get()->GetTimeSinceLastInSeconds() * 100;
 }
 void logic::Player::Jump() {
   if (airborne_) {
@@ -67,6 +68,9 @@ void logic::Player::CalcVel() {
   stamina_ += Clock::Get()->GetTimeSinceLastInSeconds() * 0.1;
 }
 void logic::Player::Modify(logic::Modifier mod) {
+  if (mod.velocity.y > 0) {
+    this->airborne_ = true;
+  }
   this->velocity_ += mod.velocity;
   this->score_ += mod.score;
 }

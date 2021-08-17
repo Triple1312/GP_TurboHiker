@@ -23,7 +23,7 @@ set(view
         src/view/Player.cpp src/view/Player.h
         src/view/Lane.cpp src/view/Lane.h
         src/view/Drawable.hpp
-        src/view/Camera.hpp src/view/Drawable.cpp src/view/Scoreboard.cpp src/view/Scoreboard.h)
+        src/view/Camera.hpp src/view/Drawable.cpp src/view/Scoreboard.cpp src/view/Scoreboard.h src/view/Collectable.cpp src/view/Collectable.h)
 
 add_library(model STATIC
         src/model/Entity.cc src/model/Entity.h
@@ -33,7 +33,7 @@ add_library(model STATIC
         src/model/Obstacle.cc src/model/Obstacle.h
         src/model/Lane.cc src/model/Lane.h
         src/model/Factory.h src/model/PlayerFactory.hh
-        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h src/model/GameSettings.cpp src/model/GameSettings.h src/model/Model.cpp src/model/Model.h src/model/collision.cpp src/model/Collectable.cpp src/model/Collectable.h)
+        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h src/model/GameSettings.cpp src/model/GameSettings.h src/model/Model.cpp src/model/Model.h src/model/Collectable.cpp src/model/Collectable.h)
 
 add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp

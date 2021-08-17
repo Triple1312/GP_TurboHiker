@@ -197,3 +197,5 @@ void logic::Entity::MoveUp(float tmp) {
 glm::vec3 logic::Entity::GetSize() {
   return glm::vec3(points_[6] - points_[0]);
 }
+logic::Modifier logic::Entity::Hit() { return logic::Modifier(); }
+void logic::Entity::Modify(logic::Modifier mod) {};

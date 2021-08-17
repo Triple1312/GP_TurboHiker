@@ -93,15 +93,20 @@ void collision(logic::Player* e1, logic::Entity* e2){
 
   if (tmp.x != 0.F) {  // if there is no collision it will also end here
     e1->MoveRight(tmp.x);
+    e1->Modify(e2->Hit());
 
   } else if (tmp.y != 0.F) {
+
     e1->MoveUp(tmp.y);
+    e1->Modify(e2->Hit());
     e1->velocity_.y = 0.f;
     e1->airborne_ = false;
   } else if (tmp.z != 0.F) {
     e1->velocity_.z = GameSettings::PlayerSpeed() * 3 / 4;
     e1->MoveForward(tmp.z);
+    e1->Modify(e2->Hit());
   }
+
 }
 
 void logic::World::Update() {
@@ -218,7 +223,7 @@ void logic::World::GenerateObstacleMap() {
           temp.emplace_back(0);
         }
         for (int j = 0; j < 1; ++j) {
-          temp.emplace_back(4); //todo dit moet 5 zijn
+          temp.emplace_back(5); //todo dit moet 5 zijn
         }
       }
       auto r = Random::Get().Int(0, temp.size() - 1);
