@@ -16,6 +16,8 @@ class Factory : public logic::Factory {
  public:
   unsigned int lanechunknr_ = 0;
 
+  ~Factory() override{delete instance_;}
+
   std::shared_ptr<logic::Obstacle> MakeObstacle(
       glm::vec3 pos, logic::ObstType obst_type) override {
     if (obst_type == logic::WALL) {
@@ -41,6 +43,10 @@ class Factory : public logic::Factory {
 
   std::shared_ptr<logic::NPC> MakeNPC(glm::vec3 pos) override {
     return std::make_shared<NPC>(pos);
+  }
+
+  std::shared_ptr<logic::KillerNPC> MakeKillerNPC(glm::vec3 pos) override {
+    return std::make_shared<view::KillerNPC>(pos);
   }
 
   std::shared_ptr<logic::User> MakeUser(glm::vec3 pos,

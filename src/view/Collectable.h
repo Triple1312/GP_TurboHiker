@@ -16,6 +16,8 @@ class Collectable : public logic::Collectable, public view::Drawable {
 
   explicit Collectable(glm::vec3 pos);
 
+  ~Collectable() override = default;
+
   void Display() override;
 
 };

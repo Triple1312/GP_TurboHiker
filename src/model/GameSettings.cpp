@@ -8,7 +8,7 @@ GameSettings GameSettings::instance;
 
 GameSettings::GameSettings() {
   playerspeed = 4;
-  jumpheight = 2;
+  jumpheight = 2.5;
   lanes = 5;
   valversnelling = -1;
   enemies = 2;

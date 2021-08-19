@@ -9,7 +9,7 @@ logic::OCube::OCube(glm::vec3 pos, glm::vec3 size) : Obstacle(pos, size) {}
 logic::Obstacle::Obstacle(glm::vec3 pos, glm::vec3 size)
     : Entity(glm::vec3(pos.x, pos.y + size.y / 2, pos.z), size) {}
 logic::Modifier logic::Obstacle::Hit() {
-  return {{0,0,0}, -1000, false};
+  return {glm::vec3(0,0,0), -1000, false, false, false, true, 0};
 }
 
 

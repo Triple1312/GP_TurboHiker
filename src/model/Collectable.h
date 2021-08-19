@@ -15,6 +15,8 @@ class Collectable : public logic::Obstacle {
  public:
   explicit Collectable(glm::vec3 pos);
 
+  virtual ~Collectable() = default;
+
   Modifier Hit() override;
 
 

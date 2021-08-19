@@ -28,7 +28,11 @@ namespace logic {
 struct Modifier {
   glm::vec3 velocity = {0,0,0};
   float score = 0;
-  bool die = false;
+  bool dead = false;
+  bool respawn = false;
+  bool finish = false;
+  bool slow = false;
+  float emp = 0;
 
 };
 

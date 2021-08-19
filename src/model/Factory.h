@@ -26,6 +26,10 @@ class Factory {
     return std::make_shared<logic::NPC>(pos);
   }
 
+  virtual std::shared_ptr<logic::KillerNPC> MakeKillerNPC(glm::vec3 pos){
+    return std::make_shared<logic::KillerNPC>(pos);
+  }
+
   virtual std::shared_ptr<logic::User> MakeUser() {
     return std::make_shared<logic::User>();
   }

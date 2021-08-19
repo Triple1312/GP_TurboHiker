@@ -17,6 +17,8 @@ class Scoreboard : public logic::Scoreboard {
  public:
   explicit Scoreboard(std::shared_ptr<logic::Player>);
 
+  ~Scoreboard() override;
+
   void Update() override;
 
   void Draw() override;

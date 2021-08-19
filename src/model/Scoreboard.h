@@ -16,6 +16,8 @@ class Scoreboard {
  public:
   explicit Scoreboard(std::shared_ptr<logic::Player>);
 
+  virtual ~Scoreboard() = default;
+
   const uint32_t &GetScore() const;
   const uint32_t &GetHighScore() const;
   const float &GetSpeed() const;

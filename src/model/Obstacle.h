@@ -15,7 +15,9 @@ class Obstacle : public Entity {
 
   Obstacle(glm::vec3 pos, glm::vec3 size);
 
-  virtual Modifier Hit();
+  virtual ~Obstacle() = default;
+
+  virtual Modifier Hit() override;
 };
 
 /**
@@ -24,6 +26,8 @@ class Obstacle : public Entity {
 class Ramp1 : public Obstacle {
  public:
   explicit Ramp1(glm::vec3 pos);
+
+  virtual ~Ramp1()  = default;
 };
 
 class Ramp2 : public Obstacle {
@@ -36,16 +40,22 @@ class OCube : public Obstacle {  // todo andere naam geven
   OCube(glm::vec3 pos, glm::vec3 size);
 
   OCube() = default;
+
+  virtual ~OCube() = default;
 };
 
 class Horde : public Obstacle {
  public:
   explicit Horde(glm::vec3 pos);
+
+  virtual ~Horde() = default;
 };
 
 class Finish : public Obstacle {
  public:
   explicit Finish( glm::vec3 pos , int size);
+
+  virtual ~Finish() = default;
 };
 
 class Laser : public Obstacle {};

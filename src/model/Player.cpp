@@ -88,9 +88,18 @@ void logic::Player::Modify(logic::Modifier mod) {
   else {
     this->score_ += mod.score;
   }
-  if (mod.die) {
+  if (mod.dead) {
     this->Respawn();
     this->score_ = 0;
+  }
+  if (mod.slow) {
+    this->velocity_ = {0, this->velocity_.y, GameSettings::PlayerSpeed()/4};
+  }
+  if (mod.respawn) {
+    this->Respawn();
+  }
+  if (mod.finish) {
+    this->finished_ = true;
   }
 }
 void logic::Player::Respawn() {
@@ -125,8 +134,9 @@ logic::Modifier logic::NPC::Hit() {
 float logic::NPC::MaxSpeed() { return GameSettings::EnemySpeed(); }
 
 float logic::KillerNPC::MaxSpeed() { return -GameSettings::EnemySpeed(); }
+
 logic::Modifier logic::KillerNPC::Hit() {
-  return {glm::vec3(0.f,0.f,0.f), 0, true};
+  return {glm::vec3(0.f,0.f,0.f), 0, true, false, false, false, 0};
 }
 logic::KillerNPC::KillerNPC(glm::vec3 pos) : logic::Player(pos, glm::vec3(.8, 1, .8)){
     this->velocity_ = {0, 0.f, -GameSettings::EnemySpeed()};

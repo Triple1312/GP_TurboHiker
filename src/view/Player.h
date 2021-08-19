@@ -10,6 +10,8 @@ class User : public logic::User, public view::Drawable {
  public:
   User();
 
+  ~User() override = default;
+
   User(glm::vec3 pos, glm::vec3 size);
 
   void Display() override {
@@ -32,6 +34,7 @@ class NPC : public logic::NPC, public view::Drawable {
 
 class KillerNPC : public logic::KillerNPC, public view::Drawable {
   public:
+   ~KillerNPC() override = default;
    explicit KillerNPC(glm::vec3 pos);
 };
 

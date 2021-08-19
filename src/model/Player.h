@@ -18,6 +18,8 @@ class Player : public logic::Entity {
   // Player(glm::vec4 ,glm::vec4 = glm::vec4(40.f/60.f, 80.f/60.f, 25.f/60.f,
   // 0));
 
+  virtual ~Player() = default;
+
   virtual void Update();
 
   void Modify(Modifier mod);
@@ -28,6 +30,7 @@ class Player : public logic::Entity {
   float score_;
   float stamina_{};
   float speed_{};  // todo: pixel per second ?
+  bool finished_ = false;
   //  std::uint8_t height_{}; // if the player jumps or rolls this number will
   //  change
   float emp_charge_{};
@@ -57,6 +60,8 @@ class User : public logic::Player {
  public:
   User();
 
+  virtual ~User() = default;
+
   User(glm::vec3 pos, glm::vec3 size);
 
   void EmpCharge(const std::deque<std::shared_ptr<Player>> &);
@@ -70,6 +75,8 @@ class NPC : public logic::Player {
  public:
   explicit NPC(glm::vec3 pos);
 
+  virtual ~NPC() = default;
+
   void Display() override {}
 
   Modifier Hit() override;
@@ -81,9 +88,11 @@ class NPC : public logic::Player {
 class KillerNPC : public logic::Player {
   float MaxSpeed();
 
+
+
   Modifier Hit() override;
  public:
-
+  virtual ~KillerNPC() = default;
   explicit KillerNPC(glm::vec3 pos);
 };
 

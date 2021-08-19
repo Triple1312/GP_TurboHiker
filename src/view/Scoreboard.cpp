@@ -30,3 +30,8 @@ void view::Scoreboard::Draw() {
   gltDrawText2D(this->speed_, 400, 10, 1.7);
   gltEndDraw();
 }
+view::Scoreboard::~Scoreboard() {
+  gltDeleteText(this->speed_);
+  gltDeleteText(this->highscore_text_);
+  gltDeleteText(this->score_text_);
+}

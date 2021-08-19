@@ -56,6 +56,10 @@ logic::World::World(std::uint8_t lanes) {
     temp->SetPosition({2* (j+1), 2, 1});
     players_.emplace_back(temp);
   }
+
+  for (int k = 0; k < GameSettings::Enemies()*3;k++) {
+
+  }
   // this->user_->SetPosition({this->lanes_[0]->GetPosition().x,
   // this->lanes_[0]->GetPosition().y + 2, 1});
 }
