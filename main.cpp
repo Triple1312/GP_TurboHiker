@@ -11,10 +11,6 @@
 #include "view/Camera.hpp"
 
 
-#include <ft2build.h>
-#include FT_FREETYPE_H
-
-
 
 Cam* Cam::camera = nullptr;
 
@@ -55,13 +51,6 @@ int main() {
   }
 
   // text renderer lib checken
-  FT_Library ft;
-  if (FT_Init_FreeType(&ft))
-  {
-    std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
-    return -1;
-  }
-
 
     glCullFace(GL_CCW);
 

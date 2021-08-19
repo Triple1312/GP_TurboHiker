@@ -8,8 +8,7 @@ set(CMAKE_CXX_FLAGS )
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
-add_subdirectory(dependencies/engine/engine/freetype2 )
-include_directories(src dependencies/glad/include dependencies/engine/engine/freetype2/include)
+include_directories(src dependencies/glad/include )
 
 include( ${CMAKE_CURRENT_LIST_DIR}/dependencies/CmakeLists.txt)
 #include( dependencies/engine/engine/freetype-2.10.0/CMakeLists.txt)
@@ -57,5 +56,5 @@ find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED
 
 #find_package(Freetype REQUIRED)
 
-target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system -ldl -lGL engine model freetype )
-target_link_libraries(GP_debug sfml-audio sfml-graphics sfml-window sfml-system  -ldl -lGL engine model freetype)
+target_link_libraries(GP sfml-audio sfml-graphics sfml-window sfml-system -ldl -lGL engine model  )
+target_link_libraries(GP_debug sfml-audio sfml-graphics sfml-window sfml-system  -ldl -lGL engine model )
