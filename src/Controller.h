@@ -8,18 +8,43 @@
 #include <thread>
 #include <iostream>
 
-#include "view/Window.h"
-#include "model/Model.h"
+#include <glad/glad.h>
+#include <SFML/Graphics.hpp>
+
+#define GLT_IMPLEMENTATION
+#include "Utils/gltext.h"
+
+#include "model/World.h"
+#include "view/Factory.h"
+#include "model/Clock.hpp"
+#include "Utils/Random.hpp"
+#include "view/Menu.h"
+
+
+enum gamestate {MENU = 0, GAME = 1, END = 2};
 
 class Controller {
-  std::unique_ptr<Model> model;
-  std::unique_ptr<Window> view;
+  std::shared_ptr<logic::World> world;
+  std::shared_ptr<sf::Window> window;
+  std::shared_ptr<view::Menu> menu;
+
+
+  gamestate state = MENU;
+
+  void ChangeState(gamestate);
 
  public:
+
   Controller();
 
   void start();
 
+  void Display();
+
+  void CreateWindow();
+
+
 };
+
 
 #endif  // GP_SRC_CONTROLLER_H_

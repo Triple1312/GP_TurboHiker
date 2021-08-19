@@ -65,10 +65,9 @@ glm::vec3 logic::Entity::Collision(Entity* enti) {
   return axis;
 }
 
-glm::vec4 logic::Entity::GetCenter() {
-  return glm::vec4(
-      this->points_[6].x / 2, this->points_[6].y / 2, this->points_[6].z / 2,
-      1);  // glm::vec4(this->pos.x/2, this->pos.y/2, this->pos.z/2) ;
+glm::vec3 logic::Entity::GetCenter() {
+  return glm::vec3(
+      this->points_[6].x / 2, this->points_[6].y / 2, this->points_[6].z / 2);  // glm::vec4(this->pos.x/2, this->pos.y/2, this->pos.z/2) ;
 }
 
 void *logic::Entity::GetPoints() { return &this->points_; }

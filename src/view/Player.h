@@ -30,6 +30,11 @@ class NPC : public logic::NPC, public view::Drawable {
   }
 };
 
+class KillerNPC : public logic::KillerNPC, public view::Drawable {
+  public:
+   explicit KillerNPC(glm::vec3 pos);
+};
+
 }  // namespace view
 
 #endif  // GP_SRC_MODEL_PLAYER_H_

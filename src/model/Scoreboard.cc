@@ -19,6 +19,7 @@ void logic::Scoreboard::Update() {
 //  score_ += (float)this->entity_->velocity_.z / GameSettings::PlayerSpeed() *
 //            (float)Clock::Get()->GetTimeSinceLastInMilliSeconds();
   score_ = this->entity_->score_;
+  speed = this->entity_->velocity_.z;
 }
 void logic::Scoreboard::Finish() {
   if(GetScore() > highscore_) {
@@ -27,4 +28,7 @@ void logic::Scoreboard::Finish() {
     o << gamefile;
   }
 }
-
+const uint32_t& logic::Scoreboard::GetHighScore() const {
+  return this->highscore_;
+}
+const float& logic::Scoreboard::GetSpeed() const { return this->speed; }

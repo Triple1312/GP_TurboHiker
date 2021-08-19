@@ -5,7 +5,7 @@
 
 namespace logic {
 
-enum ObstType { WALL = 1, HORDE = 2, STEP_1 = 3, STEP_2 = 4, COLLECTABLE = 5 };
+enum ObstType { WALL = 1, HORDE = 2, STEP_1 = 3, STEP_2 = 4, COLLECTABLE = 5, FINISH = 6};
 
 class Obstacle : public Entity {
  public:
@@ -15,7 +15,7 @@ class Obstacle : public Entity {
 
   Obstacle(glm::vec3 pos, glm::vec3 size);
 
-  virtual void hit();
+  virtual Modifier Hit();
 };
 
 /**
@@ -41,6 +41,11 @@ class OCube : public Obstacle {  // todo andere naam geven
 class Horde : public Obstacle {
  public:
   explicit Horde(glm::vec3 pos);
+};
+
+class Finish : public Obstacle {
+ public:
+  explicit Finish( glm::vec3 pos , int size);
 };
 
 class Laser : public Obstacle {};

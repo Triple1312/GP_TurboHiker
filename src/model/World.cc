@@ -35,7 +35,7 @@ logic::World::World(std::uint8_t lanes) {
       Factory::Get()->MakeUser({this->lanes_[0]->GetPosition().x,
                                 this->lanes_[0]->GetPosition().y + 2, 1},
                                glm::vec3(1.f));
-  this->SetOnLanechunk(this->user_, 2, 1);
+//  this->SetOnLanechunk(this->user_, 2, 1);
   this->players_.emplace_back(this->user_);
 
   this->score_board_ = Factory::Get()->MakeScoreBoard(this->user_);
@@ -49,9 +49,11 @@ logic::World::World(std::uint8_t lanes) {
           logic::ObstType(obst_map_[i])));
     }
   }
+  this->obstacles_.emplace_back(Factory::Get()->MakeObstacle({lanes, 0.7, 430}, FINISH));
+
   for (int j = 0; j < GameSettings::Enemies(); j++) {
     std::shared_ptr<NPC> temp = Factory::Get()->MakeNPC({1, 1, 1});
-    SetOnLanechunk(temp, j, 1);
+    temp->SetPosition({2* (j+1), 2, 1});
     players_.emplace_back(temp);
   }
   // this->user_->SetPosition({this->lanes_[0]->GetPosition().x,
@@ -117,7 +119,15 @@ void collision(logic::Player* e1, logic::Entity* e2){
 
 void logic::World::Update() {
   this->Display();
-  for (const auto &i : this->players_) {
+//  int rand = Random::Get().Int(0, 12);
+//  if ( rand == 10) {
+//    this->players_.push_back(std::make_shared<KillerNPC>(this->user_->GetCenter() + glm::vec3(0, 2, 50)));
+//  }
+  for (auto i = this->players_.begin(); i != this->players_.end(); i++) {
+
+    if (i->get()->dead) {
+      this->players_.erase(i);
+    }
     auto l1 = [&](Player& player){
       P_L_Collision(player);
     };
@@ -127,7 +137,7 @@ void logic::World::Update() {
     std::vector<std::thread> threads;
     
     for (const auto &l : obstacles_) {
-      threads.emplace_back(std::thread(collision,i.get(),l.get()));
+      threads.emplace_back(std::thread(collision,i->get(),l.get()));
 //      glm::vec3 tmp = i->Collision(l.get());
 //
 //
@@ -145,7 +155,7 @@ void logic::World::Update() {
     }
 
     for (const auto &l : lanes_) {//todo collision multi ??
-      threads.emplace_back(std::thread(collision,i.get(),l.get()));
+      threads.emplace_back(std::thread(collision,i->get(),l.get()));
 //      glm::vec3 tmp = i->Collision(l.get());
 //      if (tmp.x != 0.F) {  // if there is no collision it will also end here
 //        i->MoveRight(tmp.x);

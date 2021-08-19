@@ -17,6 +17,8 @@ class Scoreboard {
   explicit Scoreboard(std::shared_ptr<logic::Player>);
 
   const uint32_t &GetScore() const;
+  const uint32_t &GetHighScore() const;
+  const float &GetSpeed() const;
 
   virtual void Update();
 
@@ -33,6 +35,8 @@ class Scoreboard {
   std::uint32_t score_ = 0;
 
   std::uint32_t highscore_ = 0;
+
+  float speed = 0;
 };
 
 }  // namespace logic

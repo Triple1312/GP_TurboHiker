@@ -10,6 +10,7 @@
 
 namespace view {
 
+
 class Collectable : public logic::Collectable, public view::Drawable {
  public:
 

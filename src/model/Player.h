@@ -32,6 +32,7 @@ class Player : public logic::Entity {
   //  change
   float emp_charge_{};
   bool airborne_ = false;
+  bool dead = false;
   //  glm::vec3 max_speed_{};
   //  glm::vec3 curr_acceleration_{};
 
@@ -75,6 +76,15 @@ class NPC : public logic::Player {
 
   // void Update() override {}
   float MaxSpeed();
+};
+
+class KillerNPC : public logic::Player {
+  float MaxSpeed();
+
+  Modifier Hit() override;
+ public:
+
+  explicit KillerNPC(glm::vec3 pos);
 };
 
 }  // namespace logic

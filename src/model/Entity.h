@@ -30,7 +30,6 @@ struct Modifier {
   float score = 0;
   bool die = false;
 
-
 };
 
 class Entity {
@@ -55,14 +54,14 @@ class Entity {
 
   /**
    *@brief returns a pointer to a c-array whinch holds all the points of the
-   *entiry
+   *entity
    */
   void *GetPoints();  // returns a pointer to an array of 24 floats
 
   /**
    *@brief returns the center point of the entity
    */
-  virtual glm::vec4 GetCenter();
+  virtual glm::vec3 GetCenter();
 
   /**
    *@brief moves the entity to a position with as position the given point

@@ -28,6 +28,8 @@ class Factory : public logic::Factory {
       return std::make_shared<view::Ramp2>(pos);
     } else if (obst_type == logic::COLLECTABLE) {
       return std::make_shared<view::Collectable>(pos);
+    } else if (obst_type == logic::FINISH) {
+      return std::make_shared<view::Finish>(pos, 7);
     }
     return NULL;
   }

@@ -29,7 +29,8 @@ void logic::Player::Update() {
   this->CalcVel();
   this->score_ += Clock::Get()->GetTimeSinceLastInSeconds() * 100;
 
-  if (this->GetCenter().y < -3) {
+  if (this->GetCenter().y < -2) {
+    score_ = score_ /2;
       this->Respawn();
   }
 }
@@ -48,7 +49,7 @@ void logic::Player::Bump(float stamina, glm::vec3 dir) {
 
   } else if (stamina == 0) {
     // todo delete ?
-    std::cout << "ha";
+//    std::cout << "ha";
   } else {
     this->velocity_.z = this->velocity_.z * stamina_ / stamina;
     this->stamina_ = stamina_ - stamina;
@@ -81,13 +82,22 @@ void logic::Player::Modify(logic::Modifier mod) {
     this->airborne_ = true;
   }
   this->velocity_ += mod.velocity;
-  this->score_ += mod.score;
-  if (mod.die) { this->Respawn();}
+  if (this->score_ < -(mod.score)) {
+    this->score_ = 0;
+  }
+  else {
+    this->score_ += mod.score;
+  }
+  if (mod.die) {
+    this->Respawn();
+    this->score_ = 0;
+  }
 }
 void logic::Player::Respawn() {
-  this->score_ -= 100;
+  this->score_ -= 10000;
   this->velocity_ = {0, 0, 0};
-  this->SetPosition({2, 10, this->points_[0].z} );
+  uint8_t lane = Random::Get().Int(0, GameSettings::Lanes()-1);
+  this->SetPosition({2* lane, 10, this->points_[0].z} );
 }
 float logic::Player::MaxSpeed() { return 0; }
 
@@ -113,3 +123,11 @@ logic::Modifier logic::NPC::Hit() {
 }
 
 float logic::NPC::MaxSpeed() { return GameSettings::EnemySpeed(); }
+
+float logic::KillerNPC::MaxSpeed() { return -GameSettings::EnemySpeed(); }
+logic::Modifier logic::KillerNPC::Hit() {
+  return {glm::vec3(0.f,0.f,0.f), 0, true};
+}
+logic::KillerNPC::KillerNPC(glm::vec3 pos) : logic::Player(pos, glm::vec3(.8, 1, .8)){
+    this->velocity_ = {0, 0.f, -GameSettings::EnemySpeed()};
+}

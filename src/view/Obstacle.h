@@ -49,6 +49,14 @@ class Horde : public logic::Horde, public view::Drawable {
 
   void Display() override;
 };
+
+class Finish : public logic::Finish, public view::Drawable {
+ public:
+  explicit Finish(glm::vec3 pos , int size);
+
+  void Display() override;
+
+};
 }  // namespace view
 
 #endif  // GP_OBSTACLE_H

@@ -24,8 +24,11 @@ class Scoreboard : public logic::Scoreboard {
  private:
   GLTtext* score_text_ = gltCreateText();  //cant use smart pointers because its managed by a c lib that doesnt allow it
   GLTtext* highscore_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* speed_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
 
 };
+
+
 
 }  // namespace view
 
