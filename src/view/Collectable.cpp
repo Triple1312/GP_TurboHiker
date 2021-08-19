@@ -28,5 +28,5 @@ view::Collectable::Collectable(glm::vec3 pos) : logic::Collectable(pos), view::D
 
   this->vao->AddBuffer(*vbo_v, vbl_v);
   this->vao->AddBuffer(*vbo_c, vbl_c);
-  this->shader = std::make_shared<Shader>("src/view/entity.shader");
+  this->shader = std::make_shared<Shader>(vertex_s, fragment_s);
 }

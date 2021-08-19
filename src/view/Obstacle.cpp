@@ -27,25 +27,8 @@ view::OCube::OCube(glm::vec3 pos)
 
   this->vao->AddBuffer(*vbo_v, vbl_v);
   this->vao->AddBuffer(*vbo_c, vbl_c);
-  std::string vertex_s =
-      "#version 330 core"
-      "layout(location = 0) in vec3 position;"
-      "layout(location = 1) in vec3 color;"
-      "uniform mat4 view;"
-      "uniform mat4 projection;"
-      "out vec4 aColor;"
-      "void main() {"
-      "    gl_Position = projection * view * vec4(position, 1.0f);"
-      "    aColor = vec4(color, 1.0f);"
-      "}";
-  std::string fragment_s =
-      "#version 330 core"
-      "out vec4 Fragcolor;"
-      "in vec4 aColor;"
-      "void main() {"
-      "    Fragcolor = aColor;"
-      "}";
-  this->shader = std::make_shared<Shader>("src/view/entity.shader");
+
+  this->shader = std::make_shared<Shader>(vertex_s, fragment_s);
 }
 
 void view::OCube::Display() {
@@ -75,25 +58,8 @@ view::Horde::Horde(glm::vec3 pos) : view::Drawable(), logic::Horde(pos) {
 
   this->vao->AddBuffer(*vbo_v, vbl_v);
   this->vao->AddBuffer(*vbo_c, vbl_c);
-  std::string vertex_s =
-      "#version 330 core"
-      "layout(location = 0) in vec3 position;"
-      "layout(location = 1) in vec3 color;"
-      "uniform mat4 view;"
-      "uniform mat4 projection;"
-      "out vec4 aColor;"
-      "void main() {"
-      "    gl_Position = projection * view * vec4(position, 1.0f);"
-      "    aColor = vec4(color, 1.0f);"
-      "}";
-  std::string fragment_s =
-      "#version 330 core"
-      "out vec4 Fragcolor;"
-      "in vec4 aColor;"
-      "void main() {"
-      "    Fragcolor = aColor;"
-      "}";
-  this->shader = std::make_shared<Shader>("src/view/entity.shader");
+
+  this->shader = std::make_shared<Shader>(vertex_s, fragment_s);
 }
 void view::Horde::Display() { this->Draw(); }
 view::Ramp1::Ramp1(glm::vec3 pos) : logic::Ramp1(pos), view::Drawable() {
@@ -118,25 +84,8 @@ view::Ramp1::Ramp1(glm::vec3 pos) : logic::Ramp1(pos), view::Drawable() {
 
   this->vao->AddBuffer(*vbo_v, vbl_v);
   this->vao->AddBuffer(*vbo_c, vbl_c);
-  std::string vertex_s =
-      "#version 330 core"
-      "layout(location = 0) in vec3 position;"
-      "layout(location = 1) in vec3 color;"
-      "uniform mat4 view;"
-      "uniform mat4 projection;"
-      "out vec4 aColor;"
-      "void main() {"
-      "    gl_Position = projection * view * vec4(position, 1.0f);"
-      "    aColor = vec4(color, 1.0f);"
-      "}";
-  std::string fragment_s =
-      "#version 330 core"
-      "out vec4 Fragcolor;"
-      "in vec4 aColor;"
-      "void main() {"
-      "    Fragcolor = aColor;"
-      "}";
-  this->shader = std::make_shared<Shader>("src/view/entity.shader");
+
+  this->shader = std::make_shared<Shader>(vertex_s, fragment_s);
 }
 void view::Ramp1::Display() { this->Draw(); }
 view::Ramp2::Ramp2(glm::vec3 pos) : logic::Ramp2(pos), view::Drawable() {
@@ -161,24 +110,7 @@ view::Ramp2::Ramp2(glm::vec3 pos) : logic::Ramp2(pos), view::Drawable() {
 
   this->vao->AddBuffer(*vbo_v, vbl_v);
   this->vao->AddBuffer(*vbo_c, vbl_c);
-  std::string vertex_s =
-      "#version 330 core"
-      "layout(location = 0) in vec3 position;"
-      "layout(location = 1) in vec3 color;"
-      "uniform mat4 view;"
-      "uniform mat4 projection;"
-      "out vec4 aColor;"
-      "void main() {"
-      "    gl_Position = projection * view * vec4(position, 1.0f);"
-      "    aColor = vec4(color, 1.0f);"
-      "}";
-  std::string fragment_s =
-      "#version 330 core"
-      "out vec4 Fragcolor;"
-      "in vec4 aColor;"
-      "void main() {"
-      "    Fragcolor = aColor;"
-      "}";
-  this->shader = std::make_shared<Shader>("src/view/entity.shader");
+
+  this->shader = std::make_shared<Shader>(vertex_s, fragment_s);
 }
 void view::Ramp2::Display() { this->Draw(); }

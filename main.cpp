@@ -89,7 +89,7 @@ int main() {
     front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
     front.y = sin(glm::radians(pitch));
     front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-  camera_front = glm::normalize(front);
+    camera_front = glm::normalize(front);
 
     window->setFramerateLimit(30);
     window->popGLStates();
@@ -114,13 +114,7 @@ int main() {
 
     while (window->isOpen() ) {
 
-      window->setActive(true);
 
-        glEnable(GL_DEPTH_TEST);
-        glDepthMask(GL_TRUE);
-        glDepthFunc(GL_LEQUAL);
-
-        glDepthRange(0.0f, 1.0f);
         glClearColor(0.9, 0.6, 0.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
