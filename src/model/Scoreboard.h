@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include <memory>
+#include <fstream>
+
+#include <Utils/json.hpp>
 
 #include "model/Player.h"
 
@@ -18,12 +21,18 @@ class Scoreboard {
   virtual void Update();
 
   // the void* is used to pass the window class of the given engine
-  virtual void Draw(void *) {}
+  virtual void Draw() { Update();}
+
+  virtual void Finish();
 
  private:
   std::shared_ptr<logic::Player> entity_;
 
+  nlohmann::json gamefile;
+
   std::uint32_t score_ = 0;
+
+  std::uint32_t highscore_ = 0;
 };
 
 }  // namespace logic

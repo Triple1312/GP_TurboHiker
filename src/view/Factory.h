@@ -29,6 +29,7 @@ class Factory : public logic::Factory {
     } else if (obst_type == logic::COLLECTABLE) {
       return std::make_shared<view::Collectable>(pos);
     }
+    return NULL;
   }
 
   std::shared_ptr<logic::Lane> MakeLane(glm::vec3 pos,

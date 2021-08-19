@@ -1,12 +1,13 @@
-//
-// Created by ppp on 1/3/21.
-//
 
 #ifndef GP_SRC_VIEW_SCOREBOARD_H_
 #define GP_SRC_VIEW_SCOREBOARD_H_
 
-#include <SFML/Graphics.hpp>
 #include <iostream>
+#include <string>
+#include <glad/glad.h>
+
+#define GLT_IMPLEMENTATION
+#include "Utils/gltext.h"
 
 #include "model/Scoreboard.h"
 
@@ -18,14 +19,12 @@ class Scoreboard : public logic::Scoreboard {
 
   void Update() override;
 
-  void Draw(void*) override;
+  void Draw() override;
 
  private:
-  sf::Text text_;
+  GLTtext* score_text_ = gltCreateText();  //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* highscore_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
 
-  sf::Font font_;
-
-  sf::String string_;
 };
 
 }  // namespace view

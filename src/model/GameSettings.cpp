@@ -13,5 +13,7 @@ GameSettings::GameSettings() {
   valversnelling = -1;
   enemies = 2;
   chunks = 1000;
-  enemyspeed = 1.2 * playerspeed;
+  enemyspeed = 2.8f * playerspeed;
+  laneWidth = 2;
+  laneHeight = 7;
 }

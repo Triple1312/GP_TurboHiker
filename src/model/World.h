@@ -6,6 +6,7 @@
 #include <memory>
 #include <vector>
 #include <thread>
+#include <fstream>
 
 #include "DisignByContract.h"
 #include "Entity.h"
@@ -13,6 +14,7 @@
 #include "Player.h"
 #include "Scoreboard.h"
 #include "Utils/Random.hpp"
+#include "Utils/json.hpp"
 
 namespace logic {
 
@@ -61,6 +63,8 @@ class World : public Entity {
   void P_L_Collision(Player&);
 
   void GenerateObstacleMap();
+
+
 };
 
 }  // namespace logic

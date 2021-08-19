@@ -22,6 +22,7 @@ void logic::World::SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes) {
 }
 
 logic::World::World(std::uint8_t lanes) {
+
   lanes = GameSettings::Lanes();
   unsigned char x_size = 2 + lanes * 2;
   this->SetPosition(glm::vec3(0, 0, 50), glm::vec3(x_size, x_size, 100));
@@ -83,6 +84,9 @@ void logic::World::Display() {
   }
 
   this->user_->Display();
+  this->score_board_->Draw();
+
+
 }
 
 std::shared_ptr<logic::User> logic::World::GetUser() { return this->user_; }
@@ -94,6 +98,7 @@ void collision(logic::Player* e1, logic::Entity* e2){
   if (tmp.x != 0.F) {  // if there is no collision it will also end here
     e1->MoveRight(tmp.x);
     e1->Modify(e2->Hit());
+    e2->Modify(e1->Hit());
 
   } else if (tmp.y != 0.F) {
 
@@ -105,6 +110,7 @@ void collision(logic::Player* e1, logic::Entity* e2){
     e1->velocity_.z = GameSettings::PlayerSpeed() * 3 / 4;
     e1->MoveForward(tmp.z);
     e1->Modify(e2->Hit());
+    e2->Modify(e1->Hit());
   }
 
 }
@@ -195,7 +201,7 @@ void logic::World::Generate(uint8_t lane_count) {
  */
 void logic::World::GenerateObstacleMap() {
   obst_map_.resize(GameSettings::Chunks(), 0);
-  std::uint8_t lanes = 5;
+  std::uint8_t lanes = GameSettings::Lanes();
   for (int i = 8; i < GameSettings::Chunks(); i++) {
     if (obst_map_[i - lanes] == 3) {
       obst_map_[i] = 4;
@@ -223,7 +229,7 @@ void logic::World::GenerateObstacleMap() {
           temp.emplace_back(0);
         }
         for (int j = 0; j < 1; ++j) {
-          temp.emplace_back(5); //todo dit moet 5 zijn
+          temp.emplace_back(5);
         }
       }
       auto r = Random::Get().Int(0, temp.size() - 1);
@@ -248,3 +254,4 @@ void logic::World::P_L_Collision(logic::Player &player) {
     }
   }
 }
+

@@ -8,7 +8,7 @@
 #include "view/Factory.h"
 #include "model/Clock.hpp"
 #include "Utils/Random.hpp"
-#include "engine/Text.h"
+#include "view/Camera.hpp"
 
 
 #include <ft2build.h>
@@ -23,6 +23,7 @@ logic::Factory* logic::Factory::instance_;
 Clock* Clock::instance_;
 
 Random Random::random_;
+
 
 int main() {
 
@@ -42,7 +43,7 @@ int main() {
 
 
     // aanmaken nieuw window
-    auto window = std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "Bla",sf::Style::Default,  settings );
+    auto window = std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "GP",sf::Style::Default,  settings );
     //window->setFramerateLimit(27);
     //window->resetGLStates();
     auto s = window->getSettings().depthBits;
@@ -61,6 +62,7 @@ int main() {
     return -1;
   }
 
+
     glCullFace(GL_CCW);
 
     glEnable(GL_DEPTH_TEST);
@@ -68,7 +70,6 @@ int main() {
     glDepthFunc(GL_LEQUAL);
 
     glDepthRange(0.0f, 1.0f);
-  window->pushGLStates();
 //    auto v = std::make_shared<view::Drawable>();
 
 
@@ -108,11 +109,23 @@ int main() {
     //Clock::Get()->Reset();
     //blub.setFillColor(sf::Color::Magenta);
 
-    Text text("recources/Fonts/Diane_de_France/Diane_de_France.ttf", 20, 20, 80);
-    text.SetString("blubldskdlasdasdasdasdasd");
+//    Text text("recources/Fonts/Diane_de_France/Diane_de_France.ttf", 20, 20, 400);
+    glm::mat4 ortogonal = glm::ortho(0.0f, 800.f, 0.0f, 600.f);
+//    text.SetString("24");
+//    auto tr = std::make_unique<afgl::TextRenderer>("recources/Fonts/Diane_de_France/Diane_de_France.ttf", glm::value_ptr(ortogonal));
 
-    while (window->isOpen()) {
-        glCullFace(GL_CCW);
+  sf::CircleShape shape(200.f);
+  shape.setFillColor(sf::Color::Magenta);
+
+  glClearDepth(1.f);
+// Enable Z-buffer read and write
+  glEnable(GL_DEPTH_TEST);
+  glDepthMask(GL_TRUE);
+
+
+    while (window->isOpen() ) {
+
+      window->setActive(true);
 
         glEnable(GL_DEPTH_TEST);
         glDepthMask(GL_TRUE);
@@ -194,9 +207,12 @@ int main() {
 
         Clock::Get()->Update();
         world.Update();
+
+
         world.Display();
-        //sb->Draw(&window); //todo is momenteel gwn logic
-        text.Draw();
+
+      //sb->Draw(&window); //todo is momenteel gwn logic
+//        tr->draw("djsahkdja", 200.f, 200.f, 1.0);
 
         window->display();
     }

@@ -25,7 +25,7 @@ class Random {
 
   static Random random_;
 
-  std::mt19937 rand_gen_;
+  std::mt19937 rand_gen_ = std::mt19937(std::chrono::steady_clock::now().time_since_epoch().count());
 };
 
 #endif  // GP_SRC_UTILS_RANDOM_HPP_

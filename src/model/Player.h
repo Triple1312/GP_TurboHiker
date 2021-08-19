@@ -46,6 +46,10 @@ class Player : public logic::Entity {
   void Bump(float stamina, glm::vec3 dir);
 
   void CalcVel();
+
+  void Respawn();
+
+  virtual float MaxSpeed();
 };
 
 class User : public logic::Player {
@@ -56,6 +60,8 @@ class User : public logic::Player {
 
   void EmpCharge(const std::deque<std::shared_ptr<Player>> &);
 
+  float MaxSpeed() override;
+
   // virtual void Display(){}
 };
 
@@ -65,7 +71,10 @@ class NPC : public logic::Player {
 
   void Display() override {}
 
+  Modifier Hit() override;
+
   // void Update() override {}
+  float MaxSpeed();
 };
 
 }  // namespace logic

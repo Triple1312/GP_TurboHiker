@@ -16,6 +16,10 @@ struct GameSettings {
 
   static uint32_t Chunks() { return instance.chunks; }
 
+  static float LaneWidth() {return instance.laneWidth; }
+
+  static float LaneHeight() {return instance.laneHeight; }
+
   static float EnemySpeed() { return instance.enemyspeed; }
 
  private:
@@ -30,6 +34,8 @@ struct GameSettings {
   uint8_t enemies;
   uint32_t chunks;
   float enemyspeed;
+  float laneWidth;
+  float laneHeight;
 };
 
 #endif  // GP_SRC_MODEL_GAMESETTINGS_H_
