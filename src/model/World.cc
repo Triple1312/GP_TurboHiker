@@ -22,7 +22,7 @@ void logic::World::SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes) {
 }
 
 logic::World::World(std::uint8_t lanes) {
-
+  Clock::Get()->Reset();
   lanes = GameSettings::Lanes();
   unsigned char x_size = 2 + lanes * 2;
   this->SetPosition(glm::vec3(0, 0, 50), glm::vec3(x_size, x_size, 100));
@@ -57,8 +57,11 @@ logic::World::World(std::uint8_t lanes) {
     players_.emplace_back(temp);
   }
 
-  for (int k = 0; k < GameSettings::Enemies()*3;k++) {
-
+  int eek = GameSettings::Enemies()*3;
+  for (int k = 1; k < eek;k++) {
+    int lane = Random::Get().Int(0, GameSettings::Lanes());
+    std::shared_ptr<logic::KillerNPC> temp = Factory::Get()->MakeKillerNPC(glm::vec3(lane*2, 3, 90+ 400/k));
+    players_.emplace_back(temp);
   }
   // this->user_->SetPosition({this->lanes_[0]->GetPosition().x,
   // this->lanes_[0]->GetPosition().y + 2, 1});
@@ -78,6 +81,7 @@ void logic::World::SetOnLane(const std::shared_ptr<Player> &p,
 }
 
 void logic::World::Display() {
+  if(this->user_->finished_ || this->user_->dead){this->score_board_->Draw(); return;}
   for (auto &i : this->lanes_) {
     // std::cout << " glss " << std::flush;
     i->Display();
@@ -122,6 +126,15 @@ void collision(logic::Player* e1, logic::Entity* e2){
 }
 
 void logic::World::Update() {
+  if(this->user_->finished_) {
+    this->score_board_->Finish();
+    return;
+  }
+  if(this->user_->dead) {
+    this->score_board_->Finish();
+    return;
+  }
+
   this->Display();
 //  int rand = Random::Get().Int(0, 12);
 //  if ( rand == 10) {
@@ -139,6 +152,12 @@ void logic::World::Update() {
 //    auto pppp = l1[i];
 
     std::vector<std::thread> threads;
+
+    for(auto p = this->players_.begin(); p != this->players_.end(); p++) {
+      if(p->get() != i->get()) {
+        threads.emplace_back(std::thread(collision,i->get(),p->get()));
+      }
+    }
     
     for (const auto &l : obstacles_) {
       threads.emplace_back(std::thread(collision,i->get(),l.get()));

@@ -27,7 +27,13 @@ class Scoreboard : public logic::Scoreboard {
   GLTtext* score_text_ = gltCreateText();  //cant use smart pointers because its managed by a c lib that doesnt allow it
   GLTtext* highscore_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
   GLTtext* speed_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* emp_charge_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
 
+  GLTtext* empd_text = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* deaths_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* bumped_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* escape_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
+  GLTtext* time_played_text_ = gltCreateText(); //cant use smart pointers because its managed by a c lib that doesnt allow it
 };
 
 

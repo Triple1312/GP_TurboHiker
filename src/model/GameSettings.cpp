@@ -7,13 +7,16 @@
 GameSettings GameSettings::instance;
 
 GameSettings::GameSettings() {
-  playerspeed = 4;
-  jumpheight = 2.5;
-  lanes = 5;
+  std::ifstream settingsfile("gamedata.json");
+  nlohmann::json j;
+  j << settingsfile;
+  playerspeed = j["playerspeed"];
+  jumpheight = j["jumpheight"];
+  lanes = j["lanes"];
   valversnelling = -1;
-  enemies = 2;
-  chunks = 1000;
-  enemyspeed = 2.8f * playerspeed;
+  enemies = j["enemies"];
+  chunks = j["chunks"];
+  enemyspeed = ((float)j.at("playerspeed") * (float)j.at("enemyspeedmultiplier"));
   laneWidth = 2;
   laneHeight = 7;
 }

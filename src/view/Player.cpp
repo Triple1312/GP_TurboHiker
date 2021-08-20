@@ -56,9 +56,9 @@ view::NPC::NPC(glm::vec3 pos) : logic::NPC(pos), Drawable() {
                                                3 * 8 * sizeof(float));
 
   float colors[] = {
-      0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f,
+      1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f,
 
-      0.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
+      1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f};
 
   this->vbo_c = std::make_shared<VertexBuffer>(colors, 3 * 8 * sizeof(float));
 
@@ -79,9 +79,9 @@ view::KillerNPC::KillerNPC(glm::vec3 pos) : logic::KillerNPC(pos), Drawable(){
                                                3 * 8 * sizeof(float));
 
   float colors[] = {
-      1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f,
+      0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
 
-      1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
+      0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
 
   this->vbo_c = std::make_shared<VertexBuffer>(colors, 3 * 8 * sizeof(float));
 

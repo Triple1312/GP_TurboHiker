@@ -207,6 +207,7 @@ void Controller::ChangeState(gamestate newState) {
   if (newState == 1) {
     state = GAME;
     world = std::make_shared<logic::World>(5);
+    Cam::Reset();
   }
 }
 

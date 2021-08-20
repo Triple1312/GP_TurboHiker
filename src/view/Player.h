@@ -36,6 +36,12 @@ class KillerNPC : public logic::KillerNPC, public view::Drawable {
   public:
    ~KillerNPC() override = default;
    explicit KillerNPC(glm::vec3 pos);
+
+   void Display() override {
+     this->Update();
+     this->ChangeVertices(this->GetPoints());
+     this->Draw();
+   }
 };
 
 }  // namespace view

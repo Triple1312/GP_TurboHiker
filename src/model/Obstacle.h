@@ -56,6 +56,8 @@ class Finish : public Obstacle {
   explicit Finish( glm::vec3 pos , int size);
 
   virtual ~Finish() = default;
+
+  Modifier Hit() override;
 };
 
 class Laser : public Obstacle {};

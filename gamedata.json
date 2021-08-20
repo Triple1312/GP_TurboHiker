@@ -1,4 +1,3 @@
-{
-  "highscore": 9000,
-  "lanes": 5
+{"chunks":1000,"enemies":3,"enemyspeedmultiplier":3,"highscore":110000,"jumpheight":2.5,"lanes":5,"playerspeed":4},
+  "jumpheight": 2.5
 }

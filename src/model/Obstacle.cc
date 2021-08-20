@@ -17,3 +17,4 @@ logic::Ramp1::Ramp1(glm::vec3 pos) : Obstacle(pos, {2, .75, 2}) {}
 logic::Ramp2::Ramp2(glm::vec3 pos) : Obstacle(pos, {2, 1.5, 2}) {}
 logic::Horde::Horde(glm::vec3 pos) : Obstacle(pos, {1.5, 1.1, 0.3}) {}
 logic::Finish::Finish(glm::vec3 pos, int size) : Obstacle(pos, {2* size, 0.5, 0.5}){}
+logic::Modifier logic::Finish::Hit() { return {glm::vec3(0, 0, 0), 0, false, false, true, false, 0}; }

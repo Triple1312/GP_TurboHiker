@@ -21,6 +21,10 @@ class Scoreboard {
   const uint32_t &GetScore() const;
   const uint32_t &GetHighScore() const;
   const float &GetSpeed() const;
+  const float &GetEMP() const;
+  const bool &GetFinished() const;
+
+
 
   virtual void Update();
 
@@ -28,6 +32,9 @@ class Scoreboard {
   virtual void Draw() { Update();}
 
   virtual void Finish();
+
+ protected:
+  const std::shared_ptr<logic::Player> &GetUser() const;
 
  private:
   std::shared_ptr<logic::Player> entity_;
@@ -38,7 +45,11 @@ class Scoreboard {
 
   std::uint32_t highscore_ = 0;
 
+  float emp_charge_;
+
   float speed = 0;
+
+  bool finished = false;
 };
 
 }  // namespace logic

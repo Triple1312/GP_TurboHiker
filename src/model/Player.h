@@ -11,12 +11,6 @@ namespace logic {
 
 class Player : public logic::Entity {
  public:
-  //  void Jump();
-  //
-  //  void Roll();
-
-  // Player(glm::vec4 ,glm::vec4 = glm::vec4(40.f/60.f, 80.f/60.f, 25.f/60.f,
-  // 0));
 
   virtual ~Player() = default;
 
@@ -24,20 +18,18 @@ class Player : public logic::Entity {
 
   void Modify(Modifier mod);
 
-  // void Display();
 
  public:
   float score_;
   float stamina_{};
   float speed_{};  // todo: pixel per second ?
   bool finished_ = false;
-  //  std::uint8_t height_{}; // if the player jumps or rolls this number will
-  //  change
-  float emp_charge_{};
+  uint8_t empd_ = 0;
+  uint8_t bumped_ = 0;
+  float emp_charge_ = 0;
   bool airborne_ = false;
   bool dead = false;
-  //  glm::vec3 max_speed_{};
-  //  glm::vec3 curr_acceleration_{};
+  uint8_t deaths = 0;
 
   Player(glm::vec3 pos, glm::vec3 size) : logic::Entity(pos, size) {
     this->stamina_ = 1;
@@ -49,7 +41,7 @@ class Player : public logic::Entity {
 
   void Bump(float stamina, glm::vec3 dir);
 
-  void CalcVel();
+  virtual void CalcVel();
 
   void Respawn();
 
@@ -62,6 +54,8 @@ class User : public logic::Player {
  public:
   User();
 
+  void Update() override;
+
   virtual ~User() = default;
 
   User(glm::vec3 pos, glm::vec3 size);
@@ -70,7 +64,6 @@ class User : public logic::Player {
 
   float MaxSpeed() override;
 
-  // virtual void Display(){}
 };
 
 class NPC : public logic::Player {
@@ -92,13 +85,13 @@ class NPC : public logic::Player {
 class KillerNPC : public logic::Player {
   float MaxSpeed();
 
-
-
   Modifier Hit() override;
  public:
   void EMPd(float distance) override;
   virtual ~KillerNPC() = default;
   explicit KillerNPC(glm::vec3 pos);
+
+  void CalcVel() override;
 };
 
 }  // namespace logic

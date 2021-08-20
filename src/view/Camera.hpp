@@ -21,6 +21,10 @@ class Cam {
     return camera;
   }
 
+  static void Reset(){
+    camera = new Cam;
+  }
+
  private:
   static Cam* camera;
 

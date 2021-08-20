@@ -3,6 +3,9 @@
 #ifndef GP_SRC_MODEL_GAMESETTINGS_H_
 #define GP_SRC_MODEL_GAMESETTINGS_H_
 #include <memory>
+#include <fstream>
+
+#include "Utils/json.hpp"
 
 struct GameSettings {
  public:
