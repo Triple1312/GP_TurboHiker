@@ -1,14 +1,8 @@
-//
-// Created by phil on 8/19/21.
-//
 
 #include "Menu.h"
 
 view::Menu::Menu() {
-  if (!gltInit())
-  {
-//    fprintf(stderr, "Failed to initialize glText\n");
-  }
+  gltInit();
   gltSetText(play_, "Play");
   gltSetText(press_play_, "press P to play");
   gltSetText(name, "TURBOHIKER by Philippe Voet");

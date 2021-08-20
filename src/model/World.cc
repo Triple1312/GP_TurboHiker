@@ -1,7 +1,4 @@
 #include "World.h"
-
-#include <utility>
-
 #include "model/Factory.h"
 
 const std::deque<std::shared_ptr<logic::Player>> &logic::World::GetPlayers()
@@ -9,16 +6,8 @@ const std::deque<std::shared_ptr<logic::Player>> &logic::World::GetPlayers()
   return players_;
 }
 
-void logic::World::SetPlayers(std::deque<std::shared_ptr<Player>> &players) {
-  World::players_ = players;
-}
-
 const std::deque<std::shared_ptr<logic::Lane>> &logic::World::GetLanes() const {
   return lanes_;
-}
-
-void logic::World::SetLanes(const std::deque<std::shared_ptr<Lane>> &lanes) {
-  World::lanes_ = lanes;
 }
 
 logic::World::World(std::uint8_t lanes) {
@@ -35,12 +24,12 @@ logic::World::World(std::uint8_t lanes) {
       Factory::Get()->MakeUser({this->lanes_[0]->GetPosition().x,
                                 this->lanes_[0]->GetPosition().y + 2, 1},
                                glm::vec3(1.f));
-//  this->SetOnLanechunk(this->user_, 2, 1);
+
   this->players_.emplace_back(this->user_);
 
   this->score_board_ = Factory::Get()->MakeScoreBoard(this->user_);
 
-  // this->lanes_[0]->GetChunks()[6]->SetOnChunk(Factory::Get()->MakeOCube({0,0,0}));
+
   GenerateObstacleMap();
   for (int i = 0; i < GameSettings::Chunks(); ++i) {
     if (obst_map_[i] != 0) {
@@ -63,21 +52,6 @@ logic::World::World(std::uint8_t lanes) {
     std::shared_ptr<logic::KillerNPC> temp = Factory::Get()->MakeKillerNPC(glm::vec3(lane*2, 3, 90+ 400/k));
     players_.emplace_back(temp);
   }
-  // this->user_->SetPosition({this->lanes_[0]->GetPosition().x,
-  // this->lanes_[0]->GetPosition().y + 2, 1});
-}
-
-void logic::World::MovePlayer(int i) { auto p = this->players_[0]; }
-
-void logic::World::SetOnLane(const std::shared_ptr<Player> &p,
-                             std::uint8_t nr) {  // todo zet niet op grond
-  REQUIRE(p.get() != nullptr,
-          "Tried to set an Player that doesnt exist on a lane ");
-  REQUIRE(this->lanes_.size() > nr, "Tried to set on a lane that doesnt exist");
-  REQUIRE(0 <= nr, "Tried to set player on a lane with negative nr");
-  // auto test =
-  // this->GetLanes()[nr]->GetLaneChunks()[this->GetLanes().size()-1]->GetCenterPos();
-  // p->SetPosition(this->GetLanes()[nr]->GetLaneChunks()[0]->GetPos());
 }
 
 void logic::World::Display() {
@@ -136,20 +110,12 @@ void logic::World::Update() {
   }
 
   this->Display();
-//  int rand = Random::Get().Int(0, 12);
-//  if ( rand == 10) {
-//    this->players_.push_back(std::make_shared<KillerNPC>(this->user_->GetCenter() + glm::vec3(0, 2, 50)));
-//  }
+
   for (auto i = this->players_.begin(); i != this->players_.end(); i++) {
 
     if (i->get()->dead) {
       this->players_.erase(i);
     }
-    auto l1 = [&](Player& player){
-      P_L_Collision(player);
-    };
-//
-//    auto pppp = l1[i];
 
     std::vector<std::thread> threads;
 
@@ -161,36 +127,10 @@ void logic::World::Update() {
     
     for (const auto &l : obstacles_) {
       threads.emplace_back(std::thread(collision,i->get(),l.get()));
-//      glm::vec3 tmp = i->Collision(l.get());
-//
-//
-//      if (tmp.x != 0.F) {  // if there is no collision it will also end here
-//        i->MoveRight(tmp.x);
-//
-//      } else if (tmp.y != 0.F) {
-//        i->MoveUp(tmp.y);
-//        i->velocity_.y = 0.f;
-//        i->airborne_ = false;
-//      } else if (tmp.z != 0.F) {
-//        this->velocity_.z = GameSettings::PlayerSpeed() * 3 / 4;
-//        i->MoveForward(tmp.z);
-//      }
     }
 
     for (const auto &l : lanes_) {//todo collision multi ??
       threads.emplace_back(std::thread(collision,i->get(),l.get()));
-//      glm::vec3 tmp = i->Collision(l.get());
-//      if (tmp.x != 0.F) {  // if there is no collision it will also end here
-//        i->MoveRight(tmp.x);
-//
-//      } else if (tmp.y != 0.F) {
-//        i->MoveUp(tmp.y);
-//        i->velocity_.y = 0.f;
-//        i->airborne_ = false;
-//      } else if (tmp.z != 0.F) {
-//        this->velocity_.z = GameSettings::PlayerSpeed() * 3 / 4;
-//        i->MoveForward(tmp.z);
-//      }
     }
     for (auto &th : threads) {
       th.join();
@@ -210,8 +150,6 @@ void logic::World::Update() {
   }
 }
 
-void logic::World::SetOnLanechunk(std::shared_ptr<logic::Entity> entity,
-                                  unsigned int lane, unsigned int chunk) {}
 void logic::World::Generate(uint8_t lane_count) {
   int max = GameSettings::Lanes() / 2;  // afronden naar beneden
   int length = 100;
@@ -220,10 +158,6 @@ void logic::World::Generate(uint8_t lane_count) {
     field[l][0] = 0;
   }
 
-  //  for (int i = 1; i < length; i++) {
-  //
-  //  }
-  float atm = 0;
 }
 
 /*
@@ -252,9 +186,7 @@ void logic::World::GenerateObstacleMap() {
         for (int j = 0; j < 3; ++j) {
           temp.emplace_back(1);
         }
-        //        for (int j = 0; j < 1; ++j) {
-        //          temp.emplace_back(3);
-        //        }
+
         for (int j = 0; j < 2; ++j) {
           temp.emplace_back(2);
         }
@@ -270,21 +202,3 @@ void logic::World::GenerateObstacleMap() {
     }
   }
 }
-logic::Scoreboard *logic::World::GetScoreBoard() {
-  return this->score_board_.get();
-}
-void logic::World::P_L_Collision(logic::Player &player) {
-  for (const auto &j : lanes_) {
-    glm::vec3 tmp = player.Collision(j.get());
-    if (tmp.x != 0.F) {  // if there is no collision it will also end here
-      player.MoveRight(tmp.x);
-    } else if (tmp.y != 0.F) {
-      player.MoveUp(tmp.y);
-      player.velocity_.y = 0.f;
-      player.airborne_ = 0;
-    } else if (tmp.z != 0.F) {
-      player.MoveForward(tmp.z);
-    }
-  }
-}
-

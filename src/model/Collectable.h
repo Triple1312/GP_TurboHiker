@@ -1,6 +1,4 @@
-//
-// Created by phil on 7/29/21.
-//
+
 
 #ifndef GP_SRC_MODEL_COLLECTABLE_H_
 #define GP_SRC_MODEL_COLLECTABLE_H_

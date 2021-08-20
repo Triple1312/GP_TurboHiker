@@ -1,6 +1,4 @@
-//
-// Created by phil on 7/29/21.
-//
+
 
 #include "Collectable.h"
 logic::Collectable::Collectable(glm::vec3 pos) : Obstacle(pos + glm::vec3(0, .5, 0), {.5, .5, .5}) {};

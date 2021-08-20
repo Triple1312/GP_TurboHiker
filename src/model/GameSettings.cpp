@@ -1,6 +1,3 @@
-//
-// Created by ppp on 1/1/21.
-//
 
 #include "GameSettings.h"
 

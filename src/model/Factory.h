@@ -4,7 +4,6 @@
 #include "model/Lane.h"
 #include "model/Obstacle.h"
 #include "model/Player.h"
-#include "model/Trigger.h"
 #include "model/World.h"
 
 namespace logic {
@@ -16,9 +15,6 @@ class Factory {
   virtual ~Factory() { delete instance_; }
 
   static logic::Factory *Get() {
-    //            if (!instance_) {
-    //                instance_  = new Factory;
-    //            }
     return instance_;
   }
 
@@ -50,11 +46,6 @@ class Factory {
     return std::make_shared<logic::OCube>();
   }
 
-  virtual std::unique_ptr<Trigger> MakeTrigger(std::function<void()> &action,
-                                               std::function<bool()> &trigger,
-                                               bool del = true) {
-    return std::make_unique<Trigger>(action, trigger, del);
-  }
 
   virtual std::shared_ptr<logic::Scoreboard> MakeScoreBoard(
       std::shared_ptr<logic::Player>) = 0;

@@ -74,30 +74,6 @@ class Factory : public logic::Factory {
   Factory() = default;
 };
 
-// std::shared_ptr<logic::Obstacle> Factory::MakeObstacle() {
-//
-//}
-//
-// std::shared_ptr<logic::NPC> Factory::MakeNPC() {
-//    return std::make_shared<view::NPC>();
-//}
-//
-// std::shared_ptr<logic::LaneChunk> Factory::MakeLaneChunk(glm::vec3 pos,
-// glm::vec3 size) {
-//    return std::make_shared<view::LaneChunk>( pos, size);
-//}
-//
-// std::shared_ptr<logic::User> Factory::MakeUser() {
-//
-//}
-//
-// std::shared_ptr<logic::Lane> Factory::MakeLane(glm::vec3 pos, glm::vec3 size)
-// {
-//    ;
-//}
-//
-//} // namespace view
-
 }  // namespace view
 
 #endif  // GP_SRC_VIEW_FACTORY_H_

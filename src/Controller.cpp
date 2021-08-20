@@ -1,28 +1,9 @@
-//
-// Created by phil on 7/26/21.
-//
 
 #include "Controller.h"
 Controller::Controller() {
   CreateWindow();
 }
 
-void startWindow() {
-
-}
-
-void startWorld() {
-
-}
-
-void Controller::start() {
-    std::thread t_window (startWindow);
-    std::thread t_model (startWorld);
-
-    t_window.join();
-    t_model.detach();
-
-}
 void Controller::Display() {
   glm::vec3 camera_pos   = glm::vec3(0.0f, 0.0f, 3.0f);
   glm::vec3 camera_front = glm::vec3(0.0f, 0.0f, -1.0f);
@@ -69,13 +50,6 @@ void Controller::Display() {
           this->ChangeState(GAME);
         }
       }
-//      auto size = window->getSize();
-//      gltBeginDraw();
-//      gltColor(1.f, 1.f, 1.f, 1.f);
-//      gltDrawText2DAligned(menu.play, (GLfloat)(size.x/2), (GLfloat)(size.y/4), 5, GLT_CENTER, GLT_CENTER);
-//      gltDrawText2DAligned(menu.pressPlay, (GLfloat)(size.x/2), (GLfloat)(size.y/2), 2, GLT_CENTER, GLT_CENTER);
-//      gltEndDraw();
-
 
     }
     else if (state == 1) {
@@ -209,11 +183,4 @@ void Controller::ChangeState(gamestate newState) {
     world = std::make_shared<logic::World>(5);
     Cam::Reset();
   }
-}
-
-void DisplayWorld() {
-  glClearColor(0.9, 0.6, 0.0, 1.0);
-  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-
 }

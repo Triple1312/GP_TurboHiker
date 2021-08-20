@@ -151,7 +151,7 @@ logic::KillerNPC::KillerNPC(glm::vec3 pos) : logic::Player(pos, glm::vec3(.8, 1,
     this->velocity_ = {0, 0.f, -GameSettings::EnemySpeed()};
 }
 void logic::KillerNPC::EMPd(float distance) {
-  if (distance < 5) {
+  if (distance < 10) {
     this->dead = true;
   }
 }

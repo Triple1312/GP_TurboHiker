@@ -15,7 +15,6 @@ include( ${CMAKE_CURRENT_LIST_DIR}/dependencies/CmakeLists.txt)
 
 
 set(view
-        src/view/Draw.cc src/view/Draw.h
         src/view/Factory.h
         src/view/Obstacle.cpp src/view/Obstacle.h
         src/view/Player.cpp src/view/Player.h
@@ -31,7 +30,7 @@ add_library(model STATIC
         src/model/Obstacle.cc src/model/Obstacle.h
         src/model/Lane.cc src/model/Lane.h
         src/model/Factory.h src/model/PlayerFactory.hh
-        src/model/Clock.hpp src/model/Trigger.cpp src/model/Trigger.h src/model/GameSettings.cpp src/model/GameSettings.h src/model/Model.cpp src/model/Model.h src/model/Collectable.cpp src/model/Collectable.h)
+        src/model/Clock.hpp src/model/GameSettings.cpp src/model/GameSettings.h src/model/Collectable.cpp src/model/Collectable.h)
 
 add_library(engine STATIC
         dependencies/engine/engine/Shader.h dependencies/engine/engine/Shader.cpp
@@ -49,7 +48,7 @@ set(controller src/Controller.cpp)
 
 #include_directories(GP dependencies/engine/engine/freetype-2.10.0/include)
 #link_directories(GP dependencies/engine/engine/freetype-2.10.0/build)
-add_executable( GP main.cpp  ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c src/Utils/json.hpp src/Utils/gltext.h )
+add_executable( GP main.cpp  ${view} ${controller} src/Utils/Random.hpp dependencies/glad/src/glad.c src/Utils/json.hpp src/Utils/gltext.h )
 add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c )
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 

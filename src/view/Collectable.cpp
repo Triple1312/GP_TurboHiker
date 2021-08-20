@@ -1,6 +1,3 @@
-//
-// Created by phil on 8/16/21.
-//
 
 #include "Collectable.h"
 void view::Collectable::Display() {

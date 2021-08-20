@@ -121,49 +121,8 @@ void logic::Entity::SetPosition(glm::vec3 pos) {
   points_[7] = {pos.x - size.x / 2, pos.y + size.y / 2, pos.z + size.z / 2};
 }
 
-// void logic::Entity::SetPositionBottom(glm::vec3 pos) {
-//  glm::vec3 size(points_[6 * 3] - points_[0], points_[6 * 3 + 1] - points_[1],
-//                 points_[6 * 3 + 2] - points_[2]);
-//
-//  points_[0] = pos.x - size.x / 2;
-//  points_[1] = pos.y;
-//  points_[2] = pos.z - size.z / 2;
-//
-//  points_[3] = pos.x + size.x / 2;
-//  points_[4] = pos.y;
-//  points_[5] = pos.z - size.z / 2;
-//
-//  points_[6] = pos.x + size.x / 2;
-//  points_[7] = pos.y;
-//  points_[8] = pos.z + size.z / 2;
-//
-//  points_[9] = pos.x + size.x / 2;
-//  points_[10] = pos.y;
-//  points_[11] = pos.z + size.z / 2;
-//
-//  points_[12] = pos.x - size.x / 2;
-//  points_[13] = pos.y + size.y;
-//  points_[14] = pos.z - size.z / 2;
-//
-//  points_[15] = pos.x + size.x / 2;
-//  points_[16] = pos.y + size.y;
-//  points_[17] = pos.z - size.z / 2;
-//
-//  points_[18] = pos.x + size.x / 2;
-//  points_[19] = pos.y + size.y;
-//  points_[20] = pos.z + size.z / 2;
-//
-//  points_[21] = pos.x + size.x / 2;
-//  points_[22] = pos.y + size.y;
-//  points_[23] = pos.z + size.z / 2;
-//}
 
 void logic::Entity::Display() {}
-
-// glm::vec3 logic::Entity::GetPositionTop() {
-//  auto pos = GetPosition();
-//  return glm::vec3(pos.x, points_[6 * 3 + 2], pos.z);
-//}
 
 logic::Entity::Entity(glm::vec3 pos, glm::vec3 size) {
   points_[0] = {pos.x - size.x / 2, pos.y - size.y / 2, pos.z - size.z / 2};

@@ -37,8 +37,6 @@ class Controller {
 
   Controller();
 
-  void start();
-
   void Display();
 
   void CreateWindow();

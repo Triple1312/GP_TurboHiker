@@ -9,7 +9,6 @@
 #include <iostream>
 #include <memory>
 
-#include "DisignByContract.h"
 #include "model/Clock.hpp"
 #include "model/GameSettings.h"
 
@@ -98,10 +97,6 @@ class Entity {
   virtual void MoveZ(float);
 
   virtual void Modify(logic::Modifier);
-
-  // virtual void SetPositionBottom(glm::vec3);
-
-  // virtual glm::vec3 GetPositionTop();
 
   virtual void Display();
 

@@ -1,6 +1,3 @@
-//
-// Created by Phili on 03/12/2020.
-//
 
 #ifndef GP_SRC_VIEW_OBSTACLE_H_
 #define GP_SRC_VIEW_OBSTACLE_H_

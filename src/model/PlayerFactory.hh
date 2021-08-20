@@ -1,6 +1,4 @@
-//
-// Created by Phili on 28/11/2020.
-//
+
 
 #ifndef GP_SRC_MODEL_PLAYERFACTORY_HH_
 #define GP_SRC_MODEL_PLAYERFACTORY_HH_
