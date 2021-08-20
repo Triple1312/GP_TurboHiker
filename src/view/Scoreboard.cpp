@@ -2,15 +2,11 @@
 #include "Scoreboard.h"
 
 #include <utility>
-void view::Scoreboard::Update() {
-  logic::Scoreboard::Update();
-
-}
+void view::Scoreboard::Update() { logic::Scoreboard::Update(); }
 
 view::Scoreboard::Scoreboard(std::shared_ptr<logic::Player> entity)
     : logic::Scoreboard(std::move(entity)) {
-  if (!gltInit())
-  {
+  if (!gltInit()) {
     fprintf(stderr, "Failed to initialize glText\n");
   }
 }
@@ -20,15 +16,17 @@ void view::Scoreboard::Draw() {
   std::string temp2 = "highscore: " + std::to_string(this->GetHighScore());
   std::string temp3 = "speed: " + std::to_string(this->GetSpeed());
   std::string temp4 = "emp: " + std::to_string(this->GetEMP());
-  gltSetText(score_text_,temp.c_str());
-  gltSetText(highscore_text_,temp2.c_str());
+  gltSetText(score_text_, temp.c_str());
+  gltSetText(highscore_text_, temp2.c_str());
 
-  if(this->GetFinished()) {
+  if (this->GetFinished()) {
     std::string temp5 = "bumps: " + std::to_string(this->GetUser()->bumped_);
     std::string temp6 = "deaths: " + std::to_string(this->GetUser()->deaths);
     std::string temp7 = "EMP's used: " + std::to_string(this->GetUser()->empd_);
     std::string temp8 = "press ESC to continue";
-    std::string temp9 = "time played: " + std::to_string(Clock::Get()->GetTimeAsSeconds()) + " seconds";
+    std::string temp9 =
+        "time played: " + std::to_string(Clock::Get()->GetTimeAsSeconds()) +
+        " seconds";
     gltSetText(bumped_text_, temp5.c_str());
     gltSetText(deaths_text_, temp6.c_str());
     gltSetText(empd_text, temp7.c_str());
@@ -37,7 +35,7 @@ void view::Scoreboard::Draw() {
     glClearColor(0.72, 0.63, 0.36, 1.0);
     gltBeginDraw();
     gltColor(1, 1, 1, 1);
-    if(this->GetUser()->dead) {
+    if (this->GetUser()->dead) {
       gltColor(1, 0, 0, 1);
     }
     gltDrawText2D(this->score_text_, 50, 100, 2);
@@ -53,9 +51,8 @@ void view::Scoreboard::Draw() {
     return;
   }
 
-
-  gltSetText(speed_,temp3.c_str());
-  gltSetText(emp_charge_text_,temp4.c_str());
+  gltSetText(speed_, temp3.c_str());
+  gltSetText(emp_charge_text_, temp4.c_str());
   gltBeginDraw();
   gltColor(1, 1, 1, 1);
   gltDrawText2D(this->score_text_, 15, 40, 1.7);

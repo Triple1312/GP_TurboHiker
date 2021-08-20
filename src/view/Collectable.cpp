@@ -1,9 +1,8 @@
 
 #include "Collectable.h"
-void view::Collectable::Display() {
-  this->Draw();
-}
-view::Collectable::Collectable(glm::vec3 pos) : logic::Collectable(pos), view::Drawable(){
+void view::Collectable::Display() { this->Draw(); }
+view::Collectable::Collectable(glm::vec3 pos)
+    : logic::Collectable(pos), view::Drawable() {
   this->velocity_ = {0, 0, 0};
   this->ibo = std::make_shared<IndexBuffer>();
   this->vbo_v = std::make_shared<VertexBuffer>(&this->points_[0].x,

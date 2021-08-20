@@ -25,14 +25,13 @@ enum CollissionType {
 namespace logic {
 
 struct Modifier {
-  glm::vec3 velocity = {0,0,0};
+  glm::vec3 velocity = {0, 0, 0};
   float score = 0;
   bool dead = false;
   bool respawn = false;
   bool finish = false;
   bool slow = false;
   float emp = 0;
-
 };
 
 class Entity {
@@ -51,11 +50,12 @@ class Entity {
   /**
    * @brief function that checks collision for every axis
    */
-  virtual glm::vec3 Collision(Entity*);
+  virtual glm::vec3 Collision(Entity *);
 
   /**
    * @brief: function that calculates what has to happen when hit
-   * @return: a struct in which the data is for what has to happen f you get hit by this entity
+   * @return: a struct in which the data is for what has to happen f you get hit
+   * by this entity
    */
   virtual logic::Modifier Hit();
 

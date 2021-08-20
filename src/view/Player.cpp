@@ -73,7 +73,7 @@ view::NPC::NPC(glm::vec3 pos) : logic::NPC(pos), Drawable() {
   this->vao->AddBuffer(*vbo_c, vbl_c);
   this->shader = std::make_shared<Shader>(vertex_s, fragment_s);
 }
-view::KillerNPC::KillerNPC(glm::vec3 pos) : logic::KillerNPC(pos), Drawable(){
+view::KillerNPC::KillerNPC(glm::vec3 pos) : logic::KillerNPC(pos), Drawable() {
   this->ibo = std::make_shared<IndexBuffer>();
   this->vbo_v = std::make_shared<VertexBuffer>(&this->points_[0].x,
                                                3 * 8 * sizeof(float));

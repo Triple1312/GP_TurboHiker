@@ -6,7 +6,6 @@ view::Menu::Menu() {
   gltSetText(play_, "Play");
   gltSetText(press_play_, "press P to play");
   gltSetText(name, "TURBOHIKER by Philippe Voet");
-
 }
 void view::Menu::Display() {
   gltBeginDraw();

@@ -4,11 +4,11 @@
 #include <memory>
 
 #include "model/Factory.h"
+#include "view/Collectable.h"
 #include "view/Lane.h"
 #include "view/Obstacle.h"
 #include "view/Player.h"
 #include "view/Scoreboard.h"
-#include "view/Collectable.h"
 
 namespace view {
 
@@ -16,7 +16,7 @@ class Factory : public logic::Factory {
  public:
   unsigned int lanechunknr_ = 0;
 
-  ~Factory() override{delete instance_;}
+  ~Factory() override { delete instance_; }
 
   std::shared_ptr<logic::Obstacle> MakeObstacle(
       glm::vec3 pos, logic::ObstType obst_type) override {

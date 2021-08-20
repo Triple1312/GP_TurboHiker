@@ -23,7 +23,6 @@ class Ramp2 : public logic::Ramp2, public view::Drawable {
   explicit Ramp2(glm::vec3 pos);
   ~Ramp2() override = default;
 
-
   void Display() override;
 };
 
@@ -48,12 +47,11 @@ class Horde : public logic::Horde, public view::Drawable {
 
 class Finish : public logic::Finish, public view::Drawable {
  public:
-  explicit Finish(glm::vec3 pos , int size);
+  explicit Finish(glm::vec3 pos, int size);
 
   ~Finish() override = default;
 
   void Display() override;
-
 };
 }  // namespace view
 

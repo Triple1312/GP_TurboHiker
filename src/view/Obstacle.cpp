@@ -112,7 +112,8 @@ view::Ramp2::Ramp2(glm::vec3 pos) : logic::Ramp2(pos), view::Drawable() {
 }
 void view::Ramp2::Display() { this->Draw(); }
 
-view::Finish::Finish(glm::vec3 pos, int size): logic::Finish(pos, size), view::Drawable() {
+view::Finish::Finish(glm::vec3 pos, int size)
+    : logic::Finish(pos, size), view::Drawable() {
   this->velocity_ = {0, 0, 0};
   this->ibo = std::make_shared<IndexBuffer>();
   this->vbo_v = std::make_shared<VertexBuffer>(&this->points_[0].x,

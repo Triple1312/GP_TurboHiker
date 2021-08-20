@@ -18,7 +18,6 @@ class Drawable {
   std::shared_ptr<VertexBuffer> vbo_c;
   std::shared_ptr<Shader> shader;
 
-
   void ChangeColor(void* colors) const;
   void ChangeVertices(void* vertices) const;
 
@@ -53,7 +52,6 @@ class Drawable {
       "void main() {\n"
       "    Fragcolor = aColor;\n"
       "}";
-
 };
 
 }  // namespace view

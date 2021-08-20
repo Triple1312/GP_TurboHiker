@@ -8,18 +8,15 @@
 
 namespace view {
 
-
 class Collectable : public logic::Collectable, public view::Drawable {
  public:
-
   explicit Collectable(glm::vec3 pos);
 
   ~Collectable() override = default;
 
   void Display() override;
-
 };
 
-}
+}  // namespace view
 
 #endif  // GP_SRC_VIEW_COLLECTABLE_H_

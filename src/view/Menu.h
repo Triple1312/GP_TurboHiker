@@ -22,6 +22,6 @@ class Menu {
 
   ~Menu();
 };
-} //namespace view
+}  // namespace view
 
 #endif  // GP_SRC_VIEW_MENU_H_
