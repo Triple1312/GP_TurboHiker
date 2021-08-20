@@ -12,7 +12,7 @@ const std::deque<std::shared_ptr<logic::Lane>> &logic::World::GetLanes() const {
 
 logic::World::World(std::uint8_t lanes) {
   Clock::Get()->Reset();
-  lanes = GameSettings::Lanes();
+  lanes = GameSettings::GetLanes();
   unsigned char x_size = 2 + lanes * 2;
   this->SetPosition(glm::vec3(0, 0, 50), glm::vec3(x_size, x_size, 100));
   for (int i = 0; i < lanes; i++) {
@@ -31,7 +31,7 @@ logic::World::World(std::uint8_t lanes) {
 
 
   GenerateObstacleMap();
-  for (int i = 0; i < GameSettings::Chunks(); ++i) {
+  for (int i = 0; i < GameSettings::GetChunks(); ++i) {
     if (obst_map_[i] != 0) {
       this->obstacles_.emplace_back(Factory::Get()->MakeObstacle(
           glm::vec3((i % lanes) * 2, 0, (i / lanes) * 2),
@@ -40,15 +40,15 @@ logic::World::World(std::uint8_t lanes) {
   }
   this->obstacles_.emplace_back(Factory::Get()->MakeObstacle({lanes, 0.7, 430}, FINISH));
 
-  for (int j = 0; j < GameSettings::Enemies(); j++) {
+  for (int j = 0; j < GameSettings::GetEnemies(); j++) {
     std::shared_ptr<NPC> temp = Factory::Get()->MakeNPC({1, 1, 1});
     temp->SetPosition({2* (j+1), 2, 1});
     players_.emplace_back(temp);
   }
 
-  int eek = GameSettings::Enemies()*3;
+  int eek = GameSettings::GetEnemies()*2;
   for (int k = 1; k < eek;k++) {
-    int lane = Random::Get().Int(0, GameSettings::Lanes());
+    int lane = Random::Get().Int(0, GameSettings::GetLanes());
     std::shared_ptr<logic::KillerNPC> temp = Factory::Get()->MakeKillerNPC(glm::vec3(lane*2, 3, 90+ 400/k));
     players_.emplace_back(temp);
   }
@@ -91,7 +91,7 @@ void collision(logic::Player* e1, logic::Entity* e2){
     e1->velocity_.y = 0.f;
     e1->airborne_ = false;
   } else if (tmp.z != 0.F) {
-    e1->velocity_.z = GameSettings::PlayerSpeed() * 3 / 4;
+    e1->velocity_.z = GameSettings::GetPlayerSpeed() * 3 / 4;
     e1->MoveForward(tmp.z);
     e1->Modify(e2->Hit());
     e2->Modify(e1->Hit());
@@ -150,11 +150,9 @@ void logic::World::Update() {
   }
 }
 
-void logic::World::Generate(uint8_t lane_count) {
-  int max = GameSettings::Lanes() / 2;  // afronden naar beneden
-  int length = 100;
-  int field[GameSettings::Lanes()][500];
-  for (int l = 0; l < GameSettings::Lanes(); ++l) {
+void logic::World::Generate() {
+  int field[GameSettings::GetLanes()][500];
+  for (int l = 0; l < GameSettings::GetLanes(); ++l) {
     field[l][0] = 0;
   }
 
@@ -167,9 +165,9 @@ void logic::World::Generate(uint8_t lane_count) {
  * then it chooses one of the possibilities random and places it on the map
  */
 void logic::World::GenerateObstacleMap() {
-  obst_map_.resize(GameSettings::Chunks(), 0);
-  std::uint8_t lanes = GameSettings::Lanes();
-  for (int i = 8; i < GameSettings::Chunks(); i++) {
+  obst_map_.resize(GameSettings::GetChunks(), 0);
+  std::uint8_t lanes = GameSettings::GetLanes();
+  for (int i = 8; i < GameSettings::GetChunks(); i++) {
     if (obst_map_[i - lanes] == 3) {
       obst_map_[i] = 4;
     } else if (obst_map_[i - lanes] == 4) {

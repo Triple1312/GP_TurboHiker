@@ -9,6 +9,10 @@ namespace logic {
 
 enum COLLTYPE {JUMP = 0, SPEED = 1, EMP = 2};
 
+
+/**
+ * @brief item that can be picked up
+ */
 class Collectable : public logic::Obstacle {
  public:
   explicit Collectable(glm::vec3 pos);

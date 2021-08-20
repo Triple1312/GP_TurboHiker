@@ -25,7 +25,10 @@ class World : public Entity {
 
   explicit World(std::uint8_t);
 
-  void Generate(uint8_t lane_count);
+  /**
+   * @brief generates the lanes
+   */
+  void Generate();
 
   void Display() override;
 

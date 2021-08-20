@@ -41,12 +41,25 @@ class Player : public logic::Entity {
 
   void Bump(float stamina, glm::vec3 dir);
 
+  /**
+   * @brief calculates the velocity for the next tick
+   */
   virtual void CalcVel();
 
+  /**
+   * @brief: teleports the player on random lane and clears velocity
+   */
   void Respawn();
 
+  /**
+   * @brief: called when entity is hit by emp or used emp
+   * @param distance
+   */
   virtual void EMPd(float distance){};
 
+  /**
+   * @return max speed of the entity
+   */
   virtual float MaxSpeed();
 };
 

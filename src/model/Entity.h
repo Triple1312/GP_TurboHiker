@@ -53,6 +53,10 @@ class Entity {
    */
   virtual glm::vec3 Collision(Entity*);
 
+  /**
+   * @brief: function that calculates what has to happen when hit
+   * @return: a struct in which the data is for what has to happen f you get hit by this entity
+   */
   virtual logic::Modifier Hit();
 
   /**

@@ -37,15 +37,6 @@ class OCube : public logic::OCube,
   void Display() override;
 };
 
-class Laser : public logic::Laser, public view::Drawable {};
-
-class ChunkGone
-    : public logic::ChunkGone,
-      public view::Drawable {  // todo geen idee hoe ik dit ga implementeren
-};
-
-class Portal : public logic::Portal, public view::Drawable {};
-
 class Horde : public logic::Horde, public view::Drawable {
  public:
   explicit Horde(glm::vec3 pos);

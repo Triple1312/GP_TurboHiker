@@ -25,6 +25,9 @@ class Clock {
         .count();
   }
 
+  /**
+   * @brief: when called the clock knows how long a tick lasted
+   */
   void Update() {
     since_last_ = std::chrono::duration_cast<std::chrono::microseconds>(
                       std::chrono::steady_clock::now() - last_)
@@ -32,6 +35,9 @@ class Clock {
     last_ = std::chrono::steady_clock::now();
   }
 
+  /**
+   * @brief time set to 0
+   */
   void Reset() {
     begin_ = std::chrono::steady_clock::now();
     last_ = std::chrono::steady_clock::now();

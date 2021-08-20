@@ -49,7 +49,7 @@ set(controller src/Controller.cpp)
 #include_directories(GP dependencies/engine/engine/freetype-2.10.0/include)
 #link_directories(GP dependencies/engine/engine/freetype-2.10.0/build)
 add_executable( GP main.cpp  ${view} ${controller} src/Utils/Random.hpp dependencies/glad/src/glad.c src/Utils/json.hpp src/Utils/gltext.h )
-add_executable( GP_debug debug.cpp ${view} ${controller} src/DisignByContract.h src/Utils/Random.hpp dependencies/glad/src/glad.c )
+add_executable( GP_debug debug.cpp ${view} ${controller} src/Utils/Random.hpp dependencies/glad/src/glad.c )
 #add_executable(NoUI main.cpp src/Entity.cc src/Entity.h src/Player.cpp src/Player.h src/Item.h src/Item.cc src/Scoreboard.cc src/Scoreboard.h src/World.cc src/World.h src/Obstacle.cc src/Obstacle.h src/MainGame.cc src/MainGame.h src/Menu.cc src/Menu.h src/Lane.cc src/Lane.h src/Widget.cc src/Widget.h src/Vector3.h src/DisignByContract.h)
 
 

@@ -40,7 +40,7 @@ void logic::Player::Jump() {
     return;
   }
   airborne_ = true;
-  this->velocity_.y = GameSettings::JumpHeight();
+  this->velocity_.y = GameSettings::GetJumpHeight();
 }
 void logic::Player::Bump(float stamina, glm::vec3 dir) {
 
@@ -82,7 +82,8 @@ void logic::Player::Modify(logic::Modifier mod) {
     this->dead = true;
   }
   if (mod.slow) {
-    this->velocity_ = {0, this->velocity_.y, GameSettings::PlayerSpeed()/4};
+    this->velocity_ = {0, this->velocity_.y,
+                       GameSettings::GetPlayerSpeed()/4};
     this->bumped_ += 1;
   }
   if (mod.respawn) {
@@ -96,7 +97,7 @@ void logic::Player::Respawn() {
   this->score_ -= 10000;
   this->velocity_ = {0, 0, 0};
   this->deaths += 1;
-  uint8_t lane = Random::Get().Int(0, GameSettings::Lanes()-1);
+  uint8_t lane = Random::Get().Int(0, GameSettings::GetLanes()-1);
   this->SetPosition({2* lane, 5, this->points_[0].z} );
 }
 float logic::Player::MaxSpeed() { return 0; }
@@ -104,9 +105,9 @@ float logic::Player::MaxSpeed() { return 0; }
 logic::User::User() : logic::Player(glm::vec3(0, 1, 0), glm::vec3(1, 1, 1)) {}
 
 logic::User::User(glm::vec3 pos, glm::vec3 size) : Player(pos, size) {
-  this->velocity_ = {0, 0.f, GameSettings::PlayerSpeed()};
+  this->velocity_ = {0, 0.f, GameSettings::GetPlayerSpeed()};
 }
-float logic::User::MaxSpeed() { return GameSettings::PlayerSpeed(); }
+float logic::User::MaxSpeed() { return GameSettings::GetPlayerSpeed(); }
 void logic::User::Update() {
   this->emp_charge_ += Clock::Get()->GetTimeSinceLastInSeconds() / 17;
   if (this->emp_charge_ > 1) {
@@ -116,39 +117,39 @@ void logic::User::Update() {
 }
 
 logic::NPC::NPC(glm::vec3 pos) : logic::Player(pos, glm::vec3(.8, 1, .8)) {
-  this->velocity_ = {0, 0.f, GameSettings::EnemySpeed()};
+  this->velocity_ = {0, 0.f, GameSettings::GetEnemySpeed()};
 }
 logic::Modifier logic::NPC::Hit() {
   int direction = Random::Get().Int(0, 1);
   if (direction == 0) {
-    this->MoveRight(GameSettings::LaneWidth());
+    this->MoveRight(GameSettings::GetLaneWidth());
   }
   else {
-    this->MoveLeft(GameSettings::LaneWidth());
+    this->MoveLeft(GameSettings::GetLaneWidth());
   }
   return {glm::vec3(0.0, 0, 0.0), -5000.f, false, true, false, false, false};
 }
 
-float logic::NPC::MaxSpeed() { return GameSettings::EnemySpeed(); }
+float logic::NPC::MaxSpeed() { return GameSettings::GetEnemySpeed(); }
 
 void logic::NPC::EMPd(float distance) {
   this->velocity_.z - this->velocity_.z / distance;
 }
 
-float logic::KillerNPC::MaxSpeed() { return -GameSettings::EnemySpeed(); }
+float logic::KillerNPC::MaxSpeed() { return -GameSettings::GetEnemySpeed(); }
 
 logic::Modifier logic::KillerNPC::Hit() {
   int direction = Random::Get().Int(0, 1);
   if (direction == 0) {
-    this->MoveRight(GameSettings::LaneWidth());
+    this->MoveRight(GameSettings::GetLaneWidth());
   }
   else {
-    this->MoveLeft(GameSettings::LaneWidth());
+    this->MoveLeft(GameSettings::GetLaneWidth());
   }
   return {glm::vec3(0.f,0.f,0.f), 0, true, false, false, false, 0};
 }
 logic::KillerNPC::KillerNPC(glm::vec3 pos) : logic::Player(pos, glm::vec3(.8, 1, .8)){
-    this->velocity_ = {0, 0.f, -GameSettings::EnemySpeed()};
+    this->velocity_ = {0, 0.f, -GameSettings::GetEnemySpeed()};
 }
 void logic::KillerNPC::EMPd(float distance) {
   if (distance < 10) {
@@ -156,5 +157,5 @@ void logic::KillerNPC::EMPd(float distance) {
   }
 }
 void logic::KillerNPC::CalcVel() {
-  this->velocity_.z = -GameSettings::EnemySpeed();
+  this->velocity_.z = -GameSettings::GetEnemySpeed();
 }

@@ -14,7 +14,7 @@ logic::Scoreboard::Scoreboard(std::shared_ptr<logic::Player> entity) {
 }
 const uint32_t &logic::Scoreboard::GetScore() const { return this->score_; }
 void logic::Scoreboard::Update() {
-//  score_ += (float)this->entity_->velocity_.z / GameSettings::PlayerSpeed() *
+//  score_ += (float)this->entity_->velocity_.z / GameSettings::GetPlayerSpeed() *
 //            (float)Clock::Get()->GetTimeSinceLastInMilliSeconds();
   score_ = this->entity_->score_;
   speed = this->entity_->velocity_.z;

@@ -7,9 +7,11 @@ namespace logic {
 
 enum ObstType { WALL = 1, HORDE = 2, STEP_1 = 3, STEP_2 = 4, COLLECTABLE = 5, FINISH = 6};
 
+/**
+ * @brief class that defines objects that are static in the world
+ */
 class Obstacle : public Entity {
  public:
-  // Obstacle(glm::vec4, glm::vec4);
 
   Obstacle() = default;
 
@@ -21,7 +23,7 @@ class Obstacle : public Entity {
 };
 
 /**
- * @note moet een systeem vinden voor meerdere obstakels achter elkaar
+ * @brief: old obstacle , unused now
  */
 class Ramp1 : public Obstacle {
  public:
@@ -30,12 +32,15 @@ class Ramp1 : public Obstacle {
   virtual ~Ramp1()  = default;
 };
 
+/**
+ * @brief: old obstacle , unused now
+ */
 class Ramp2 : public Obstacle {
  public:
   explicit Ramp2(glm::vec3 pos);
 };
 
-class OCube : public Obstacle {  // todo andere naam geven
+class OCube : public Obstacle {
  public:
   OCube(glm::vec3 pos, glm::vec3 size);
 
@@ -59,14 +64,6 @@ class Finish : public Obstacle {
 
   Modifier Hit() override;
 };
-
-class Laser : public Obstacle {};
-
-class ChunkGone
-    : public Obstacle {  // todo geen idee hoe ik dit ga implementeren
-};
-
-class Portal : public Obstacle {};
 
 }  // namespace logic
 

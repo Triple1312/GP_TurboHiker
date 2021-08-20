@@ -9,21 +9,21 @@
 
 struct GameSettings {
  public:
-  static float PlayerSpeed() { return instance.playerspeed; }
+  static float GetPlayerSpeed() { return instance.playerspeed; }
 
-  static float JumpHeight() { return instance.jumpheight; }
+  static float GetJumpHeight() { return instance.jumpheight; }
 
-  static uint8_t Lanes() { return instance.lanes; }
+  static uint8_t GetLanes() { return instance.lanes; }
 
-  static uint8_t Enemies() { return instance.enemies; }
+  static uint8_t GetEnemies() { return instance.enemies; }
 
-  static uint32_t Chunks() { return instance.chunks; }
+  static uint32_t GetChunks() { return instance.chunks; }
 
-  static float LaneWidth() {return instance.laneWidth; }
+  static float GetLaneWidth() {return instance.laneWidth; }
 
   static float LaneHeight() {return instance.laneHeight; }
 
-  static float EnemySpeed() { return instance.enemyspeed; }
+  static float GetEnemySpeed() { return instance.enemyspeed; }
 
  private:
   static GameSettings instance;
