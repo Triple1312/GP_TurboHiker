@@ -10,8 +10,7 @@ void logic::User::EmpCharge(
   for (const std::shared_ptr<Player>& i : players) {
     if (i.get() != (Player*)this) {
       float distance = glm::length(i->GetPosition() - temp);
-      i->speed_ = i->speed_ / distance;
-      i->stamina_ = i->stamina_ / distance;
+      i->speed_ = i->speed_ -  i->speed_ / distance;
     }
   }
 }
@@ -133,6 +132,10 @@ logic::Modifier logic::NPC::Hit() {
 
 float logic::NPC::MaxSpeed() { return GameSettings::EnemySpeed(); }
 
+void logic::NPC::EMPd(float distance) {
+  this->velocity_.z - this->velocity_.z / distance;
+}
+
 float logic::KillerNPC::MaxSpeed() { return -GameSettings::EnemySpeed(); }
 
 logic::Modifier logic::KillerNPC::Hit() {
@@ -140,4 +143,7 @@ logic::Modifier logic::KillerNPC::Hit() {
 }
 logic::KillerNPC::KillerNPC(glm::vec3 pos) : logic::Player(pos, glm::vec3(.8, 1, .8)){
     this->velocity_ = {0, 0.f, -GameSettings::EnemySpeed()};
+}
+void logic::KillerNPC::EMPd(float distance) {
+
 }

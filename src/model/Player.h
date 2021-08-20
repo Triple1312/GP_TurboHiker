@@ -53,6 +53,8 @@ class Player : public logic::Entity {
 
   void Respawn();
 
+  virtual void EMPd(float distance){};
+
   virtual float MaxSpeed();
 };
 
@@ -81,6 +83,8 @@ class NPC : public logic::Player {
 
   Modifier Hit() override;
 
+  void EMPd(float distance) override;
+
   // void Update() override {}
   float MaxSpeed();
 };
@@ -92,6 +96,7 @@ class KillerNPC : public logic::Player {
 
   Modifier Hit() override;
  public:
+  void EMPd(float distance) override;
   virtual ~KillerNPC() = default;
   explicit KillerNPC(glm::vec3 pos);
 };
